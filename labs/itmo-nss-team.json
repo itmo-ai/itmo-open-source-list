@@ -1,0 +1,19 @@
+{
+  "id": "itmo-nss-team",
+  "name": "Natural Systems Simulation Lab (NSS Lab)",
+  "description": {
+    "ru": "R&D‑лаборатория Института ИИ ИТМО, занимающаяся моделированием природных систем, генеративным дизайном, data-driven моделированием, автоматическим машинным обучением и открытыми научными инструментами.",
+    "en": "R&D lab at ITMO’s AI Institute focusing on natural systems simulations, generative design, data-driven modeling, automated machine learning, and open scientific tools."
+  },
+  "github_org": "https://github.com/ITMO-NSS-team",
+  "links": {
+    "email": "itmo.nss.team@gmail.com",
+    "website": "https://itmo-nss-team.github.io/",
+    "telegram": "https://t.me/NSS_group",
+    "vkontakte": null
+  },
+  "example_projects": [
+    "EPDE",
+    "torch_DE_solver"
+  ]
+}

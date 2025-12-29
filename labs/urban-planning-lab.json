@@ -1,0 +1,18 @@
+{
+  "id": "urban-planning-lab",
+  "name": "Intelligent Urban Planning Technologies Lab",
+  "description": {
+    "ru": "Лаборатория интеллектуальных технологий городского планирования, разрабатывающая AI-инструменты для анализа городских данных, мастер-планирования и оценки территорий.",
+    "en": "Laboratory of Intelligent Urban Planning Technologies developing AI tools for urban data analysis, master planning, and territory assessment."
+  },
+  "github_org": null,
+  "links": {
+    "email": null,
+    "website": "https://iai.itmo.ru/czifrovaya-urbanistika",
+    "telegram": null,
+    "vkontakte": null,
+  },
+  "example_projects": [
+    "Prosto.R"
+  ]
+}

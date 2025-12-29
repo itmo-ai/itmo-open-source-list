@@ -1,0 +1,24 @@
+{
+  "id": "ctlab",
+  "name": "CTLab (Computational Technologies Lab)",
+  "description": {
+    "ru": "Учебно-научная лаборатория компьютерных технологий ИТМО с открытыми проектами в области вычислительной биологии, статистики и анализа данных.",
+    "en": "Educational and research lab in computational technologies at ITMO with open-source projects in computational biology, statistics, and data analysis."
+  },
+  "github_org": "https://github.com/CTLab-ITMO",
+  "links": {
+    "email": null,
+    "website": null,
+    "telegram": "https://t.me/ctlab_itmo",
+    "vkontakte": null,
+    "legacy_github_org": "https://github.com/ctlab"
+  },
+  "example_projects": [
+    "CoolPrompt",
+    "fgsea",
+    "GADMA",
+    "samovar",
+    "metafast",
+    "VGLib"
+  ]
+}

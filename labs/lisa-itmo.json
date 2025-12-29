@@ -1,0 +1,18 @@
+{
+  "id": "lisa-itmo",
+  "name": "LISA Lab",
+  "description": {
+    "ru": "Учебно-научная лаборатория LISA с открытыми проектами на стыке ИИ и образования/аналитики.",
+    "en": "Educational and research lab LISA with open-source projects at the intersection of AI, education, and analytics."
+  },
+  "github_org": "https://github.com/LISA-ITMO",
+  "links": {
+    "email": null,
+    "website": "https://sno.itmo.ru/lisa",
+    "telegram": "https://t.me/lisaitmo",
+    "vkontakte": "https://vk.com/lisa.itmo"
+  },
+  "example_projects": [
+    "edulytica"
+  ]
+}

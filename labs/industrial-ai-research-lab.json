@@ -1,0 +1,19 @@
+{
+  "id": "industrial-ai-research-lab",
+  "name": "Industrial AI Research Lab",
+  "description": {
+    "ru": "Лаборатория промышленного ИИ, развивающая open source‑решения для анализа данных, рекомендательных систем и цифровизации промышленных процессов.",
+    "en": "Industrial AI lab developing open-source tools for data analysis, recommender systems, and industrial digitalization."
+  },
+  "github_org": "https://github.com/Industrial-AI-Research-Lab",
+  "links": {
+    "email": null,
+    "website": null,
+    "telegram": null,
+    "vkontakte": null,
+  },
+  "example_projects": [
+    "documentor",
+    "rec4u"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "swarmtronics",
+  "name": "Swarmtronics",
+  "description": {
+    "ru": "Лаборатория, занимающаяся моделированием роев из простых роботов, способных к самоорганизации и совместному решению сложных задач.",
+    "en": "Lab focused on swarm robotics: modeling swarms of simple robots capable of self-organization and solving complex tasks together."
+  },
+  "github_org": "https://github.com/swarmtronics",
+  "links": {
+    "email": null,
+    "website": "http://swarmtronics.com/",
+    "telegram": null,
+    "vkontakte": null,
+  },
+  "example_projects": [
+    "AMPy",
+    "swarmodroid"
+  ]
+}

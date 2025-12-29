@@ -1,0 +1,16 @@
+{
+  "id": "aist-lab",
+  "name": "AIST (AI Science & Technology Lab)",
+  "description": {
+    "ru": "Учебно-научная лаборатория AIST, объединяющая студентов для работы над реальными научными проектами в области ИИ.",
+    "en": "Educational and research laboratory AIST, uniting students to work on real-world scientific AI projects."
+  },
+  "github_org": null,
+  "links": {
+    "email": null,
+    "website": null,
+    "telegram": "https://t.me/aist_itmo",
+    "vkontakte": null
+  },
+  "example_projects": []
+}

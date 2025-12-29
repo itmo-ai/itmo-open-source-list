@@ -1,0 +1,19 @@
+{
+  "id": "ilt-itmo",
+  "name": "ILT-ITMO (Institute of Laser Technologies)",
+  "description": {
+    "ru": "Институт лазерных технологий ИТМО с открытыми проектами по лазерной обработке материалов и мониторингу процессов.",
+    "en": "ITMO’s Institute of Laser Technologies with open-source projects on laser material processing and process monitoring."
+  },
+  "github_org": "https://github.com/ILT-ITMO",
+  "links": {
+    "email": "ilt@itmo.ru",
+    "website": "https://ilt.itmo.ru/",
+    "telegram": "https://t.me/careerstalk",
+    "vkontakte": "https://vk.com/lasers_itmo"
+  },
+  "example_projects": [
+    "LaserProcessing",
+    "LaserWeldMonitor"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "ai-chem",
+  "name": "AI-chem (AI in Chemistry Center)",
+  "description": {
+    "ru": "Центр «ИИ в химии» ИТМО, разрабатывающий открытые инструменты для задач химии и материаловедения.",
+    "en": "ITMO’s AI in Chemistry center developing open-source tools for chemistry and materials science."
+  },
+  "github_org": "https://github.com/ai-chem",
+  "links": {
+    "email": "ai-chemistry@scamt-itmo.ru",
+    "website": "https://ai-chemistry.itmo.ru/",
+    "telegram": "https://t.me/ai_chemistry",
+    "vkontakte": "https://vk.com/ai_chemistry"
+  },
+  "example_projects": [
+    "GEMCODE",
+    "DiZyme",
+    "Dimag",
+    "DESignSolvents"
+  ]
+}

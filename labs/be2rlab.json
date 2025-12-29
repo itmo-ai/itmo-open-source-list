@@ -1,0 +1,18 @@
+{
+  "id": "be2rlab",
+  "name": "BE2R Lab (Biomechatronics and Energy-Efficient Robotics)",
+  "description": {
+    "ru": "Лаборатория биомехатроники и энергоэффективной робототехники с открытыми проектами в области мобильной и человекоподобной робототехники.",
+    "en": "Lab on biomechatronics and energy-efficient robotics with open-source projects in mobile and humanoid robotics."
+  },
+  "github_org": "https://github.com/be2rlab",
+  "links": {
+    "email": null,
+    "website": null,
+    "telegram": null,
+    "vkontakte": "https://vk.com/be2rlab"
+  },
+  "example_projects": [
+    "OpenSemanticMapping"
+  ]
+}
