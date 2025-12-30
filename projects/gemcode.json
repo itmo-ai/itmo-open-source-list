@@ -1,0 +1,16 @@
+{
+  "id": "gemcode",
+  "title": "GEMCODE",
+  "description": {
+    "ru": "Инструмент для генеративного дизайна материалов.",
+    "en": "Generative material design tool."
+  },
+  "github_url": "https://github.com/ai-chem/GEMCODE",
+  "lab": "ai-chem",
+  "area": "AI for Science",
+  "logo": null,
+  "links": {
+    "website": null,
+    "docs": null
+  }
+}

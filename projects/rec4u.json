@@ -1,0 +1,16 @@
+{
+  "id": "rec4u",
+  "title": "Rec4U",
+  "description": {
+    "ru": "Библиотека рекомендательных систем.",
+    "en": "Recommender systems library."
+  },
+  "github_url": "https://github.com/Industrial-AI-Research-Lab/rec4u",
+  "lab": "industrial-ai-research-lab",
+  "area": "Industrial AI",
+  "logo": null,
+  "links": {
+    "website": null,
+    "docs": null
+  }
+}

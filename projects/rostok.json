@@ -1,0 +1,16 @@
+{
+  "id": "rostok",
+  "title": "Rostok",
+  "description": {
+    "ru": "Фреймворк для генеративного проектирования роботов.",
+    "en": "Framework for generative design of robots."
+  },
+  "github_url": "https://github.com/aimclub/rostok",
+  "lab": "aimclub",
+  "area": "Robotics",
+  "logo": "https://raw.githubusercontent.com/aimclub/rostok/master/docs/images/logo_rostok_long.png",
+  "links": {
+    "website": null,
+    "docs": "https://rostok.readthedocs.io/en/latest/?badge=latest"
+  }
+}

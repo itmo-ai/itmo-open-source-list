@@ -1,0 +1,16 @@
+{
+  "id": "documentor",
+  "title": "Documentor",
+  "description": {
+    "ru": "Инструмент для обработки и анализа документов.",
+    "en": "Tool for document processing and analysis."
+  },
+  "github_url": "https://github.com/Industrial-AI-Research-Lab/documentor",
+  "lab": "industrial-ai-research-lab",
+  "area": "Industrial AI",
+  "logo": "https://raw.githubusercontent.com/Industrial-AI-Research-Lab/documentor/main/images/logo.png",
+  "links": {
+    "website": null,
+    "docs": null
+  }
+}

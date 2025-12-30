@@ -1,0 +1,16 @@
+{
+  "id": "iopt",
+  "title": "iOpt",
+  "description": {
+    "ru": "Фреймворк для автоматического выбора параметров алгоритмов оптимизации.",
+    "en": "Framework for automatic selection of optimization algorithm parameters."
+  },
+  "github_url": "https://github.com/aimclub/iOpt",
+  "lab": "aimclub",
+  "area": "ML tools",
+  "logo": "https://raw.githubusercontent.com/aimclub/iOpt/main/docs/iOpt_logo.png",
+  "links": {
+    "website": null,
+    "docs": "https://iopt.readthedocs.io/ru/latest/"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "bamt",
+  "title": "BAMT",
+  "description": {
+    "ru": "Библиотека для анализа и работы с байесовскими сетями.",
+    "en": "Library for analysis and work with Bayesian Networks."
+  },
+  "github_url": "https://github.com/aimclub/BAMT",
+  "lab": "aimclub",
+  "area": "ML tools",
+  "logo": "https://raw.githubusercontent.com/aimclub/BAMT/refs/heads/master/docs/images/BAMT_white_bg.png",
+  "links": {
+    "website": null,
+    "docs": "https://bamt.readthedocs.io/en/latest/"
+  }
+}
