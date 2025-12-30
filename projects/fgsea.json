@@ -1,0 +1,16 @@
+{
+  "id": "fgsea",
+  "title": "fgsea",
+  "description": {
+    "ru": "Быстрый анализ обогащения генных наборов (GSEA).",
+    "en": "Fast Gene Set Enrichment Analysis (GSEA)."
+  },
+  "github_url": "https://github.com/ctlab/fgsea",
+  "lab": "ctlab",
+  "area": "Bioinformatics",
+  "logo": null,
+  "links": {
+    "website": null,
+    "docs": "https://bioconductor.org/packages/release/bioc/html/fgsea.html"
+  }
+}

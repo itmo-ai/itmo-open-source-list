@@ -1,0 +1,16 @@
+{
+  "id": "ampy",
+  "title": "AMPy",
+  "description": {
+    "ru": "Библиотека для моделирования роевого интеллекта.",
+    "en": "Library for swarm intelligence simulation."
+  },
+  "github_url": "https://github.com/swarmtronics/AMPy",
+  "lab": "swarmtronics",
+  "area": "Robotics",
+  "logo": "https://raw.githubusercontent.com/swarmtronics/AMPy/master/materials/logo_header_wh_font.png#gh-dark-mode-only",
+  "links": {
+    "website": "https://swarmtronics.com/",
+    "docs": "https://ampy.readthedocs.io/en/latest/"
+  }
+}

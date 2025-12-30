@@ -1,0 +1,16 @@
+{
+  "id": "metafast",
+  "title": "metafast",
+  "description": {
+    "ru": "Инструмент для метагеномного анализа.",
+    "en": "Tool for metagenomic analysis."
+  },
+  "github_url": "https://github.com/ctlab/metafast",
+  "lab": "ctlab",
+  "area": "Bioinformatics",
+  "logo": "https://raw.githubusercontent.com/ctlab/metafast/master/logo.jpg",
+  "links": {
+    "website": null,
+    "docs": "https://github.com/ctlab/metafast/wiki"
+  }
+}

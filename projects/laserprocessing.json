@@ -1,0 +1,16 @@
+{
+  "id": "laserprocessing",
+  "title": "LaserProcessing",
+  "description": {
+    "ru": "Инструмент для лазерной обработки материалов.",
+    "en": "Tool for laser material processing."
+  },
+  "github_url": "https://github.com/ILT-ITMO/LaserProcessing",
+  "lab": "ilt-itmo",
+  "area": "Industrial AI",
+  "logo": null,
+  "links": {
+    "website": null,
+    "docs": null
+  }
+}

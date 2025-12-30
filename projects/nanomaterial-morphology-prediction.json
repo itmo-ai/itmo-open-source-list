@@ -1,0 +1,16 @@
+{
+  "id": "nanomaterial-morphology-prediction",
+  "title": "Nanomaterial Morphology Prediction",
+  "description": {
+    "ru": "Предсказание морфологии наноматериалов.",
+    "en": "Prediction of nanomaterial morphology."
+  },
+  "github_url": "https://github.com/ai-chem/Nanomaterial_Morphology_Prediction",
+  "lab": "ai-chem",
+  "area": "AI for Science",
+  "logo": null,
+  "links": {
+    "website": null,
+    "docs": null
+  }
+}

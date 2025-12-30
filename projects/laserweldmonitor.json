@@ -1,0 +1,16 @@
+{
+  "id": "laserweldmonitor",
+  "title": "LaserWeldMonitor",
+  "description": {
+    "ru": "Система мониторинга лазерной сварки.",
+    "en": "Laser welding monitoring system."
+  },
+  "github_url": "https://github.com/ILT-ITMO/LaserWeldMonitor",
+  "lab": "ilt-itmo",
+  "area": "Industrial AI",
+  "logo": null,
+  "links": {
+    "website": null,
+    "docs": "https://github.com/ILT-ITMO/LaserWeldMonitor#documentation"
+  }
+}

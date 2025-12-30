@@ -1,0 +1,16 @@
+{
+  "id": "edulytica",
+  "title": "Edulytica",
+  "description": {
+    "ru": "Инструмент для аналитики в образовании.",
+    "en": "Educational analytics tool."
+  },
+  "github_url": "https://github.com/aimclub/Edulytica/tree/lisa_2023",
+  "lab": "lisa-itmo",
+  "area": "Education",
+  "logo": "https://raw.githubusercontent.com/aimclub/Edulytica/lisa_2023/src/images/logo.png",
+  "links": {
+    "website": null,
+    "docs": null
+  }
+}
