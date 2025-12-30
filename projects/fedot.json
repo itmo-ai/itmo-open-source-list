@@ -8,11 +8,7 @@
   "github_url": "https://github.com/aimclub/FEDOT",
   "lab": "aimclub",
   "area": "AI for Science",
-  "topics": ["automl", "ml"],
   "logo": "https://github.com/aimclub/FEDOT/blob/master/docs/fedot_logo.png?raw=true",
-  "maintainers": [
-    { "name": "Nikolay Nikitin", "github": "nicl-nno" }
-  ],
   "links": {
     "website": "https://ods.ai/projects/fedot",
     "docs": "https://fedot.readthedocs.io"

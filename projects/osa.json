@@ -1,0 +1,14 @@
+{
+  "id": "osa",
+  "title": "OSA",
+  "description": {
+    "ru": "Инструмент для улучшения open-source проектов с помощью LLM-агентов.",
+    "en": "Tool that makes your open source project better using LLM agents."
+  },
+  "github_url": "https://github.com/aimclub/OSA",
+  "lab": "aimclub",
+  "area": "ML tools",
+  "links": {
+    "website": "https://github.com/aimclub/OSA"
+  }
+}
