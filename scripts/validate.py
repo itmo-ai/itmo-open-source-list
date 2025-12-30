@@ -13,9 +13,10 @@ REQUIRED_LAB_FIELDS = ["id", "name", "description"]
 def load_json_files(directory):
     """Читает все .json файлы из папки и возвращает словарь {filename: data}."""
     files_data = {}
+    read_errors = []
+
     if not directory.exists():
-        print(f"Директория не найдена: {directory}")
-        return {}
+        return {}, [f"Директория не найдена: {directory}"]
 
     for file_path in directory.glob("*.json"):
         if file_path.name.startswith("_"):
@@ -25,11 +26,10 @@ def load_json_files(directory):
             with open(file_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
                 files_data[file_path.name] = data
-        except json.JSONDecodeError as e:
-            print(f"Ошибка JSON в файле {file_path.name}: {e}")
-            sys.exit(1)
+        except Exception as e:
+            read_errors.append(f"[{file_path.name}] Ошибка чтения/JSON: {e}")
 
-    return files_data
+    return files_data, read_errors
 
 
 def validate_projects(projects, valid_lab_ids):
@@ -68,21 +68,25 @@ def validate_labs(labs):
 def main():
     print("Запуск валидации данных...")
 
-    labs = load_json_files(LABS_DIR)
-    projects = load_json_files(PROJECTS_DIR)
+    labs, labs_read_errors = load_json_files(LABS_DIR)
+    projects, projects_read_errors = load_json_files(PROJECTS_DIR)
 
-    if not labs:
+    if not labs and not labs_read_errors:
         print("Нет файлов лабораторий!")
-    if not projects:
+    if not projects and not projects_read_errors:
         print("Нет файлов проектов!")
 
     valid_lab_ids = {data["id"] for data in labs.values() if "id" in data}
 
-    lab_errors = validate_labs(labs)
+    lab_logic_errors = validate_labs(labs)
+    project_logic_errors = validate_projects(projects, valid_lab_ids)
 
-    project_errors = validate_projects(projects, valid_lab_ids)
-
-    all_errors = lab_errors + project_errors
+    all_errors = (
+        labs_read_errors +
+        projects_read_errors +
+        lab_logic_errors +
+        project_logic_errors
+    )
 
     if all_errors:
         print(f"\nНайдено {len(all_errors)} ошибок:")
@@ -90,7 +94,7 @@ def main():
             print(f"  - {err}")
         sys.exit(1)
     else:
-        print("\nВсе данные корректны! Лабы существуют, поля на месте.")
+        print("\nВсе данные корректны!")
         print(f"   Лабораторий: {len(labs)}")
         print(f"   Проектов: {len(projects)}")
 
