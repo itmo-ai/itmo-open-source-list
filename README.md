@@ -1,7 +1,3 @@
-# 🚀 ITMO Open Source List
-
-![ITMO University](https://img.shields.io/badge/ITMO-University-1946BA?style=for-the-badge)
-![Open Source](https://img.shields.io/badge/Open_Source-Love-EC0B43?style=for-the-badge&logo=opensource-initiatives&logoColor=white)
 ![Projects](https://img.shields.io/badge/Projects-Growing-00C853?style=for-the-badge)
 ![License](https://img.shields.io/github/license/itmo-ai/itmo-open-source-list?style=for-the-badge)
 
