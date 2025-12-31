@@ -1,0 +1,16 @@
+{
+  "id": "samovar",
+  "title": "samovar",
+  "description": {
+    "ru": "Инструмент для работы с геномными данными.",
+    "en": "Tool for genomic data processing."
+  },
+  "github_url": "https://github.com/ctlab/samovar",
+  "lab": "ctlab",
+  "area": "Bioinformatics",
+  "logo": "https://raw.githubusercontent.com/ctlab/samovar/main/data/img/logos/logo_stable.png",
+  "links": {
+    "website": null,
+    "docs": null
+  }
+}

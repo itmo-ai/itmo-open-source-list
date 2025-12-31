@@ -1,0 +1,16 @@
+{
+  "id": "opensemanticmapping",
+  "title": "OpenSemanticMapping",
+  "description": {
+    "ru": "Открытое семантическое картирование для робототехники.",
+    "en": "Open semantic mapping for robotics."
+  },
+  "github_url": "https://github.com/be2rlab/OSMa-Bench",
+  "lab": "be2rlab",
+  "area": "Robotics",
+  "logo": null,
+  "links": {
+    "website": null,
+    "docs": null
+  }
+}

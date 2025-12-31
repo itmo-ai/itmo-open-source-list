@@ -1,0 +1,16 @@
+{
+  "id": "svetlanna",
+  "title": "SVETlANNa",
+  "description": {
+    "ru": "Проект лаборатории вычислительной физики.",
+    "en": "Project from Computational Physics Lab."
+  },
+  "github_url": "https://github.com/CompPhysLab/SVETlANNa",
+  "lab": "compphyslab",
+  "area": "AI for Science",
+  "logo": null,
+  "links": {
+    "website": null,
+    "docs": "https://compphyslab.github.io/SVETlANNa/"
+  }
+}

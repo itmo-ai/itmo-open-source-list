@@ -1,0 +1,16 @@
+{
+  "id": "swarmodroid",
+  "title": "swarmodroid",
+  "description": {
+    "ru": "Проект по роевой робототехнике.",
+    "en": "Swarm robotics project."
+  },
+  "github_url": "https://github.com/swarmtronics/swarmodroid.firmware",
+  "lab": "swarmtronics",
+  "area": "Robotics",
+  "logo": null,
+  "links": {
+    "website": null,
+    "docs": null
+  }
+}

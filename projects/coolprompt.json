@@ -1,0 +1,16 @@
+{
+  "id": "coolprompt",
+  "title": "CoolPrompt",
+  "description": {
+    "ru": "Инструмент для работы с промптами.",
+    "en": "Prompt engineering tool."
+  },
+  "github_url": "https://github.com/CTLab-ITMO/CoolPrompt",
+  "lab": "ctlab",
+  "area": "ML tools",
+  "logo": "https://raw.githubusercontent.com/CTLab-ITMO/CoolPrompt/master/docs/images/logo_dark.png",
+  "links": {
+    "website": null,
+    "docs": null
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "compphyslab",
+  "name": "Computational Physics Lab",
+  "description": {
+    "ru": "Лаборатория вычислительной физики, занимающаяся численным моделированием в нанофотонике, задачами рассеяния волн и разработкой методов T-матриц.",
+    "en": "Computational Physics Laboratory focusing on numerical modeling in nanophotonics, wave scattering problems, and T-matrix methods."
+  },
+  "github_org": "https://github.com/CompPhysLab",
+  "links": {
+    "website": "https://physics.itmo.ru/en/research-group/24703",
+    "email": null,
+    "telegram": null
+  },
+  "example_projects": [
+    "SVETlANNa",
+    "ttgsm"
+  ]
+}

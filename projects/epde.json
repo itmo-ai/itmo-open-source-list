@@ -1,0 +1,16 @@
+{
+  "id": "epde",
+  "title": "EPDE",
+  "description": {
+    "ru": "Фреймворк для поиска дифференциальных уравнений в частных производных.",
+    "en": "Framework for partial differential equations discovery."
+  },
+  "github_url": "https://github.com/ITMO-NSS-team/EPDE",
+  "lab": "itmo-nss-team",
+  "area": "AI for Science",
+  "logo": "https://raw.githubusercontent.com/ITMO-NSS-team/EPDE/main/docs/epde_logo.png",
+  "links": {
+    "website": null,
+    "docs": null
+  }
+}

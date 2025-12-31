@@ -1,0 +1,16 @@
+{
+  "id": "gadma",
+  "title": "GADMA",
+  "description": {
+    "ru": "Генетический алгоритм для демографического анализа.",
+    "en": "Genetic Algorithm for Demographic Model Analysis."
+  },
+  "github_url": "https://github.com/ctlab/GADMA",
+  "lab": "ctlab",
+  "area": "Bioinformatics",
+  "logo": null,
+  "links": {
+    "website": null,
+    "docs": "https://gadma.readthedocs.io/en/latest/"
+  }
+}

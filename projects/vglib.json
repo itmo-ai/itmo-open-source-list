@@ -1,0 +1,16 @@
+{
+  "id": "vglib",
+  "title": "VGLib",
+  "description": {
+    "ru": "Библиотека визуальной геометрии.",
+    "en": "Visual Geometry Library."
+  },
+  "github_url": "https://github.com/CTLab-ITMO/VGLib",
+  "lab": "ctlab",
+  "area": "Computer Vision",
+  "logo": null,
+  "links": {
+    "website": null,
+    "docs": null
+  }
+}

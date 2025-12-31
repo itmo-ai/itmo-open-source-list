@@ -1,0 +1,16 @@
+{
+  "id": "torch-de-solver",
+  "title": "torch_DE_solver",
+  "description": {
+    "ru": "Инструмент для решения дифференциальных уравнений с использованием PyTorch.",
+    "en": "Tool for solving differential equations using PyTorch."
+  },
+  "github_url": "https://github.com/ITMO-NSS-team/torch_DE_solver",
+  "lab": "itmo-nss-team",
+  "area": "AI for Science",
+  "logo": null,
+  "links": {
+    "website": null,
+    "docs": null
+  }
+}
