@@ -15,20 +15,19 @@
       gap: 24px; padding: 20px 0; 
     }
     .itmo-project-card { 
-      border: 1px solid #e1e5e9; border-radius: 12px; padding: 20px; 
-      background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
-      transition: box-shadow 0.2s; 
+      border: 1px solid	id #e1e5e9; border-radius: 12px; padding: 20px;
+      background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: box-shadow 0.2s;
     }
     .itmo-project-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
     .card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
-    
-.card-avatar-logo {
-  width: 48px; height: 48px; border-radius: 8px;
-  background-color: #f0f0f0;
-  background-size: contain !important;
-  background-position: center center;
+
+.card-avatar-square { width: 128px; height: 128px; }
+.card-avatar-wide { width: 128px; height: 48px; } /* Горизонтальные логотипы */
+.card-avatar-logo, .card-avatar-wide, .card-avatar-square {
+  background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
-  flex-shrink: 0;
 }
 
 .card-avatar-placeholder {
@@ -38,77 +37,110 @@
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
 }
-    
+
     .card-title a { font-size: 18px; font-weight: 600; color: #1a1a1a; text-decoration: none; }
     .card-title a:hover { color: #0366d6; }
-    .lab-tag, .area-tag { 
-      background: #e3f2fd; color: #1976d2; padding: 2px 8px; 
-      font-size: 12px; border-radius: 12px; margin-left: 8px; 
+    .lab-tag, .area-tag {
+      background: #e3f2fd; color: #1976d2; padding: 2px 8px;
+      font-size: 12px; border-radius: 12px; margin-left: 8px;
     }
     .card-description { color: #666; line-height: 1.5; margin-bottom: 12px; }
     @media (max-width: 768px) { .projects-container { grid-template-columns: 1fr; gap: 16px; } }
     .card-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
-.tag-area { 
-  background: #e8f5e8; color: #2e7d32; 
-  padding: 2px 6px; border-radius: 3px; font-size: 11px; 
+.tag-area {
+  background: #e8f5e8; color: #2e7d32;
+  padding: 2px 6px; border-radius: 3px; font-size: 11px;
 }
-.tag-lab { 
-  background: #e3f2fd; color: #1976d2; 
-  padding: 2px 6px; border-radius: 3px; font-size: 11px; 
+.tag-lab {
+  background: #e3f2fd; color: #1976d2;
+  padding: 2px 6px; border-radius: 3px; font-size: 11px;
 }
-.card-links { 
-  margin-top: 12px; font-size: 12px; 
-  color: #666; border-top: 1px solid #eee; padding-top: 8px; 
+.card-links {
+  margin-top: 12px; font-size: 12px;
+  color: #666; border-top: 1px solid #eee; padding-top: 8px;
 }
 .card-links a { color: #0066cc; text-decoration: none; margin-right: 12px; }
 .card-links a:hover { text-decoration: underline; }
-
-  </style>
-  
-
-
-  <script>
-    async function renderItmoProjects() {
-      const container = document.getElementById('itmo-projects');
-      const status = document.getElementById('status');
-      
-      try {
-        const response = await fetch('/api/projects');
-        const data = await response.json();
-        const projects = data.projects || [];
-        
-        status.textContent = ` ${projects.length} проектов из ${projects.length} JSON'ов`;
-        projects.forEach(project => {
-console.log('аватарки :', project.title, 'logo:', project.logo);
-          const labShort = project.lab ? project.lab.slice(0,2).toUpperCase() : 'IT';
-
-
-           let avatar = '';
-if (project.logo && project.logo.trim() !== '' && project.logo !== 'null') {
-  avatar = `
-    <div class="card-avatar-logo" 
-         style="background-image: url('${project.logo}');
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;">
-    </div>
-  `;
-} else {
-  avatar = `<div class="card-avatar-placeholder">${labShort}</div>`;
+.project-stars {
+  display: flex; align-items: center; gap: 4px;
+  margin-top: 8px; font-size: 16px; color: #ffa500;
 }
-      
+.stars-count {
+  font-size: 14px; font-weight: 500; color: #666; margin-left: 4px;
+}
+  </style>
 
+
+
+<script>
+const logoCache = {};
+
+async function getLogoDimensions(logoUrl) {
+  if (logoCache[logoUrl]) return logoCache[logoUrl];
+
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.onload = () => {
+      const ratio = img.naturalWidth / img.naturalHeight;
+      logoCache[logoUrl] = { ratio, isWide: ratio > 2.0 };
+      resolve(logoCache[logoUrl]);
+    };
+    img.onerror = () => resolve({ isWide: false });
+    img.src = logoUrl;
+  });
+}
+
+function generateStars(starsCount) {
+  const fullStars = Math.min(Math.floor(starsCount / 1000), 5); // 1 звезда = 1k
+  let html = '';
+  for (let i = 0; i < 5; i++) {
+    html += i < fullStars ? '★' : '☆';
+  }
+  return html + (starsCount > 0 ? ` <span class="stars-count">${starsCount.toLocaleString()}</span>` : '');
+}
+
+async function renderItmoProjects() {
+  const container = document.getElementById('itmo-projects');
+  const status = document.getElementById('status');
+
+  try {
+    const response = await fetch('/api/projects');
+    const data = await response.json();
+    const projects = data.projects || [];
+
+    status.textContent = ` ${projects.length} проектов загружено`;
+
+    for (const project of projects) {
+      console.log('аватарки:', project.title, 'logo:', project.logo);
+
+      const titleShort = project.title?.slice(0,2).toUpperCase() || '??';
+      const logoUrl = project.local_logo || project.logo || '';
+
+      let avatar = `<div class="card-avatar-placeholder">${titleShort}</div>`;
+
+      if (logoUrl && logoUrl.trim() !== '' && logoUrl !== 'null') {
+        const dims = await getLogoDimensions(logoUrl);
+
+        if (dims.isWide) {
+          avatar = `<div class="card-avatar-wide" style="background-image: url('${logoUrl}')"></div>`;
+        } else {
+          avatar = `<div class="card-avatar-square" style="background-image: url('${logoUrl}')"></div>`;
+        }
+      }
 
       const tags = [];
       if (project.area) tags.push(`<span class="tag-area">${project.area}</span>`);
       if (project.lab) tags.push(`<span class="tag-lab">${project.lab}</span>`);
       const tagsHtml = tags.join('');
-      
+
+      const stars = project.stars || 0;
+      const starsHtml = generateStars(stars);
+
       const extraLinks = [];
       if (project.links?.docs) extraLinks.push(`📚 <a href="${project.links.docs}" target="_blank">Docs</a>`);
       if (project.links?.website) extraLinks.push(`🌐 <a href="${project.links.website}" target="_blank">Site</a>`);
       const linksHtml = extraLinks.length ? `<div class="card-links">${extraLinks.join(' | ')}</div>` : '';
-      
+
       container.innerHTML += `
         <div class="itmo-project-card">
           <div class="card-header">
@@ -120,10 +152,10 @@ if (project.logo && project.logo.trim() !== '' && project.logo !== 'null') {
           </div>
           <div class="card-description">${project.description?.ru || 'Описание проекта'}</div>
           ${linksHtml}
+          ${stars > 0 ? `<div class="project-stars">${starsHtml}</div>` : ''}
         </div>
       `;
-    });
-    
+    }
   } catch (error) {
     status.textContent = `ошибка: ${error.message}`;
   }
