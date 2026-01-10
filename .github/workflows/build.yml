@@ -29,10 +29,10 @@ jobs:
         GITHUB_TOKEN:  ${{ secrets.GITHUB_TOKEN }}
       run: python build.py
 
-    - name:  Commit and push changes
+    - name: Commit and push changes
       run: |
-        git config --local user.email "action@github. com"
+        git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add build/data.json
+        git add -f build/data.json
         git commit -m "Update data.json" || echo "No changes"
         git push
