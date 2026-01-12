@@ -89,8 +89,6 @@ class RepositoryBuilder:
         }
         projects = self.read_json_files(PROJECTS_DIR)
         labs = self.read_json_files(LABS_DIR)
-        print(len(projects))
-        print(len(labs))
         for i, item in enumerate(projects, 1):
             if "github_url" in item:
                 try:
@@ -102,9 +100,10 @@ class RepositoryBuilder:
                     if github_data:
                         item.update(github_data)
                     else:
-                        print(f"Не удалось получить данные из GitHub")
+                        print(f"Не удалось получить данные из GitHub для {github_url}")
                 except Exception as e:
-                    print(e)
+                    project_url = item.get("github_url", "URL не найден")
+                    print(f"Ошибка при обработке проекта {project_url}: {e}")
             else:
                 print(f"Нет поля 'github_url ' в файле")
             all_data["projects"].append(item)
