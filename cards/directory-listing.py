@@ -4,11 +4,25 @@ import json
 import requests
 import time
 from threading import Lock
+from urllib.parse import unquote
 
 stars_cache = {}
 cache_lock = Lock()
 CACHE_TTL = 3600
+projects_cache = None
+projects_cache_time = 0
+CACHE_REFRESH = 30
 
+def parse_github_repo(github_url):
+    if 'github.com' not in github_url:
+        return None
+    try:
+        parts = github_url.split('github.com/')[1].split('/')
+        if len(parts) >= 2:
+            return f"{parts[0]}/{parts[1]}"
+    except (IndexError, ValueError):
+        pass
+    return None
 
 def get_github_stars(github_url):
     with cache_lock:
@@ -16,52 +30,88 @@ def get_github_stars(github_url):
         if cached and (time.time() - cached['timestamp']) < CACHE_TTL:
             return cached['stars']
 
+    repo = parse_github_repo(github_url)
+    if not repo:
+        return 0
+
     try:
-        if 'github.com' in github_url:
-            parts = github_url.split('github.com/')[1].split('/')
-            repo = f"{parts[0]}/{parts[1]}"
-            api_url = f"https://api.github.com/repos/{repo}"
-            response = requests.get(api_url, timeout=5)
-            if response.status_code == 200:
-                stars = response.json().get('stargazers_count', 0)
-                with cache_lock:
-                    stars_cache[github_url] = {'stars': stars, 'timestamp': time.time()}
-                return stars
-    except:
+        api_url = f"https://api.github.com/repos/{repo}"
+        response = requests.get(api_url, timeout=5)
+        if response.status_code == 200:
+            stars = response.json().get('stargazers_count', 0)
+            with cache_lock:
+                stars_cache[github_url] = {'stars': stars, 'timestamp': time.time()}
+            return stars
+    except requests.RequestException:
         pass
     return 0
 
+def scan_projects():
+    global projects_cache, projects_cache_time
+    if projects_cache and (time.time() - projects_cache_time) < CACHE_REFRESH:
+        return projects_cache
+
+    projects = []
+    for folder in ['projects', 'labs']:
+        folder_path = os.path.join(os.getcwd(), folder)
+        if os.path.exists(folder_path):
+            for file in os.listdir(folder_path):
+                if file.endswith('.json'):
+                    filepath = os.path.join(folder_path, file)
+                    try:
+                        with open(filepath, 'r', encoding='utf-8') as f:
+                            data = json.load(f)
+                            if data.get('id') and (data.get('title') or data.get('name')):
+                                url = data.get('github_url') or data.get('github_org')
+                                stars = get_github_stars(url) if url else 0
+                                data['stars'] = stars
+                                data['title'] = data.get('title') or data.get('name')
+                                if not data.get('github_url') and data.get('github_org'):
+                                    data['github_url'] = data['github_org']
+                                projects.append(data)
+                    except (json.JSONDecodeError, KeyError, FileNotFoundError, PermissionError, UnicodeDecodeError):
+                        continue
+    projects_cache = projects
+    projects_cache_time = time.time()
+    return projects
 
 class ProjectHandler(SimpleHTTPRequestHandler):
     def do_GET(self):
-        if self.path == '/api/projects':
-            projects = []
-            for folder in ['projects', 'labs']:
-                folder_path = os.path.join(os.getcwd(), folder)
-                if os.path.exists(folder_path):
-                    for file in os.listdir(folder_path):
-                        if file.endswith('.json'):
-                            filepath = os.path.join(folder_path, file)
-                            try:
-                                with open(filepath, 'r', encoding='utf-8') as f:
-                                    data = json.load(f)
-                                    if data.get('id') and (data.get('title') or data.get('name')):
-                                        url = data.get('github_url') or data.get('github_org')
-                                        data['stars'] = get_github_stars(url) if url else 0
-                                        data['title'] = data.get('title') or data.get('name')
-                                        if not data.get('github_url') and data.get('github_org'):
-                                            data['github_url'] = data['github_org']
-                                        projects.append(data)
-                            except:
-                                pass
-            self.send_response(200)
-            self.send_header('Content-Type', 'application/json')
-            self.send_header('Access-Control-Allow-Origin', '*')
-            self.end_headers()
-            self.wfile.write(json.dumps({'projects': projects}, ensure_ascii=False).encode('utf-8'))
+        parsed_path = unquote(self.path)
+
+        if parsed_path == '/api/projects':
+            projects = scan_projects()
+            self.send_json({'projects': projects})
+
+        elif parsed_path.startswith('/api/lab/'):
+            try:
+                lab_id = parsed_path.split('/api/lab/')[1]
+                projects = scan_projects()
+                lab = next((p for p in projects if p['id'] == lab_id and 'example_projects' in p), None)
+                if not lab:
+                    self.send_response(404)
+                    self.end_headers()
+                    return
+
+                lab_projects = []
+                for proj_name in lab['example_projects']:
+                    proj = next((p for p in projects if p['title'].upper() == proj_name.upper()), None)
+                    if proj:
+                        lab_projects.append(proj)
+                self.send_json({'lab': lab, 'projects': lab_projects})
+            except (IndexError, ValueError):
+                self.send_response(400)
+                self.end_headers()
+
         else:
             super().do_GET()
 
+    def send_json(self, data):
+        self.send_response(200)
+        self.send_header('Content-Type', 'application/json')
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.end_headers()
+        self.wfile.write(json.dumps(data, ensure_ascii=False).encode('utf-8'))
 
 if __name__ == '__main__':
     server = HTTPServer(('localhost', 8000), ProjectHandler)

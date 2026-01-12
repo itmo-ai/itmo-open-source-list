@@ -91,7 +91,7 @@ async function getLogoDimensions(logoUrl) {
 }
 
 function generateStars(starsCount) {
-  const fullStars = Math.min(Math.floor(starsCount / 1000), 5); // 1 звезда = 1k
+  const fullStars = Math.min(Math.floor(starsCount / 1000), 5);
   let html = '';
   for (let i = 0; i < 5; i++) {
     html += i < fullStars ? '★' : '☆';
@@ -99,69 +99,115 @@ function generateStars(starsCount) {
   return html + (starsCount > 0 ? ` <span class="stars-count">${starsCount.toLocaleString()}</span>` : '');
 }
 
-async function renderItmoProjects() {
-  const container = document.getElementById('itmo-projects');
-  const status = document.getElementById('status');
+function showLabProjects(labId) {
+  fetch(`/api/lab/${labId}`)
+    .then(r => r.json())
+    .then(data => {
+      const container = document.getElementById('itmo-projects');
+      const status = document.getElementById('status');
+      container.innerHTML = '';
 
-  try {
-    const response = await fetch('/api/projects');
-    const data = await response.json();
-    const projects = data.projects || [];
+      const labCard = document.createElement('div');
+      labCard.className = 'itmo-project-card lab-header';
+      labCard.innerHTML = `
+        <div class="card-header">
+          <div class="card-avatar-placeholder">L</div>
+          <div class="card-title">
+            <h2>${data.lab.name}</h2>
+            <p>${data.lab.description?.en || data.lab.description?.ru || ''}</p>
+          </div>
+        </div>
+        <div class="card-links">
+          <a href="${data.lab.github_org}" target="_blank">GitHub Org</a> |
+          <button onclick="showAllProjects()" style="background:none;border:none;color:blue;cursor:pointer;">← Назад</button>
+        </div>
+      `;
+      container.appendChild(labCard);
 
-    status.textContent = ` ${projects.length} проектов загружено`;
+      data.projects.forEach(async (proj) => {
+        const titleShort = proj.title?.slice(0,2).toUpperCase() || '??';
+        const logoUrl = proj.local_logo || proj.logo || '';
 
-    for (const project of projects) {
-      console.log('аватарки:', project.title, 'logo:', project.logo);
-
-      const titleShort = project.title?.slice(0,2).toUpperCase() || '??';
-      const logoUrl = project.local_logo || project.logo || '';
-
-      let avatar = `<div class="card-avatar-placeholder">${titleShort}</div>`;
-
-      if (logoUrl && logoUrl.trim() !== '' && logoUrl !== 'null') {
-        const dims = await getLogoDimensions(logoUrl);
-
-        if (dims.isWide) {
-          avatar = `<div class="card-avatar-wide" style="background-image: url('${logoUrl}')"></div>`;
-        } else {
-          avatar = `<div class="card-avatar-square" style="background-image: url('${logoUrl}')"></div>`;
+        let avatar = `<div class="card-avatar-placeholder">${titleShort}</div>`;
+        if (logoUrl && logoUrl.trim() !== '' && logoUrl !== 'null') {
+          const dims = await getLogoDimensions(logoUrl);
+          if (dims.isWide) {
+            avatar = `<div class="card-avatar-wide" style="background-image: url('${logoUrl}')"></div>`;
+          } else {
+            avatar = `<div class="card-avatar-square" style="background-image: url('${logoUrl}')"></div>`;
+          }
         }
-      }
 
-      const tags = [];
-      if (project.area) tags.push(`<span class="tag-area">${project.area}</span>`);
-      if (project.lab) tags.push(`<span class="tag-lab">${project.lab}</span>`);
-      const tagsHtml = tags.join('');
+        const tags = [];
+        if (proj.area) tags.push(`<span class="tag-area">${proj.area}</span>`);
+        if (proj.lab) tags.push(`<span class="tag-lab">${proj.lab}</span>`);
+        const tagsHtml = tags.join('');
 
-      const stars = project.stars || 0;
-      const starsHtml = generateStars(stars);
+        const starsHtml = generateStars(proj.stars || 0);
+        const extraLinks = [];
+        if (proj.links?.docs) extraLinks.push(`📚 <a href="${proj.links.docs}" target="_blank">Docs</a>`);
+        if (proj.links?.website) extraLinks.push(`🌐 <a href="${proj.links.website}" target="_blank">Site</a>`);
+        const linksHtml = extraLinks.length ? `<div class="card-links">${extraLinks.join(' | ')}</div>` : '';
 
-      const extraLinks = [];
-      if (project.links?.docs) extraLinks.push(`📚 <a href="${project.links.docs}" target="_blank">Docs</a>`);
-      if (project.links?.website) extraLinks.push(`🌐 <a href="${project.links.website}" target="_blank">Site</a>`);
-      const linksHtml = extraLinks.length ? `<div class="card-links">${extraLinks.join(' | ')}</div>` : '';
-
-      container.innerHTML += `
-        <div class="itmo-project-card">
+        const projCard = document.createElement('div');
+        projCard.className = 'itmo-project-card';
+        projCard.innerHTML = `
           <div class="card-header">
             ${avatar}
             <div class="card-title">
-              <a href="${project.github_url || '#'}" target="_blank">${project.title}</a>
+              <a href="${proj.github_url || '#'}" target="_blank">${proj.title}</a>
               <div class="card-tags">${tagsHtml}</div>
             </div>
           </div>
-          <div class="card-description">${project.description?.ru || 'Описание проекта'}</div>
+          <div class="card-description">${proj.description?.ru || proj.description?.en || 'Описание проекта'}</div>
           ${linksHtml}
-          ${stars > 0 ? `<div class="project-stars">${starsHtml}</div>` : ''}
-        </div>
-      `;
-    }
-  } catch (error) {
-    status.textContent = `ошибка: ${error.message}`;
-  }
+          ${proj.stars > 0 ? `<div class="project-stars">${starsHtml}</div>` : ''}
+        `;
+        container.appendChild(projCard);
+      });
+
+      status.textContent = `${data.projects.length} проектов лаборатории`;
+    });
 }
 
-renderItmoProjects();
-  </script>
+function showLabsOnly() {
+  const container = document.getElementById('itmo-projects');
+  const status = document.getElementById('status');
+
+  fetch('/api/projects')
+    .then(r => r.json())
+    .then(data => {
+      container.innerHTML = '';
+      const labs = data.projects.filter(p => p.example_projects);
+
+      labs.forEach(project => {
+        const titleShort = project.title?.slice(0,2).toUpperCase() || '??';
+        const starsHtml = generateStars(project.stars || 0);
+
+        container.innerHTML += `
+          <div class="itmo-project-card lab-card" onclick="showLabProjects('${project.id}')" style="cursor:pointer;">
+            <div class="card-header">
+              <div class="card-avatar-placeholder">${titleShort}</div>
+              <div class="card-title">
+                <h3>${project.title}</h3>
+                <div style="margin-top:8px;background:#007bff;color:white;padding:10px;text-align:center;border-radius:6px;">
+                  Показать ${project.example_projects.length} проектов
+                </div>
+              </div>
+            </div>
+            ${project.stars > 0 ? `<div class="project-stars">${starsHtml}</div>` : ''}
+          </div>
+        `;
+      });
+      status.textContent = `${labs.length} лабораторий`;
+    });
+}
+
+function showAllProjects() {
+  showLabsOnly();
+}
+
+showLabsOnly();
+</script>
 </body>
 </html>
