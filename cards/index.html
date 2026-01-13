@@ -109,16 +109,21 @@ function showLabProjects(labId) {
 
       const labCard = document.createElement('div');
       labCard.className = 'itmo-project-card lab-header';
+      const githubUrl = data.lab.github_url || data.lab.github_org;
+      const hasGithub = githubUrl && githubUrl !== 'null' && githubUrl !== null;
+      const hasWebsite = data.lab.links?.website;
+
       labCard.innerHTML = `
         <div class="card-header">
           <div class="card-avatar-placeholder">L</div>
           <div class="card-title">
-            <h2>${data.lab.name}</h2>
+            <h2>${data.lab.name || data.lab.title}</h2>
             <p>${data.lab.description?.en || data.lab.description?.ru || ''}</p>
           </div>
         </div>
         <div class="card-links">
-          <a href="${data.lab.github_org}" target="_blank">GitHub Org</a> |
+          ${hasWebsite ? `<a href="${data.lab.links.website}" target="_blank" style="margin-right:10px;">Сайт</a>` : ''}
+          ${hasGithub ? `<a href="${githubUrl}" target="_blank" style="margin-right:10px;">GitHub</a>` : ''}
           <button onclick="showAllProjects()" style="background:none;border:none;color:blue;cursor:pointer;">← Назад</button>
         </div>
       `;
@@ -180,25 +185,34 @@ function showLabsOnly() {
       container.innerHTML = '';
       const labs = data.projects.filter(p => p.example_projects);
 
-      labs.forEach(project => {
+      labs.forEach((project, index) => {
         const titleShort = project.title?.slice(0,2).toUpperCase() || '??';
-        const starsHtml = generateStars(project.stars || 0);
+        const githubUrl = project.github_url || project.github_org;
+        const hasGithub = githubUrl && githubUrl !== 'null' && githubUrl !== null;
 
         container.innerHTML += `
           <div class="itmo-project-card lab-card" onclick="showLabProjects('${project.id}')" style="cursor:pointer;">
             <div class="card-header">
               <div class="card-avatar-placeholder">${titleShort}</div>
               <div class="card-title">
-                <h3>${project.title}</h3>
-                <div style="margin-top:8px;background:#007bff;color:white;padding:10px;text-align:center;border-radius:6px;">
-                  Показать ${project.example_projects.length} проектов
+                <div style="font-size:18px;font-weight:bold;margin-bottom:8px;">${index + 1}. ${project.title}</div>
+                <div style="color:#666;margin-bottom:12px;font-size:14px;">
+                  ${project.description?.ru || project.description?.en || 'Описание лаборатории'}
+                  ${project.links?.website ? `<br><a href="${project.links.website}" target="_blank" style="color:#007bff;">Сайт лаборатории</a>` : ''}
                 </div>
+                <div style="margin-bottom:12px;font-size:14px;color:#555;">
+                  Примеры проектов: ${project.example_projects.slice(0,3).join(', ')}${project.example_projects.length > 3 ? '...' : ''}
+                </div>
+                ${hasGithub ?
+                  `<a href="${githubUrl}" target="_blank" class="github-link" style="background:#007bff;color:white;padding:8px 16px;display:inline-block;border-radius:4px;text-decoration:none;margin-top:8px;">GitHub </a>` :
+                  ''
+                }
               </div>
             </div>
-            ${project.stars > 0 ? `<div class="project-stars">${starsHtml}</div>` : ''}
           </div>
         `;
       });
+
       status.textContent = `${labs.length} лабораторий`;
     });
 }
