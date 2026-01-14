@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ITMO 500+ Автоскан</title>
+</head>
+<body style="font-family: sans-serif; max-width: 1200px; margin: 0 auto; padding: 40px;">
+  <h1 style="color: #333;"> ITMO Projects </h1>
+  <p id="status">Сканируем build/...</p>
+  <div id="itmo-projects" class="projects-container"></div>
+  
+  <style>
+    .projects-container { 
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+      gap: 24px; padding: 20px 0; 
+    }
+    .itmo-project-card { 
+      border: 1px solid	id #e1e5e9; border-radius: 12px; padding: 20px;
+      background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: box-shadow 0.2s;
+    }
+    .itmo-project-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+    .card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+
+.card-avatar-square { width: 128px; height: 128px; }
+.card-avatar-wide { width: 128px; height: 48px; } /* Горизонтальные логотипы */
+.card-avatar-logo, .card-avatar-wide, .card-avatar-square {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card-avatar-placeholder {
+  width: 48px; height: 48px; border-radius: 8px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white; font-weight: bold; font-size: 14px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+    .card-title a { font-size: 18px; font-weight: 600; color: #1a1a1a; text-decoration: none; }
+    .card-title a:hover { color: #0366d6; }
+    .lab-tag, .area-tag {
+      background: #e3f2fd; color: #1976d2; padding: 2px 8px;
+      font-size: 12px; border-radius: 12px; margin-left: 8px;
+    }
+    .card-description { color: #666; line-height: 1.5; margin-bottom: 12px; }
+    @media (max-width: 768px) { .projects-container { grid-template-columns: 1fr; gap: 16px; } }
+    .card-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
+.tag-area {
+  background: #e8f5e8; color: #2e7d32;
+  padding: 2px 6px; border-radius: 3px; font-size: 11px;
+}
+.tag-lab {
+  background: #e3f2fd; color: #1976d2;
+  padding: 2px 6px; border-radius: 3px; font-size: 11px;
+}
+.card-links {
+  margin-top: 12px; font-size: 12px;
+  color: #666; border-top: 1px solid #eee; padding-top: 8px;
+}
+.card-links a { color: #0066cc; text-decoration: none; margin-right: 12px; }
+.card-links a:hover { text-decoration: underline; }
+.project-stars {
+  display: flex; align-items: center; gap: 4px;
+  margin-top: 8px; font-size: 16px; color: #ffa500;
+}
+.stars-count {
+  font-size: 14px; font-weight: 500; color: #666; margin-left: 4px;
+}
+  </style>
+
+
+
+<script>
+const logoCache = {};
+
+async function getLogoDimensions(logoUrl) {
+  if (logoCache[logoUrl]) return logoCache[logoUrl];
+
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.onload = () => {
+      const ratio = img.naturalWidth / img.naturalHeight;
+      logoCache[logoUrl] = { ratio, isWide: ratio > 2.0 };
+      resolve(logoCache[logoUrl]);
+    };
+    img.onerror = () => resolve({ isWide: false });
+    img.src = logoUrl;
+  });
+}
+
+function generateStars(starsCount) {
+  const fullStars = Math.min(Math.floor(starsCount / 1000), 5);
+  let html = '';
+  for (let i = 0; i < 5; i++) {
+    html += i < fullStars ? '★' : '☆';
+  }
+  return html + (starsCount > 0 ? ` <span class="stars-count">${starsCount.toLocaleString()}</span>` : '');
+}
+
+function showLabProjects(labId) {
+  fetch(`/api/lab/${labId}`)
+    .then(r => r.json())
+    .then(data => {
+      const container = document.getElementById('itmo-projects');
+      const status = document.getElementById('status');
+      container.innerHTML = '';
+
+      const labCard = document.createElement('div');
+      labCard.className = 'itmo-project-card lab-header';
+      const githubUrl = data.lab.github_url || data.lab.github_org;
+      const hasGithub = githubUrl && githubUrl !== 'null' && githubUrl !== null;
+      const hasWebsite = data.lab.links?.website;
+
+      labCard.innerHTML = `
+        <div class="card-header">
+          <div class="card-avatar-placeholder">L</div>
+          <div class="card-title">
+            <h2>${data.lab.name || data.lab.title}</h2>
+            <p>${data.lab.description?.en || data.lab.description?.ru || ''}</p>
+          </div>
+        </div>
+        <div class="card-links">
+          ${hasWebsite ? `<a href="${data.lab.links.website}" target="_blank" style="margin-right:10px;">Сайт</a>` : ''}
+          ${hasGithub ? `<a href="${githubUrl}" target="_blank" style="margin-right:10px;">GitHub</a>` : ''}
+          <button onclick="showAllProjects()" style="background:none;border:none;color:blue;cursor:pointer;">← Назад</button>
+        </div>
+      `;
+      container.appendChild(labCard);
+
+      data.projects.forEach(async (proj) => {
+        const titleShort = proj.title?.slice(0,2).toUpperCase() || '??';
+        const logoUrl = proj.local_logo || proj.logo || '';
+
+        let avatar = `<div class="card-avatar-placeholder">${titleShort}</div>`;
+        if (logoUrl && logoUrl.trim() !== '' && logoUrl !== 'null') {
+          const dims = await getLogoDimensions(logoUrl);
+          if (dims.isWide) {
+            avatar = `<div class="card-avatar-wide" style="background-image: url('${logoUrl}')"></div>`;
+          } else {
+            avatar = `<div class="card-avatar-square" style="background-image: url('${logoUrl}')"></div>`;
+          }
+        }
+
+        const tags = [];
+        if (proj.area) tags.push(`<span class="tag-area">${proj.area}</span>`);
+        if (proj.lab) tags.push(`<span class="tag-lab">${proj.lab}</span>`);
+        const tagsHtml = tags.join('');
+
+        const starsHtml = generateStars(proj.stars || 0);
+        const extraLinks = [];
+        if (proj.links?.docs) extraLinks.push(`📚 <a href="${proj.links.docs}" target="_blank">Docs</a>`);
+        if (proj.links?.website) extraLinks.push(`🌐 <a href="${proj.links.website}" target="_blank">Site</a>`);
+        const linksHtml = extraLinks.length ? `<div class="card-links">${extraLinks.join(' | ')}</div>` : '';
+
+        const projCard = document.createElement('div');
+        projCard.className = 'itmo-project-card';
+        projCard.innerHTML = `
+          <div class="card-header">
+            ${avatar}
+            <div class="card-title">
+              <a href="${proj.github_url || '#'}" target="_blank">${proj.title}</a>
+              <div class="card-tags">${tagsHtml}</div>
+            </div>
+          </div>
+          <div class="card-description">${proj.description?.ru || proj.description?.en || 'Описание проекта'}</div>
+          ${linksHtml}
+          ${proj.stars > 0 ? `<div class="project-stars">${starsHtml}</div>` : ''}
+        `;
+        container.appendChild(projCard);
+      });
+
+      status.textContent = `${data.projects.length} проектов лаборатории`;
+    });
+}
+
+function showLabsOnly() {
+  const container = document.getElementById('itmo-projects');
+  const status = document.getElementById('status');
+
+  fetch('/api/projects')
+    .then(r => r.json())
+    .then(data => {
+      container.innerHTML = '';
+      const labs = data.projects.filter(p => p.example_projects);
+
+      labs.forEach((project, index) => {
+        const titleShort = project.title?.slice(0,2).toUpperCase() || '??';
+        const githubUrl = project.github_url || project.github_org;
+        const hasGithub = githubUrl && githubUrl !== 'null' && githubUrl !== null;
+
+        container.innerHTML += `
+          <div class="itmo-project-card lab-card" onclick="showLabProjects('${project.id}')" style="cursor:pointer;">
+            <div class="card-header">
+              <div class="card-avatar-placeholder">${titleShort}</div>
+              <div class="card-title">
+                <div style="font-size:18px;font-weight:bold;margin-bottom:8px;">${index + 1}. ${project.title}</div>
+                <div style="color:#666;margin-bottom:12px;font-size:14px;">
+                  ${project.description?.ru || project.description?.en || 'Описание лаборатории'}
+                  ${project.links?.website ? `<br><a href="${project.links.website}" target="_blank" style="color:#007bff;">Сайт лаборатории</a>` : ''}
+                </div>
+                <div style="margin-bottom:12px;font-size:14px;color:#555;">
+                  Примеры проектов: ${project.example_projects.slice(0,3).join(', ')}${project.example_projects.length > 3 ? '...' : ''}
+                </div>
+                ${hasGithub ?
+                  `<a href="${githubUrl}" target="_blank" class="github-link" style="background:#007bff;color:white;padding:8px 16px;display:inline-block;border-radius:4px;text-decoration:none;margin-top:8px;">GitHub </a>` :
+                  ''
+                }
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      status.textContent = `${labs.length} лабораторий`;
+    });
+}
+
+function showAllProjects() {
+  showLabsOnly();
+}
+
+showLabsOnly();
+</script>
+</body>
+</html>
