@@ -214,11 +214,10 @@ function showLabsOnly() {
       });
 
       status.textContent = `${labs.length} лабораторий`;
-document.querySelectorAll('.lab-container').forEach(container => {
-  container.addEventListener('click', (e) => {
-    // Исключаем клики по ЛЮБЫМ ссылкам внутри карточки
-    if (e.target.tagName === 'A') {
-      return;  // Любая ссылка открывается сама
+       document.querySelectorAll('.lab-container').forEach(container => {
+        container.addEventListener('click', (e) => {
+         if (e.target.tagName === 'A') {
+         return;  // Любая ссылка открывается сама
     }
 
     const labId = container.id.replace('lab-', '');

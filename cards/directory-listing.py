@@ -91,6 +91,7 @@ class ProjectHandler(SimpleHTTPRequestHandler):
                     self.send_response(404)
                     self.end_headers()
                     return
+
                 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
                 projects_folder = os.path.join(BASE_DIR, 'projects')
                 lab_projects = []
