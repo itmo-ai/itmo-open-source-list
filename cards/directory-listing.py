@@ -51,26 +51,25 @@ def scan_projects():
     if projects_cache and (time.time() - projects_cache_time) < CACHE_REFRESH:
         return projects_cache
 
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     projects = []
-    for folder in ['projects', 'labs']:
-        folder_path = os.path.join(os.getcwd(), folder)
-        if os.path.exists(folder_path):
-            for file in os.listdir(folder_path):
-                if file.endswith('.json'):
-                    filepath = os.path.join(folder_path, file)
-                    try:
-                        with open(filepath, 'r', encoding='utf-8') as f:
-                            data = json.load(f)
-                            if data.get('id') and (data.get('title') or data.get('name')):
-                                url = data.get('github_url') or data.get('github_org')
-                                stars = get_github_stars(url) if url else 0
-                                data['stars'] = stars
-                                data['title'] = data.get('title') or data.get('name')
-                                if not data.get('github_url') and data.get('github_org'):
-                                    data['github_url'] = data['github_org']
-                                projects.append(data)
-                    except (json.JSONDecodeError, KeyError, FileNotFoundError, PermissionError, UnicodeDecodeError):
-                        continue
+
+    folder_path = os.path.join(BASE_DIR, 'labs')
+    if os.path.exists(folder_path):
+        for file in os.listdir(folder_path):
+            if file.endswith('.json') and not file.startswith('_'):
+                filepath = os.path.join(folder_path, file)
+                try:
+                    with open(filepath, 'r', encoding='utf-8') as f:
+                        data = json.load(f)
+                        if 'example_projects' in data and data['example_projects']:
+                            url = data.get('github_url') or data.get('github_org')
+                            data['stars'] = get_github_stars(url) if url else 0
+                            data['title'] = data.get('title') or data.get('name')
+                            projects.append(data)
+                except:
+                    continue
+
     projects_cache = projects
     projects_cache_time = time.time()
     return projects
@@ -86,23 +85,31 @@ class ProjectHandler(SimpleHTTPRequestHandler):
         elif parsed_path.startswith('/api/lab/'):
             try:
                 lab_id = parsed_path.split('/api/lab/')[1]
-                projects = scan_projects()
-                lab = next((p for p in projects if p['id'] == lab_id and 'example_projects' in p), None)
+                projects_all = scan_projects()
+                lab = next((p for p in projects_all if p['id'] == lab_id), None)
                 if not lab:
                     self.send_response(404)
                     self.end_headers()
                     return
-
+                BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+                projects_folder = os.path.join(BASE_DIR, 'projects')
                 lab_projects = []
-                for proj_name in lab['example_projects']:
-                    proj = next((p for p in projects if p['title'].upper() == proj_name.upper()), None)
-                    if proj:
-                        lab_projects.append(proj)
+                if os.path.exists(projects_folder):
+                    for file in os.listdir(projects_folder):
+                        if file.endswith('.json') and not file.startswith('_'):
+                            filepath = os.path.join(projects_folder, file)
+                            try:
+                                with open(filepath, 'r', encoding='utf-8') as f:
+                                    proj = json.load(f)
+                                    if proj.get('lab') == lab_id:
+                                        proj['stars'] = get_github_stars(proj.get('github_url'))
+                                        lab_projects.append(proj)
+                            except:
+                                continue
                 self.send_json({'lab': lab, 'projects': lab_projects})
             except (IndexError, ValueError):
                 self.send_response(400)
                 self.end_headers()
-
         else:
             super().do_GET()
 

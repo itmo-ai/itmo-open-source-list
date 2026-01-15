@@ -191,7 +191,7 @@ function showLabsOnly() {
         const hasGithub = githubUrl && githubUrl !== 'null' && githubUrl !== null;
 
         container.innerHTML += `
-          <div class="itmo-project-card lab-card" onclick="showLabProjects('${project.id}')" style="cursor:pointer;">
+          <div class="itmo-project-card lab-card lab-container" id="lab-${project.id}" style="cursor:pointer;">
             <div class="card-header">
               <div class="card-avatar-placeholder">${titleShort}</div>
               <div class="card-title">
@@ -204,7 +204,7 @@ function showLabsOnly() {
                   Примеры проектов: ${project.example_projects.slice(0,3).join(', ')}${project.example_projects.length > 3 ? '...' : ''}
                 </div>
                 ${hasGithub ?
-                  `<a href="${githubUrl}" target="_blank" class="github-link" style="background:#007bff;color:white;padding:8px 16px;display:inline-block;border-radius:4px;text-decoration:none;margin-top:8px;">GitHub </a>` :
+                  `<a href="${githubUrl}" target="_blank" class="github-link" style="background:#007bff;color:white;padding:8px 16px;display:inline-block;border-radius:4px;text-decoration:none;margin-top:8px;">GitHub</a>` :
                   ''
                 }
               </div>
@@ -214,9 +214,19 @@ function showLabsOnly() {
       });
 
       status.textContent = `${labs.length} лабораторий`;
+document.querySelectorAll('.lab-container').forEach(container => {
+  container.addEventListener('click', (e) => {
+    // Исключаем клики по ЛЮБЫМ ссылкам внутри карточки
+    if (e.target.tagName === 'A') {
+      return;  // Любая ссылка открывается сама
+    }
+
+    const labId = container.id.replace('lab-', '');
+    showLabProjects(labId);
+  });
+});
     });
 }
-
 function showAllProjects() {
   showLabsOnly();
 }
