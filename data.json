@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-15T13:35:13.183934",
+  "generated_at": "2026-01-16T01:03:48.984287",
   "projects": [
     {
       "id": "osa",
@@ -270,7 +270,7 @@
         "docs": null
       },
       "stars": 67,
-      "updated_at": "2026-01-08T09:07:27Z",
+      "updated_at": "2026-01-15T13:37:42Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/ITMO-NSS-team/EPDE",
