@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-17T01:00:49.381376",
+  "generated_at": "2026-01-18T01:08:25.958246",
   "projects": [
     {
       "id": "osa",
@@ -39,8 +39,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 165,
-      "updated_at": "2026-01-16T14:31:46Z",
+      "stars": 166,
+      "updated_at": "2026-01-17T19:10:26Z",
       "license": "Apache License 2.0",
       "language": "Python",
       "url": "https://github.com/CTLab-ITMO/CoolPrompt",
