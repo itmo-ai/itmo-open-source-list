@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-23T01:04:31.939509",
+  "generated_at": "2026-01-24T01:01:47.056834",
   "projects": [
     {
       "id": "osa",
@@ -120,8 +120,8 @@
         "website": null,
         "docs": "https://bioconductor.org/packages/release/bioc/html/fgsea.html"
       },
-      "stars": 428,
-      "updated_at": "2026-01-20T07:39:22Z",
+      "stars": 429,
+      "updated_at": "2026-01-23T12:44:22Z",
       "license": "Other",
       "language": "R",
       "url": "https://github.com/alserglab/fgsea",
