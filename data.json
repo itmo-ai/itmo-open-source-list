@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-25T01:10:13.374928",
+  "generated_at": "2026-01-26T01:08:55.760618",
   "projects": [
     {
       "id": "osa",
@@ -120,8 +120,8 @@
         "website": null,
         "docs": "https://bioconductor.org/packages/release/bioc/html/fgsea.html"
       },
-      "stars": 429,
-      "updated_at": "2026-01-23T12:44:22Z",
+      "stars": 430,
+      "updated_at": "2026-01-25T13:01:50Z",
       "license": "Other",
       "language": "R",
       "url": "https://github.com/alserglab/fgsea",
@@ -187,7 +187,7 @@
         "docs": "https://github.com/ILT-ITMO/LaserWeldMonitor#documentation"
       },
       "stars": 5,
-      "updated_at": "2025-11-25T09:04:27Z",
+      "updated_at": "2026-01-25T16:38:48Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Jupyter Notebook",
       "url": "https://github.com/ILT-ITMO/LaserWeldMonitor",
@@ -480,8 +480,8 @@
         "website": null,
         "docs": "https://compphyslab.github.io/SVETlANNa/"
       },
-      "stars": 50,
-      "updated_at": "2025-12-30T11:27:33Z",
+      "stars": 51,
+      "updated_at": "2026-01-25T15:23:01Z",
       "license": "Mozilla Public License 2.0",
       "language": "Python",
       "url": "https://github.com/CompPhysLab/SVETlANNa",
