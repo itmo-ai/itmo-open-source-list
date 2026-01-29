@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-28T01:03:58.854764",
+  "generated_at": "2026-01-29T01:13:33.433187",
   "projects": [
     {
       "id": "osa",
@@ -12,8 +12,8 @@
       "links": {
         "website": "https://github.com/aimclub/OSA"
       },
-      "stars": 124,
-      "updated_at": "2026-01-28T00:08:56Z",
+      "stars": 125,
+      "updated_at": "2026-01-28T07:19:16Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/OSA",
@@ -39,8 +39,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 170,
-      "updated_at": "2026-01-21T05:25:02Z",
+      "stars": 169,
+      "updated_at": "2026-01-28T11:09:46Z",
       "license": "Apache License 2.0",
       "language": "Python",
       "url": "https://github.com/CTLab-ITMO/CoolPrompt",
@@ -120,8 +120,8 @@
         "website": null,
         "docs": "https://bioconductor.org/packages/release/bioc/html/fgsea.html"
       },
-      "stars": 430,
-      "updated_at": "2026-01-25T13:01:50Z",
+      "stars": 431,
+      "updated_at": "2026-01-28T11:19:53Z",
       "license": "Other",
       "language": "R",
       "url": "https://github.com/alserglab/fgsea",
@@ -141,8 +141,8 @@
         "docs": null
       },
       "stars": 2,
-      "updated_at": "2026-01-20T10:58:36Z",
-      "license": null,
+      "updated_at": "2026-01-28T10:50:29Z",
+      "license": "Creative Commons Attribution 4.0 International",
       "language": "C++",
       "url": "https://github.com/be2rlab/OSMa-Bench",
       "fork": false,
