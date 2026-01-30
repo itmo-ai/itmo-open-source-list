@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-29T01:13:33.433187",
+  "generated_at": "2026-01-30T01:13:19.785356",
   "projects": [
     {
       "id": "osa",
@@ -186,8 +186,8 @@
         "website": null,
         "docs": "https://github.com/ILT-ITMO/LaserWeldMonitor#documentation"
       },
-      "stars": 5,
-      "updated_at": "2026-01-25T16:38:48Z",
+      "stars": 6,
+      "updated_at": "2026-01-29T15:36:49Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Jupyter Notebook",
       "url": "https://github.com/ILT-ITMO/LaserWeldMonitor",
