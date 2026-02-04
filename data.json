@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-03T01:17:47.445189",
+  "generated_at": "2026-02-04T01:12:53.119225",
   "projects": [
     {
       "id": "osa",
@@ -13,7 +13,7 @@
         "website": "https://github.com/aimclub/OSA"
       },
       "stars": 125,
-      "updated_at": "2026-02-02T11:16:54Z",
+      "updated_at": "2026-02-03T10:44:55Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/OSA",
@@ -39,8 +39,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 170,
-      "updated_at": "2026-02-02T13:40:43Z",
+      "stars": 171,
+      "updated_at": "2026-02-03T12:33:12Z",
       "license": "Apache License 2.0",
       "language": "Python",
       "url": "https://github.com/CTLab-ITMO/CoolPrompt",
@@ -120,8 +120,8 @@
         "website": null,
         "docs": "https://bioconductor.org/packages/release/bioc/html/fgsea.html"
       },
-      "stars": 432,
-      "updated_at": "2026-02-02T12:45:14Z",
+      "stars": 433,
+      "updated_at": "2026-02-03T18:31:02Z",
       "license": "Other",
       "language": "R",
       "url": "https://github.com/alserglab/fgsea",
@@ -270,7 +270,7 @@
         "docs": null
       },
       "stars": 66,
-      "updated_at": "2026-02-02T19:02:49Z",
+      "updated_at": "2026-02-03T14:54:56Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/ITMO-NSS-team/EPDE",
