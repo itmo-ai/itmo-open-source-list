@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-05T01:13:28.042539",
+  "generated_at": "2026-02-06T01:13:25.731420",
   "projects": [
     {
       "id": "osa",
@@ -12,8 +12,8 @@
       "links": {
         "website": "https://github.com/aimclub/OSA"
       },
-      "stars": 125,
-      "updated_at": "2026-02-03T10:44:55Z",
+      "stars": 126,
+      "updated_at": "2026-02-05T19:24:47Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/OSA",
@@ -94,8 +94,8 @@
         "website": null,
         "docs": "https://bamt.readthedocs.io/en/latest/"
       },
-      "stars": 135,
-      "updated_at": "2026-01-05T23:46:04Z",
+      "stars": 134,
+      "updated_at": "2026-02-05T22:42:55Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/BAMT",
@@ -500,8 +500,8 @@
         "website": "https://ods.ai/projects/fedot",
         "docs": "https://fedot.readthedocs.io"
       },
-      "stars": 703,
-      "updated_at": "2026-01-18T13:53:32Z",
+      "stars": 702,
+      "updated_at": "2026-02-05T22:42:33Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/FEDOT",
