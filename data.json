@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-06T01:13:25.731420",
+  "generated_at": "2026-02-07T01:12:06.732205",
   "projects": [
     {
       "id": "osa",
@@ -186,8 +186,8 @@
         "website": null,
         "docs": "https://github.com/ILT-ITMO/LaserWeldMonitor#documentation"
       },
-      "stars": 6,
-      "updated_at": "2026-01-29T15:36:49Z",
+      "stars": 5,
+      "updated_at": "2026-02-06T09:16:56Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Jupyter Notebook",
       "url": "https://github.com/ILT-ITMO/LaserWeldMonitor",
@@ -532,8 +532,8 @@
         "website": null,
         "docs": "https://rostok.readthedocs.io/en/latest/?badge=latest"
       },
-      "stars": 45,
-      "updated_at": "2025-07-13T00:25:39Z",
+      "stars": 46,
+      "updated_at": "2026-02-06T09:18:40Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Jupyter Notebook",
       "url": "https://github.com/aimclub/rostok",
