@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-10T01:28:09.416640",
+  "generated_at": "2026-02-11T01:25:51.610710",
   "projects": [
     {
       "id": "osa",
@@ -39,8 +39,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 172,
-      "updated_at": "2026-02-09T13:01:18Z",
+      "stars": 173,
+      "updated_at": "2026-02-10T17:15:12Z",
       "license": "Apache License 2.0",
       "language": "Python",
       "url": "https://github.com/CTLab-ITMO/CoolPrompt",
@@ -270,7 +270,7 @@
         "docs": null
       },
       "stars": 66,
-      "updated_at": "2026-02-03T14:54:56Z",
+      "updated_at": "2026-02-10T09:07:56Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/ITMO-NSS-team/EPDE",
