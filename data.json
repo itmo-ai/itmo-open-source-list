@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-14T01:14:34.125833",
+  "generated_at": "2026-02-15T01:21:29.677712",
   "projects": [
     {
       "id": "documentor",
@@ -337,8 +337,8 @@
         "website": "https://ods.ai/projects/fedot",
         "docs": "https://fedot.readthedocs.io"
       },
-      "stars": 702,
-      "updated_at": "2026-02-09T10:39:30Z",
+      "stars": 703,
+      "updated_at": "2026-02-14T09:18:49Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/FEDOT",
@@ -501,8 +501,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 172,
-      "updated_at": "2026-02-13T18:52:51Z",
+      "stars": 173,
+      "updated_at": "2026-02-14T17:15:05Z",
       "license": "Apache License 2.0",
       "language": "Python",
       "url": "https://github.com/CTLab-ITMO/CoolPrompt",
