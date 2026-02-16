@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-15T01:21:29.677712",
+  "generated_at": "2026-02-16T01:18:05.320155",
   "projects": [
     {
       "id": "documentor",
@@ -501,8 +501,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 173,
-      "updated_at": "2026-02-14T17:15:05Z",
+      "stars": 174,
+      "updated_at": "2026-02-16T01:05:52Z",
       "license": "Apache License 2.0",
       "language": "Python",
       "url": "https://github.com/CTLab-ITMO/CoolPrompt",
