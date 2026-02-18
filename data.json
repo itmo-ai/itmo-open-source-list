@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-17T01:17:20.224713",
+  "generated_at": "2026-02-18T01:19:29.304852",
   "projects": [
     {
       "id": "documentor",
@@ -33,8 +33,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 7,
-      "updated_at": "2025-12-04T10:53:59Z",
+      "stars": 8,
+      "updated_at": "2026-02-17T11:40:04Z",
       "license": "MIT License",
       "language": "Python",
       "url": "https://github.com/ctlab/samovar",
