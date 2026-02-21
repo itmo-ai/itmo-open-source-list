@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-20T01:14:38.188507",
+  "generated_at": "2026-02-21T01:12:14.894172",
   "projects": [
     {
       "id": "osa",
@@ -13,7 +13,7 @@
         "website": "https://github.com/aimclub/OSA"
       },
       "stars": 129,
-      "updated_at": "2026-02-12T18:29:54Z",
+      "updated_at": "2026-02-20T12:00:52Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/OSA",
