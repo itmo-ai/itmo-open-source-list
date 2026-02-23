@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-23T16:33:24.776886",
+  "generated_at": "2026-02-23T17:08:26.740169",
   "projects": [
     {
       "id": "ampy",
@@ -233,7 +233,7 @@
         "en": "Grounding Keypoint Descriptors into 3D Gaussian Splatting for Improved Visual Localization."
       },
       "github_url": "https://github.com/be2rlab/gsplatloc",
-      "lab": "ai-chem",
+      "lab": "be2rlab",
       "area": "AI for Science",
       "logo": null,
       "links": {
@@ -265,7 +265,7 @@
         "en": "Online Tightly Coupled Vision-Language-Geometry Fusion for Open-Vocabulary Semantic SLAM."
       },
       "github_url": "https://github.com/be2rlab/km-vipe",
-      "lab": "ai-chem",
+      "lab": "be2rlab",
       "area": "AI for Science",
       "logo": null,
       "links": {
@@ -345,7 +345,7 @@
         "en": "DNN-based Metric Semantic Dense Mapping pipeline and a Visual Inertial SLAM system."
       },
       "github_url": "https://github.com/be2rlab/MSDM-SLAM",
-      "lab": "ai-chem",
+      "lab": "be2rlab",
       "area": "AI for Science",
       "logo": null,
       "links": {
@@ -456,7 +456,7 @@
         "en": "A Robust Visual-Wheel SLAM System for Mobile Robots in Dynamic Environments."
       },
       "github_url": "https://github.com/be2rlab/rvwo",
-      "lab": "ai-chem",
+      "lab": "be2rlab",
       "area": "AI for Science",
       "logo": null,
       "links": {
