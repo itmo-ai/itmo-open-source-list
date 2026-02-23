@@ -1,6 +1,46 @@
 {
-  "generated_at": "2026-02-23T01:17:11.187573",
+  "generated_at": "2026-02-23T14:24:16.892872",
   "projects": [
+    {
+      "id": "rvwo",
+      "title": "rvwo",
+      "description": "[IROS 23] A Robust Visual-Wheel SLAM System for Mobile Robots in Dynamic Environments",
+      "github_url": "https://github.com/be2rlab/rvwo",
+      "lab": "be2rlab",
+      "area": "AI for Science",
+      "logo": null,
+      "links": {
+        "website": null,
+        "docs": null
+      },
+      "stars": 41,
+      "updated_at": "2026-01-28T14:56:09Z",
+      "license": "GNU General Public License v3.0",
+      "language": "C++",
+      "url": "https://github.com/be2rlab/rvwo",
+      "fork": false,
+      "topics": []
+    },
+    {
+      "id": "drugnanoparticlesynergy",
+      "title": "DrugNanoparticleSynergy",
+      "description": "Online Tightly Coupled Vision-Language-Geometry Fusion for Open-Vocabulary Semantic SLAM",
+      "github_url": "https://github.com/be2rlab/km-vipe",
+      "lab": "be2rlab",
+      "area": "AI for Science",
+      "logo": null,
+      "links": {
+        "website": null,
+        "docs": null
+      },
+      "stars": 45,
+      "updated_at": "2026-02-22T05:46:38Z",
+      "license": "Other",
+      "language": "Python",
+      "url": "https://github.com/be2rlab/km-vipe",
+      "fork": false,
+      "topics": []
+    },
     {
       "id": "osa",
       "title": "OSA",
@@ -8,7 +48,7 @@
       "github_url": "https://github.com/aimclub/OSA",
       "lab": "aimclub",
       "area": "ML tools",
-      "logo": "",
+      "logo": "https://github.com/aimclub/OSA/raw/main/docs/images/osa_logo_h.PNG",
       "links": {
         "website": "https://github.com/aimclub/OSA"
       },
@@ -26,6 +66,26 @@
         "repository-improvement",
         "scientific-software"
       ]
+    },
+    {
+      "id": "dizyme",
+      "title": "DiZyme",
+      "description": null,
+      "github_url": "https://github.com/ai-chem/DiZyme",
+      "lab": "ai-chem",
+      "area": "AI for Science",
+      "logo": "https://dizyme.aicidlab.itmo.ru/static/img/LOGO/logo_fin-02.png",
+      "links": {
+        "website": "https://dizyme.aicidlab.itmo.ru/",
+        "docs": null
+      },
+      "stars": 5,
+      "updated_at": "2025-11-03T01:00:45Z",
+      "license": null,
+      "language": "Jupyter Notebook",
+      "url": "https://github.com/ai-chem/DiZyme",
+      "fork": false,
+      "topics": []
     },
     {
       "id": "coolprompt",
@@ -175,6 +235,46 @@
       ]
     },
     {
+      "id": "chemx",
+      "title": "ChemX",
+      "description": "[IROS 2025] GSplatLoc: Grounding Keypoint Descriptors into 3D Gaussian Splatting for Improved Visual Localization",
+      "github_url": "https://github.com/be2rlab/gsplatloc",
+      "lab": "be2rlab",
+      "area": "AI for Science",
+      "logo": null,
+      "links": {
+        "website": "https://gsplatloc.github.io/",
+        "docs": null
+      },
+      "stars": 131,
+      "updated_at": "2026-02-22T00:47:44Z",
+      "license": "Apache License 2.0",
+      "language": "Jupyter Notebook",
+      "url": "https://github.com/be2rlab/gsplatloc",
+      "fork": false,
+      "topics": []
+    },
+    {
+      "id": "magnetexchangebias",
+      "title": "MagnetExchangeBias",
+      "description": null,
+      "github_url": "https://github.com/ai-chem/MagnetExchangeBias",
+      "lab": "ai-chem",
+      "area": "AI for Science",
+      "logo": null,
+      "links": {
+        "website": null,
+        "docs": null
+      },
+      "stars": 2,
+      "updated_at": "2025-04-04T06:45:46Z",
+      "license": null,
+      "language": "Jupyter Notebook",
+      "url": "https://github.com/ai-chem/MagnetExchangeBias",
+      "fork": false,
+      "topics": []
+    },
+    {
       "id": "laserweldmonitor",
       "title": "LaserWeldMonitor",
       "description": "This project is aimed at applying data analytics and machine learning techniques to monitoring and control systems for laser welding production processes. ",
@@ -191,6 +291,26 @@
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Jupyter Notebook",
       "url": "https://github.com/ILT-ITMO/LaserWeldMonitor",
+      "fork": false,
+      "topics": []
+    },
+    {
+      "id": "msdm-slam",
+      "title": "MSDM-SLAM",
+      "description": "Metric-Semantic Dense Mapping and SLAM system ",
+      "github_url": "https://github.com/be2rlab/MSDM-SLAM",
+      "lab": "be2rlab",
+      "area": "AI for Science",
+      "logo": null,
+      "links": {
+        "website": null,
+        "docs": null
+      },
+      "stars": 19,
+      "updated_at": "2026-01-28T14:49:56Z",
+      "license": "GNU General Public License v3.0",
+      "language": "C++",
+      "url": "https://github.com/be2rlab/MSDM-SLAM",
       "fork": false,
       "topics": []
     },
@@ -298,6 +418,26 @@
       "license": "GNU General Public License v3.0",
       "language": "C",
       "url": "https://github.com/swarmtronics/swarmodroid.firmware",
+      "fork": false,
+      "topics": []
+    },
+    {
+      "id": "designsolvents",
+      "title": "DESignSolvents",
+      "description": null,
+      "github_url": "https://github.com/ai-chem/DESignSolvents?tab=readme-ov-file",
+      "lab": "ai-chem",
+      "area": "AI for Science",
+      "logo": null,
+      "links": {
+        "website": null,
+        "docs": null
+      },
+      "stars": 6,
+      "updated_at": "2026-01-18T12:40:14Z",
+      "license": null,
+      "language": "Jupyter Notebook",
+      "url": "https://github.com/ai-chem/DESignSolvents",
       "fork": false,
       "topics": []
     },
@@ -429,6 +569,26 @@
       "topics": []
     },
     {
+      "id": "nanominer",
+      "title": "nanoMINER",
+      "description": "nanoMINER: Multimodal Information Extraction for Nanomaterials",
+      "github_url": "https://github.com/ai-chem/nanoMINER",
+      "lab": "ai-chem",
+      "area": "AI for Science",
+      "logo": null,
+      "links": {
+        "website": null,
+        "docs": null
+      },
+      "stars": 28,
+      "updated_at": "2025-12-09T09:06:31Z",
+      "license": null,
+      "language": "Jupyter Notebook",
+      "url": "https://github.com/ai-chem/nanoMINER",
+      "fork": false,
+      "topics": []
+    },
+    {
       "id": "nanomaterial-morphology-prediction",
       "title": "Nanomaterial Morphology Prediction",
       "description": null,
@@ -445,6 +605,26 @@
       "license": null,
       "language": "Jupyter Notebook",
       "url": "https://github.com/ai-chem/Nanomaterial_Morphology_Prediction",
+      "fork": false,
+      "topics": []
+    },
+    {
+      "id": "chemx",
+      "title": "ChemX",
+      "description": null,
+      "github_url": "https://github.com/ai-chem/ChemX",
+      "lab": "ai-chem",
+      "area": "AI for Science",
+      "logo": null,
+      "links": {
+        "website": null,
+        "docs": null
+      },
+      "stars": 2,
+      "updated_at": "2026-02-02T12:04:27Z",
+      "license": "MIT License",
+      "language": "Jupyter Notebook",
+      "url": "https://github.com/ai-chem/ChemX",
       "fork": false,
       "topics": []
     },
@@ -485,6 +665,26 @@
       "license": "Mozilla Public License 2.0",
       "language": "Python",
       "url": "https://github.com/CompPhysLab/SVETlANNa",
+      "fork": false,
+      "topics": []
+    },
+    {
+      "id": "drugnanoparticlesynergy",
+      "title": "DrugNanoparticleSynergy",
+      "description": null,
+      "github_url": "https://github.com/ai-chem/Drug-Nanoparticle-Synergy",
+      "lab": "ai-chem",
+      "area": "AI for Science",
+      "logo": null,
+      "links": {
+        "website": null,
+        "docs": null
+      },
+      "stars": 0,
+      "updated_at": "2025-04-04T06:45:46Z",
+      "license": null,
+      "language": "Jupyter Notebook",
+      "url": "https://github.com/ai-chem/Drug-Nanoparticle-Synergy",
       "fork": false,
       "topics": []
     },
@@ -618,7 +818,10 @@
         "vkontakte": "https://vk.com/be2rlab"
       },
       "example_projects": [
-        "OpenSemanticMapping"
+        "gsplatloc",
+        "MSDM-SLAM",
+        "rvwo",
+        "kmvipe"
       ]
     },
     {
@@ -713,8 +916,11 @@
       "example_projects": [
         "GEMCODE",
         "DiZyme",
-        "Dimag",
-        "DESignSolvents"
+        "DESignSolvents",
+        "Drug-Nanoparticle-Synergy",
+        "MagnetExchangeBias",
+        "nanoMINER",
+        "ChemX"
       ]
     },
     {
