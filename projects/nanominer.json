@@ -1,0 +1,16 @@
+{
+  "id": "nanominer",
+  "title": "nanoMINER",
+  "description": {
+    "ru": "Мультимодальное извлечение информации для наноматериалов.",
+    "en": "Multimodal Information Extraction for Nanomaterials."
+  },
+  "github_url": "https://github.com/ai-chem/nanoMINER",
+  "lab": "ai-chem",
+  "area": "AI for Science",
+  "logo": null,
+  "links": {
+    "website": null,
+    "docs": null
+  }
+}

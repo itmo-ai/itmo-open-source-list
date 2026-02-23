@@ -15,7 +15,10 @@
   "example_projects": [
     "GEMCODE",
     "DiZyme",
-    "Dimag",
-    "DESignSolvents"
+    "DESignSolvents",
+    "Drug-Nanoparticle-Synergy",
+    "MagnetExchangeBias",
+    "nanoMINER",
+    "ChemX"
   ]
 }

@@ -1,0 +1,16 @@
+{
+  "id": "rvwo",
+  "title": "rvwo",
+  "description": {
+    "ru": "надёжная визуальная система SLAM для мобильных роботов в динамических условиях.",
+    "en": "A Robust Visual-Wheel SLAM System for Mobile Robots in Dynamic Environments."
+  },
+  "github_url": "https://github.com/be2rlab/rvwo",
+  "lab": "be2rlab",
+  "area": "AI for Science",
+  "logo": null,
+  "links": {
+    "website": null,
+    "docs": null
+  }
+}

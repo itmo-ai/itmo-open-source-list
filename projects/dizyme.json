@@ -1,0 +1,16 @@
+{
+  "id": "dizyme",
+  "title": "DiZyme",
+  "description": {
+    "ru": "Веб-ресурс для рационального проектирования нанозимов.",
+    "en": "Web-resource for rational design of nanozymes."
+  },
+  "github_url": "https://github.com/ai-chem/DiZyme",
+  "lab": "ai-chem",
+  "area": "AI for Science",
+  "logo": "https://dizyme.aicidlab.itmo.ru/static/img/LOGO/logo_fin-02.png",
+  "links": {
+    "website": "https://dizyme.aicidlab.itmo.ru/",
+    "docs": null
+  }
+}

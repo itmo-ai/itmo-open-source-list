@@ -13,6 +13,9 @@
     "vkontakte": "https://vk.com/be2rlab"
   },
   "example_projects": [
-    "OpenSemanticMapping"
+    "gsplatloc",
+    "MSDM-SLAM",
+    "rvwo",
+    "kmvipe"
   ]
 }
