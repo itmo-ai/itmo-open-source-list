@@ -1,0 +1,16 @@
+{
+  "id": "msdm-slam",
+  "title": "MSDM-SLAM",
+  "description": {
+    "ru": "3D-конвейер Метрического Семантического Плотного Отображения на основе 3D DNN и систему визуального инерциального SLAM.",
+    "en": "DNN-based Metric Semantic Dense Mapping pipeline and a Visual Inertial SLAM system."
+  },
+  "github_url": "https://github.com/be2rlab/MSDM-SLAM",
+  "lab": "ai-chem",
+  "area": "AI for Science",
+  "logo": null,
+  "links": {
+    "website": null,
+    "docs": null
+  }
+}

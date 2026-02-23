@@ -1,0 +1,16 @@
+{
+  "id": "drugnanoparticlesynergy",
+  "title": "DrugNanoparticleSynergy",
+  "description": {
+    "ru": "Выявлению синергетических комбинаций препарата и NP с повышенной антимикробной активностью.",
+    "en": "Innovative approach to identifying synergistic drug-NP combinations with enhanced antimicrobial activity."
+  },
+  "github_url": "https://github.com/ai-chem/Drug-Nanoparticle-Synergy",
+  "lab": "ai-chem",
+  "area": "AI for Science",
+  "logo": null,
+  "links": {
+    "website": null,
+    "docs": null
+  }
+}

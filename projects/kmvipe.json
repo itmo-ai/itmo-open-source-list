@@ -1,0 +1,16 @@
+{
+  "id": "drugnanoparticlesynergy",
+  "title": "DrugNanoparticleSynergy",
+  "description": {
+    "ru": "Онлайн тесно связанное слияние зрения, языка и геометрии для семантического SLAM с открытой лексикой.",
+    "en": "Online Tightly Coupled Vision-Language-Geometry Fusion for Open-Vocabulary Semantic SLAM."
+  },
+  "github_url": "https://github.com/be2rlab/km-vipe",
+  "lab": "ai-chem",
+  "area": "AI for Science",
+  "logo": null,
+  "links": {
+    "website": null,
+    "docs": null
+  }
+}

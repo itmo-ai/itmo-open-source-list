@@ -1,0 +1,16 @@
+{
+  "id": "designsolvents",
+  "title": "DESignSolvents",
+  "description": {
+    "ru": "Открытая платформа для поиска и прогнозирования физико-химических свойств глубоких эвтектических растворителей.",
+    "en": "An Open Platform for Search and Prediction of the Physicochemical Properties of Deep Eutectic Solvents."
+  },
+  "github_url": "https://github.com/ai-chem/DESignSolvents?tab=readme-ov-file",
+  "lab": "ai-chem",
+  "area": "AI for Science",
+  "logo": null,
+  "links": {
+    "website": null,
+    "docs": null
+  }
+}

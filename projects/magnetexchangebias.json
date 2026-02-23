@@ -1,0 +1,16 @@
+{
+  "id": "magnetexchangebias",
+  "title": "MagnetExchangeBias",
+  "description": {
+    "ru": "Коллекция наборов данных по химии для бенчмаркинга автоматизированного извлечения информации.",
+    "en": "Prediction of exchange bias for magnetic heterostructures nanoparticles with machine learning."
+  },
+  "github_url": "https://github.com/ai-chem/MagnetExchangeBias",
+  "lab": "ai-chem",
+  "area": "AI for Science",
+  "logo": null,
+  "links": {
+    "website": null,
+    "docs": null
+  }
+}

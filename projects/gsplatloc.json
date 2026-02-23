@@ -1,0 +1,16 @@
+{
+  "id": "chemx",
+  "title": "ChemX",
+  "description": {
+    "ru": "Заземление дескрипторов ключевых точек в 3D-гауссовом сплаттинге для улучшения визуальной локализации.",
+    "en": "Grounding Keypoint Descriptors into 3D Gaussian Splatting for Improved Visual Localization."
+  },
+  "github_url": "https://github.com/be2rlab/gsplatloc",
+  "lab": "ai-chem",
+  "area": "AI for Science",
+  "logo": null,
+  "links": {
+    "website": "https://gsplatloc.github.io/",
+    "docs": null
+  }
+}

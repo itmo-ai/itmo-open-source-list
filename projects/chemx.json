@@ -1,0 +1,16 @@
+{
+  "id": "chemx",
+  "title": "ChemX",
+  "description": {
+    "ru": "Коллекция наборов данных по химии для бенчмаркинга автоматизированного извлечения информации.",
+    "en": "A Collection of Chemistry Datasets for Benchmarking Automated Information Extraction."
+  },
+  "github_url": "https://github.com/ai-chem/ChemX",
+  "lab": "ai-chem",
+  "area": "AI for Science",
+  "logo": null,
+  "links": {
+    "website": null,
+    "docs": null
+  }
+}
