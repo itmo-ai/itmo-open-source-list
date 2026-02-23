@@ -1,79 +1,648 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>ITMO 500+ Автоскан</title>
-</head>
-<body style="font-family: sans-serif; max-width: 1200px; margin: 0 auto; padding: 40px;">
-  <h1 style="color: #333;"> ITMO Projects </h1>
-  <p id="status">Сканируем build/...</p>
-  <div id="itmo-projects" class="projects-container"></div>
-  
-  <style>
-    .projects-container { 
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
-      gap: 24px; padding: 20px 0; 
-    }
-    .itmo-project-card { 
-      border: 1px solid	id #e1e5e9; border-radius: 12px; padding: 20px;
-      background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: box-shadow 0.2s;
-    }
-    .itmo-project-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
-    .card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+<div id="catalog-container">
+  <div id="projects-container" class="grid-container"></div>
+</div>
 
-.card-avatar-square { width: 128px; height: 128px; }
-.card-avatar-wide { width: 128px; height: 48px; } /* Горизонтальные логотипы */
-.card-avatar-logo, .card-avatar-wide, .card-avatar-square {
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+<div id="lab-modal" class="lab-modal" aria-hidden="true">
+  <div class="lab-modal-overlay" onclick="closeModal()"></div>
+
+  <div class="lab-modal-window" role="dialog" aria-modal="true">
+    <button class="lab-modal-close" onclick="closeModal()" aria-label="Закрыть">✕</button>
+    <div id="lab-modal-body"></div>
+  </div>
+</div>
+
+<style>
+
+/* Контейнер виджета */
+#catalog-container {
+  min-height: auto !important;
+  height: auto !important;
+  overflow: visible !important;
+
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
-.card-avatar-placeholder {
-  width: 48px; height: 48px; border-radius: 8px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white; font-weight: bold; font-size: 14px;
-  display: flex; align-items: center; justify-content: center;
+#projects-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+}
+
+/* Масштабируемость */
+#catalog-container * {
+  box-sizing: border-box;
+}
+
+/*
+   GRID
+*/
+.grid-container {
+  min-height: auto !important;
+  height: auto !important;
+  overflow: visible !important;
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: clamp(16px, 3vw, 24px);
+  padding: clamp(16px, 3vw, 32px) clamp(16px, 3vw, 32px) !important;
+  padding-bottom: 40px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+}
+
+/*
+   КАРТОЧКИ
+*/
+.lab-card {
+  margin-bottom: 24px !important;
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 32px !important;
+  width: 100% !important;
+  max-width: 860px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  min-height: 220px;
+  position: relative;
+  border: 1px solid #000;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1),
+              box-shadow 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.lab-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+.lab-card:nth-child(odd) {
+  background: radial-gradient(ellipse 90% 80% at 50% 50%,
+    rgba(90,111,216,0.20) 0%,
+    rgba(90,111,216,0.05) 70%,
+    transparent 85%);
+}
+
+.lab-card:nth-child(even) {
+  background: radial-gradient(ellipse 90% 80% at 50% 50%,
+    rgba(242,140,56,0.22) 0%,
+    rgba(242,140,56,0.06) 75%,
+    transparent 90%);
+}
+
+.project-item,
+.lab-selector {
+  position: relative !important;
+}
+
+/*
+   АВАТАР
+   */
+.avatar-container {
+  width: 64px !important;
+  height: 64px !important;
   flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-    .card-title a { font-size: 18px; font-weight: 600; color: #1a1a1a; text-decoration: none; }
-    .card-title a:hover { color: #0366d6; }
-    .lab-tag, .area-tag {
-      background: #e3f2fd; color: #1976d2; padding: 2px 8px;
-      font-size: 12px; border-radius: 12px; margin-left: 8px;
-    }
-    .card-description { color: #666; line-height: 1.5; margin-bottom: 12px; }
-    @media (max-width: 768px) { .projects-container { grid-template-columns: 1fr; gap: 16px; } }
-    .card-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
-.tag-area {
-  background: #e8f5e8; color: #2e7d32;
-  padding: 2px 6px; border-radius: 3px; font-size: 11px;
+.avatar-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
-.tag-lab {
-  background: #e3f2fd; color: #1976d2;
-  padding: 2px 6px; border-radius: 3px; font-size: 11px;
-}
-.card-links {
-  margin-top: 12px; font-size: 12px;
-  color: #666; border-top: 1px solid #eee; padding-top: 8px;
-}
-.card-links a { color: #0066cc; text-decoration: none; margin-right: 12px; }
-.card-links a:hover { text-decoration: underline; }
-.project-stars {
-  display: flex; align-items: center; gap: 4px;
-  margin-top: 8px; font-size: 16px; color: #ffa500;
-}
-.stars-count {
-  font-size: 14px; font-weight: 500; color: #666; margin-left: 4px;
-}
-  </style>
 
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #666;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+/*
+   КОНТЕНТ
+*/
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding-left: 24px;
+  padding-right: 120px;
+}
+
+.card-title {
+  font-size: 24px;
+  line-height: 1.54;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  color: #1a1a1a;
+}
+
+.card-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-title a:hover {
+  color: #0366d6;
+}
+
+.lab-description {
+  font-size: 18px;
+  line-height: 1.55;
+  color: #666;
+  margin: 0 0 24px 0;
+  flex-grow: 1;
+  background: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  max-width: 600px;
+  overflow: hidden;
+  white-space: pre-line
+}
+
+.card-examples {
+  font-size: 18px;
+  line-height: 1.55;
+  color: #666;
+  margin: 0 0 auto 0;
+}
+
+/*
+   GITHUB BUTTON
+*/
+.github-button,
+.github-button:link,
+.github-button:visited,
+.github-button:active {
+  position: absolute;
+  top: 16px;
+  right: 16px !important;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  background: transparent;
+  color: #000 !important;
+  border: 1px solid #000;
+  border-radius: 0;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10;
+}
+
+.github-button:hover {
+  background: #000 !important;
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+
+/*
+   BACK BUTTON
+ */
+.back-button {
+  background: linear-gradient(135deg, #5a6fd8 0%, #f28c38 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(90,111,216,0.3);
+  transition: all 0.3s;
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(90,111,216,0.4);
+}
+
+.lab-card .back-button {
+  position: absolute;
+  top: 68px;
+  right: 16px;
+  margin-top: 0 !important;
+  background: linear-gradient(135deg, #5a6fd8 0%, #f28c38 100%);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid #000;
+}
+
+.header-card .header-github:hover {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+/*
+   SOCIAL LINK
+    */
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #0066cc;
+  text-decoration: none;
+  border-radius: 8px;
+  background: rgba(0,102,204,0.08);
+  border: 1px solid rgba(0,102,204,0.2);
+  transition: all 0.3s ease;
+  margin-right: 10px;
+}
+
+.social-link:hover {
+  background: #0066cc;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,102,204,0.4);
+}
+
+.social-link img {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.social-link:hover img {
+  transform: scale(1.1);
+}
+
+/*
+   SOCIAL ICONS
+  */
+.social-icon {
+  position: absolute;
+  top: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid #000;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  z-index: 5;
+}
+
+.social-icon:hover {
+  background: #000;
+  border: 2px solid #fff;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.social-icon img {
+  width: 27px;
+  height: 27px;
+  transition: all 0.2s ease;
+}
+
+.social-icon:hover img {
+  content: url('');
+  filter: brightness(0) invert(1);
+}
+
+.social-icon[data-pos="1"] {
+  position: absolute !important;
+  top: 68px !important;
+  right: 16px !important;
+  z-index: 5;
+}
+
+.social-icon[data-pos="2"] {
+  position: absolute !important;
+  top: 68px !important;
+  right: 76px !important;
+  z-index: 5;
+}
+
+.social-icon[data-pos="3"] {
+  position: absolute !important;
+  top: 68px !important;
+  right: 136px !important;
+}
+
+.social-icon[data-pos="4"] {
+  position: absolute !important;
+  top: 68px !important;
+  right: 196px !important;
+}
+
+.project-item:has(.social-icon.docs-icon) .social-icon[data-pos="2"] { right: 76px !important; }
+.project-item:has(.social-icon.docs-icon) .social-icon[data-pos="3"] { right: 136px !important; }
+.project-item:has(.social-icon.docs-icon) .social-icon[data-pos="4"] { right: 196px !important; }
+
+/*
+   ОБЁРТКА ДЛЯ ИКОНОК
+*/
+.icons-row {
+  display: contents;
+}
+
+/*
+   АДАПТИВНОСТЬ
+ */
+
+/* Планшет и ниже */
+@media (max-width: 960px) {
+  .lab-description {
+    max-width: 100% !important;
+  }
+}
+
+/* Мобилка */
+@media (max-width: 768px) {
+  .grid-container {
+    padding: 20px 12px !important;
+  }
+
+  .lab-card {
+    flex-direction: column !important;
+    min-height: auto !important;
+    padding: 20px !important;
+    gap: 16px !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .avatar-container {
+    align-self: center;
+    margin-bottom: 16px;
+  }
+
+  .card-content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  .card-title {
+    font-size: 18px !important;
+    word-break: break-word !important;
+  }
+
+  .lab-description {
+    max-width: 100% !important;
+    width: 100% !important;
+    font-size: 15px !important;
+    padding: 10px 12px !important;
+  }
+
+  .card-examples {
+    font-size: 14px !important;
+    word-break: break-word !important;
+  }
+
+  #lab-modal .project-item .card-content {
+    padding-right: 0 !important;
+  }
+
+  .github-button {
+    position: static !important;
+    margin: 12px auto 0 auto !important;
+    display: block !important;
+    width: fit-content !important;
+  }
+
+  .icons-row {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+    margin-top: 12px !important;
+  }
+
+  .icons-row .social-icon,
+  .icons-row .social-icon[data-pos] {
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    display: inline-flex !important;
+    margin: 0 !important;
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .social-icon img {
+    width: 22px !important;
+    height: 22px !important;
+  }
+}
+
+/*  MODAL  */
+
+.lab-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 99999;
+}
+
+.lab-modal.active {
+  display: block;
+}
+
+.lab-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.lab-modal.active .lab-modal-overlay {
+  opacity: 1;
+}
+
+.lab-modal-window {
+  position: relative;
+  margin: 60px auto;
+  width: 95%;
+  max-width: 1100px;
+  max-height: 85vh;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+
+.lab-modal.active .lab-modal-window {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.lab-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Карточки проектов в модалке */
+
+#lab-modal .lab-card {
+  width: 100% !important;
+  max-width: 900px !important;
+  margin: 0 auto 24px auto !important;
+  padding: 32px !important;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#lab-modal .github-button {
+  position: absolute !important;
+  top: 16px;
+  right: 16px !important;
+}
+
+#lab-modal .project-item .card-content {
+  padding-right: 180px;
+}
+/* Мобильная версия модалки */
+
+@media (max-width: 768px) {
+  .lab-modal-window {
+    margin: 0;
+    border-radius: 0;
+    height: 100%;
+    max-height: 100%;
+    padding: 16px;
+  }
+
+  #lab-modal .lab-card {
+    flex-direction: column;
+    padding: 24px !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  #lab-modal .github-button {
+    position: static !important;
+    margin-top: 12px;
+  }
+    .card-content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100% !important;
+  }
+
+  #lab-modal .project-item .card-content {
+    padding-right: 0 !important;
+  }
+}
+}
+</style>
 
 
 <script>
 const logoCache = {};
+let laboratories = [];
+let projects = [];
+let scrollPosition = 0;
+
+const ICONS = {
+  TELEGRAM_WHITE: 'https://static.tildacdn.com/tild6536-6238-4861-b433-393136366633/telegram-white.png',
+  TELEGRAM_BLACK: 'https://static.tildacdn.com/tild6630-6464-4139-b338-353563666237/telegram-black.png',
+  VK_WHITE: 'https://static.tildacdn.com/tild6465-6132-4266-a566-343338303265/vk-white.png',
+  VK_BLACK: 'https://static.tildacdn.com/tild3432-6461-4365-b934-616461613231/vk-black.png',
+  WEBSITE_WHITE: 'https://static.tildacdn.com/tild3037-3234-4231-b438-663231623533/website-white.png',
+  WEBSITE_BLACK: 'https://static.tildacdn.com/tild3064-6438-4138-b532-383361636139/website-black.png',
+  DOCS_WHITE: 'https://static.tildacdn.com/tild6162-3438-4365-b661-393364326538/docs-white.png',
+  DOCS_BLACK: 'https://static.tildacdn.com/tild3734-3637-4138-b465-616163393438/docs-black.png',
+  GITHUB_WHITE: 'https://static.tildacdn.com/tild6236-3834-4139-b236-363337633163/icons8-github.png',
+  GITHUB_BLACK: 'https://static.tildacdn.com/tild3066-3130-4633-b934-306237643236/icons8-github-50.png'
+};
+const DATA_URL = 'https://raw.githubusercontent.com/Tecevik/example_projects_for_opensourse/main/data.json';
+
+async function initializeData() {
+  try {
+    const cacheKey = 'itmo_data';
+    const cacheTimestampKey = 'cache_time';
+    const cacheDuration = 3600000;
+
+    const now = Date.now();
+    const cachedData = localStorage.getItem(cacheKey);
+    const cacheTimestamp = localStorage.getItem(cacheTimestampKey);
+
+    if (cachedData && cacheTimestamp && now - parseInt(cacheTimestamp) < cacheDuration) {
+      const data = JSON.parse(cachedData);
+      laboratories = data.labs;
+      projects = data.projects;
+      renderLaboratories();
+      return;
+    }
+
+    const response = await fetch(DATA_URL);
+    const data = await response.json();
+
+    laboratories = data.labs;
+    projects = data.projects;
+
+    localStorage.setItem(cacheKey, JSON.stringify(data));
+    localStorage.setItem(cacheTimestampKey, now.toString());
+    renderLaboratories();
+  } catch (error) {
+    console.error('Data loading error:', error);
+    const cachedData = localStorage.getItem('itmo_data');
+    if (cachedData) {
+      const data = JSON.parse(cachedData);
+      laboratories = data.labs;
+      projects = data.projects;
+      renderLaboratories();
+    }
+  }
+}
 
 async function getLogoDimensions(logoUrl) {
   if (logoCache[logoUrl]) return logoCache[logoUrl];
@@ -90,147 +659,249 @@ async function getLogoDimensions(logoUrl) {
   });
 }
 
-function generateStars(starsCount) {
-  const fullStars = Math.min(Math.floor(starsCount / 1000), 5);
-  let html = '';
-  for (let i = 0; i < 5; i++) {
-    html += i < fullStars ? '★' : '☆';
+function createAvatar(logoUrl, identifier) {
+  if (!logoUrl || logoUrl === 'null' || logoUrl === '' || logoUrl === null) {
+    return `
+      <div class="avatar-container">
+        <div class="avatar-placeholder">${identifier.slice(0,2).toUpperCase()}</div>
+      </div>
+    `;
   }
-  return html + (starsCount > 0 ? ` <span class="stars-count">${starsCount.toLocaleString()}</span>` : '');
+  return `
+    <div class="avatar-container">
+      <img src="${logoUrl}" class="avatar-image" alt="${identifier}"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="avatar-placeholder" style="display: none;">${identifier.slice(0,2).toUpperCase()}</div>
+    </div>
+  `;
 }
 
-function showLabProjects(labId) {
-  fetch(`/api/lab/${labId}`)
-    .then(r => r.json())
-    .then(data => {
-      const container = document.getElementById('itmo-projects');
-      const status = document.getElementById('status');
-      container.innerHTML = '';
+function createStars(rating) {
+  if (!rating || rating === 0) return '';
+  return `<div style="display: flex; align-items: center; gap: 6px; margin-top: 12px; font-size: 16px; color: #f28c38; font-weight: 600;">
+    ★ <span style="font-size: 14px; color: #666;">${rating.toLocaleString()}</span>
+  </div>`;
+}
 
-      const labCard = document.createElement('div');
-      labCard.className = 'itmo-project-card lab-header';
-      const githubUrl = data.lab.github_url || data.lab.github_org;
-      const hasGithub = githubUrl && githubUrl !== 'null' && githubUrl !== null;
-      const hasWebsite = data.lab.links?.website;
+function createProjectLinks(project) {
+  let pos = 1;
+  const icons = [];
 
-      labCard.innerHTML = `
-        <div class="card-header">
-          <div class="card-avatar-placeholder">L</div>
-          <div class="card-title">
-            <h2>${data.lab.name || data.lab.title}</h2>
-            <p>${data.lab.description?.en || data.lab.description?.ru || ''}</p>
+  if (project.github_url) {
+    icons.push(`
+      <a href="${project.github_url}" target="_blank" class="social-icon github-icon" data-pos="${pos++}" title="GitHub">
+        <img src="${ICONS.GITHUB_WHITE}" onerror="this.src='${ICONS.GITHUB_BLACK}'">
+      </a>
+    `);
+  }
+  if (project.links?.docs) {
+    icons.push(`
+      <a href="${project.links.docs}" target="_blank" class="social-icon docs-icon" data-pos="${pos++}" title="Документация">
+        <img src="${ICONS.DOCS_WHITE}" onerror="this.src='${ICONS.DOCS_BLACK}'">
+      </a>
+    `);
+  }
+  if (project.links?.vkontakte) {
+    icons.push(`
+      <a href="${project.links.vkontakte}" target="_blank" class="social-icon" data-pos="${pos++}" title="VK">
+        <img src="${ICONS.VK_WHITE}" onerror="this.src='${ICONS.VK_BLACK}'">
+      </a>
+    `);
+  }
+  if (project.links?.telegram) {
+    icons.push(`
+      <a href="${project.links.telegram}" target="_blank" class="social-icon" data-pos="${pos++}" title="Telegram">
+        <img src="${ICONS.TELEGRAM_WHITE}" onerror="this.src='${ICONS.TELEGRAM_BLACK}'">
+      </a>
+    `);
+  }
+  if (project.links?.website) {
+    icons.push(`
+      <a href="${project.links.website}" target="_blank" class="social-icon" data-pos="${pos++}" title="Сайт">
+        <img src="${ICONS.WEBSITE_WHITE}" onerror="this.src='${ICONS.WEBSITE_BLACK}'">
+      </a>
+    `);
+  }
+  if (icons.length === 0) return '';
+  return `<div class="icons-row">${icons.join('')}</div>`;
+}
+
+function createLabIcons(lab) {
+  let pos = 1;
+  const icons = [];
+
+  if (lab.links?.telegram) {
+    icons.push(`
+      <a href="${lab.links.telegram}" target="_blank" class="social-icon lab-icon" data-pos="${pos++}" title="Telegram">
+        <img src="${ICONS.TELEGRAM_WHITE}" onerror="this.src='${ICONS.TELEGRAM_BLACK}'">
+      </a>
+    `);
+  }
+  if (lab.links?.website) {
+    icons.push(`
+      <a href="${lab.links.website}" target="_blank" class="social-icon lab-icon" data-pos="${pos++}" title="Сайт">
+        <img src="${ICONS.WEBSITE_WHITE}" onerror="this.src='${ICONS.WEBSITE_BLACK}'">
+      </a>
+    `);
+  }
+  if (lab.links?.docs) {
+    icons.push(`
+      <a href="${lab.links.docs}" target="_blank" class="social-icon lab-icon" data-pos="${pos++}" title="Docs">
+        <img src="${ICONS.DOCS_WHITE}" onerror="this.src='${ICONS.DOCS_BLACK}'">
+      </a>
+    `);
+  }
+  if (lab.links?.vkontakte) {
+    icons.push(`
+      <a href="${lab.links.vkontakte}" target="_blank" class="social-icon lab-icon" data-pos="${pos++}" title="VK">
+        <img src="${ICONS.VK_WHITE}" onerror="this.src='${ICONS.VK_BLACK}'">
+      </a>
+    `);
+  }
+  if (icons.length === 0) return '';
+  return `<div class="icons-row">${icons.join('')}</div>`;
+}
+
+function renderLaboratories() {
+  const container = document.getElementById('projects-container');
+  scrollPosition = window.scrollY;
+  container.innerHTML = laboratories.map((lab, index) => {
+    const exampleProjects = lab.example_projects || [];
+    return `
+      <div class="lab-card lab-selector" data-lab-id="${lab.id}" style="cursor: pointer; position: relative;">
+        ${lab.github_org ? `<a href="${lab.github_org}" target="_blank" class="github-button">Смотреть на GitHub</a>` : ''}
+        ${createLabIcons(lab)}
+        <div class="card-content">
+          <div class="card-title">${index + 1} — ${lab.name}</div>
+          <div class="lab-description">
+            ${lab.description?.ru?.slice(0,140) || lab.description?.en?.slice(0,140) || 'Научная лаборатория ИТМО'}
+          </div>
+          <div class="card-examples">
+            Примеры проектов: ${exampleProjects.slice(0,5).join(',\u00A0')}
           </div>
         </div>
-        <div class="card-links">
-          ${hasWebsite ? `<a href="${data.lab.links.website}" target="_blank" style="margin-right:10px;">Сайт</a>` : ''}
-          ${hasGithub ? `<a href="${githubUrl}" target="_blank" style="margin-right:10px;">GitHub</a>` : ''}
-          <button onclick="showAllProjects()" style="background:none;border:none;color:blue;cursor:pointer;">← Назад</button>
-        </div>
-      `;
-      container.appendChild(labCard);
+      </div>
+    `;
+  }).join('');
+  setTimeout(() => window.scrollTo(0, scrollPosition), 100);
+  document.querySelectorAll('.lab-selector').forEach(card => {
+    card.addEventListener('click', (event) => {
+      if (event.target.tagName === 'A') return;
+      scrollPosition = window.scrollY;
+      const labId = card.dataset.labId;
+      renderProjectsForLab(labId);
+    });
+  });
+}
 
-      data.projects.forEach(async (proj) => {
-        const titleShort = proj.title?.slice(0,2).toUpperCase() || '??';
-        const logoUrl = proj.local_logo || proj.logo || '';
+async function renderProjectsForLab(labId) {
+  const lab = laboratories.find(l => l.id === labId);
+  const labProjects = projects.filter(p => p.lab === labId);
 
-        let avatar = `<div class="card-avatar-placeholder">${titleShort}</div>`;
-        if (logoUrl && logoUrl.trim() !== '' && logoUrl !== 'null') {
-          const dims = await getLogoDimensions(logoUrl);
-          if (dims.isWide) {
-            avatar = `<div class="card-avatar-wide" style="background-image: url('${logoUrl}')"></div>`;
-          } else {
-            avatar = `<div class="card-avatar-square" style="background-image: url('${logoUrl}')"></div>`;
-          }
-        }
+  await Promise.all(
+    labProjects.map(project =>
+      project.logo ? getLogoDimensions(project.logo) : Promise.resolve()
+    )
+  );
 
-        const tags = [];
-        if (proj.area) tags.push(`<span class="tag-area">${proj.area}</span>`);
-        if (proj.lab) tags.push(`<span class="tag-lab">${proj.lab}</span>`);
-        const tagsHtml = tags.join('');
+  const modalBody = document.getElementById('lab-modal-body');
 
-        const starsHtml = generateStars(proj.stars || 0);
-        const extraLinks = [];
-        if (proj.links?.docs) extraLinks.push(`📚 <a href="${proj.links.docs}" target="_blank">Docs</a>`);
-        if (proj.links?.website) extraLinks.push(`🌐 <a href="${proj.links.website}" target="_blank">Site</a>`);
-        const linksHtml = extraLinks.length ? `<div class="card-links">${extraLinks.join(' | ')}</div>` : '';
+  modalBody.innerHTML = `
+    <div style="margin-bottom:40px;">
+      <div class="card-title" style="font-size:28px;margin-bottom:16px;">
+        ${lab.name}
+      </div>
+      <div class="lab-description" style="max-width:100%;">
+        ${lab.description?.ru || lab.description?.en || ''}
+      </div>
+    </div>
 
-        const projCard = document.createElement('div');
-        projCard.className = 'itmo-project-card';
-        projCard.innerHTML = `
-          <div class="card-header">
-            ${avatar}
-            <div class="card-title">
-              <a href="${proj.github_url || '#'}" target="_blank">${proj.title}</a>
-              <div class="card-tags">${tagsHtml}</div>
+    ${labProjects.length > 0 ? labProjects.map(project => {
+
+      const isWide = logoCache[project.logo]?.isWide || false;
+      const className = isWide ? 'avatar-wide' : '';
+
+      return `
+        <div class="lab-card project-item" style="max-width:100%;">
+
+          <div class="avatar-container">
+            ${project.logo ? `
+              <img src="${project.logo}" class="avatar-image"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            ` : ''}
+            <div class="avatar-placeholder"
+                 style="display:${project.logo ? 'none':'flex'};">
+              ${project.id.slice(0,2).toUpperCase()}
             </div>
           </div>
-          <div class="card-description">${proj.description?.ru || proj.description?.en || 'Описание проекта'}</div>
-          ${linksHtml}
-          ${proj.stars > 0 ? `<div class="project-stars">${starsHtml}</div>` : ''}
-        `;
-        container.appendChild(projCard);
-      });
 
-      status.textContent = `${data.projects.length} проектов лаборатории`;
-    });
-}
+          <div class="card-content">
+            <div class="card-title">
+              <a href="${project.github_url}" target="_blank"
+                 style="color:#1a1a1a;text-decoration:none;">
+                ${project.title}
+              </a>
+            </div>
 
-function showLabsOnly() {
-  const container = document.getElementById('itmo-projects');
-  const status = document.getElementById('status');
-
-  fetch('/api/projects')
-    .then(r => r.json())
-    .then(data => {
-      container.innerHTML = '';
-      const labs = data.projects.filter(p => p.example_projects);
-
-      labs.forEach((project, index) => {
-        const titleShort = project.title?.slice(0,2).toUpperCase() || '??';
-        const githubUrl = project.github_url || project.github_org;
-        const hasGithub = githubUrl && githubUrl !== 'null' && githubUrl !== null;
-
-        container.innerHTML += `
-          <div class="itmo-project-card lab-card lab-container" id="lab-${project.id}" style="cursor:pointer;">
-            <div class="card-header">
-              <div class="card-avatar-placeholder">${titleShort}</div>
-              <div class="card-title">
-                <div style="font-size:18px;font-weight:bold;margin-bottom:8px;">${index + 1}. ${project.title}</div>
-                <div style="color:#666;margin-bottom:12px;font-size:14px;">
-                  ${project.description?.ru || project.description?.en || 'Описание лаборатории'}
-                  ${project.links?.website ? `<br><a href="${project.links.website}" target="_blank" style="color:#007bff;">Сайт лаборатории</a>` : ''}
-                </div>
-                <div style="margin-bottom:12px;font-size:14px;color:#555;">
-                  Примеры проектов: ${project.example_projects.slice(0,3).join(', ')}${project.example_projects.length > 3 ? '...' : ''}
-                </div>
-                ${hasGithub ?
-                  `<a href="${githubUrl}" target="_blank" class="github-link" style="background:#007bff;color:white;padding:8px 16px;display:inline-block;border-radius:4px;text-decoration:none;margin-top:8px;">GitHub</a>` :
-                  ''
+            ${project.description ? `
+              <div class="lab-description" style="font-size:14px;">
+                ${typeof project.description === 'string'
+                  ? project.description.slice(0,140)
+                  : (project.description.ru?.slice(0,140) ||
+                     project.description.en?.slice(0,140) || '')
                 }
               </div>
+            ` : ''}
+
+            <div class="card-examples"
+                 style="font-size:14px;margin-bottom:12px;">
+              <span style="margin-right:12px;">
+                ${project.area || ''}
+              </span>
+              <span>${project.language || ''}</span>
             </div>
+
+            ${createStars(project.stars)}
+            ${createProjectLinks(project)}
+
           </div>
-        `;
-      });
 
-      status.textContent = `${labs.length} лабораторий`;
-       document.querySelectorAll('.lab-container').forEach(container => {
-        container.addEventListener('click', (e) => {
-         if (e.target.tagName === 'A') {
-         return;  // Любая ссылка открывается сама
-    }
+        </div>
+      `;
+    }).join('') : `
+      <div style="text-align:center;color:#999;">
+        Проекты пока не добавлены
+      </div>
+    `}
+  `;
 
-    const labId = container.id.replace('lab-', '');
-    showLabProjects(labId);
-  });
+  openModal();
+  history.pushState({lab: labId}, '', `#${labId}`);
+}
+
+function openModal() {
+  const modal = document.getElementById('lab-modal');
+  modal.classList.add('active');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  const modal = document.getElementById('lab-modal');
+  modal.classList.remove('active');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  history.pushState('', document.title, window.location.pathname);
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
 });
-    });
-}
-function showAllProjects() {
-  showLabsOnly();
-}
 
-showLabsOnly();
+window.addEventListener('load', () => {
+  const hash = window.location.hash.replace('#','');
+  if (hash) renderProjectsForLab(hash);
+});
+
+initializeData();
 </script>
-</body>
-</html>
