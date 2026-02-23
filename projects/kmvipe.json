@@ -6,7 +6,8 @@
     "en": "Online Tightly Coupled Vision-Language-Geometry Fusion for Open-Vocabulary Semantic SLAM."
   },
   "github_url": "https://github.com/be2rlab/km-vipe",
-  "lab": "ai-chem",
+
+  "lab": "be2rlab",
   "area": "AI for Science",
   "logo": null,
   "links": {
