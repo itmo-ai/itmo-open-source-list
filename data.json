@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-24T01:15:51.904106",
+  "generated_at": "2026-02-24T17:30:13.843490",
   "projects": [
     {
       "id": "rvwo",
@@ -779,6 +779,28 @@
       "example_projects": [
         "LaserProcessing",
         "LaserWeldMonitor"
+      ]
+    },
+    {
+      "id": "aimclub",
+      "name": "AIM club, AI Institute ITMO",
+      "description": {
+        "ru": "Сообщество энтузиастов AI/ML при Институте ИИ ИТМО, которое разрабатывает и поддерживает множество открытых проектов.",
+        "en": "AI/ML research community at ITMO University that creates and maintains multiple open-source projects."
+      },
+      "github_org": "https://github.com/aimclub",
+      "links": {
+        "email": "aim.club@itmo.ru",
+        "website": "https://iai.itmo.ru/",
+        "telegram": null,
+        "vkontakte": "https://vk.com/actcognitive"
+      },
+      "example_projects": [
+        "FEDOT",
+        "BAMT",
+        "OSA",
+        "rostok",
+        "iOpt"
       ]
     },
     {
