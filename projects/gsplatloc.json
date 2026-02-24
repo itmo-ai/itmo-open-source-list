@@ -1,6 +1,6 @@
 {
-  "id": "chemx",
-  "title": "ChemX",
+  "id": "gsplatloc",
+  "title": "GSplatLoc",
   "description": {
     "ru": "Заземление дескрипторов ключевых точек в 3D-гауссовом сплаттинге для улучшения визуальной локализации.",
     "en": "Grounding Keypoint Descriptors into 3D Gaussian Splatting for Improved Visual Localization."
