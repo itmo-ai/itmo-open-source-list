@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-24T17:30:13.843490",
+  "generated_at": "2026-02-24T19:38:23.027616",
   "projects": [
     {
       "id": "rvwo",
@@ -22,8 +22,8 @@
       "topics": []
     },
     {
-      "id": "drugnanoparticlesynergy",
-      "title": "DrugNanoparticleSynergy",
+      "id": "kmvipe",
+      "title": "km-vipe",
       "description": "Online Tightly Coupled Vision-Language-Geometry Fusion for Open-Vocabulary Semantic SLAM",
       "github_url": "https://github.com/be2rlab/km-vipe",
       "lab": "be2rlab",
@@ -44,28 +44,17 @@
     {
       "id": "osa",
       "title": "OSA",
-      "description": "Tool that just makes your open source project better using LLM agents",
+      "description": {
+        "ru": "Инструмент для улучшения open-source проектов с помощью LLM-агентов.",
+        "en": "Tool that makes your open source project better using LLM agents."
+      },
       "github_url": "https://github.com/aimclub/OSA",
       "lab": "aimclub",
       "area": "ML tools",
       "logo": "https://github.com/aimclub/OSA/raw/main/docs/images/osa_logo_h.PNG",
       "links": {
         "website": "https://github.com/aimclub/OSA"
-      },
-      "stars": 134,
-      "updated_at": "2026-02-23T22:03:27Z",
-      "license": "BSD 3-Clause \"New\" or \"Revised\" License",
-      "language": "Python",
-      "url": "https://github.com/aimclub/OSA",
-      "fork": false,
-      "topics": [
-        "code-analysis",
-        "code-improvement",
-        "llm",
-        "open-source",
-        "repository-improvement",
-        "scientific-software"
-      ]
+      }
     },
     {
       "id": "dizyme",
@@ -235,8 +224,8 @@
       ]
     },
     {
-      "id": "chemx",
-      "title": "ChemX",
+      "id": "gsplatloc",
+      "title": "GSplatLoc",
       "description": "[IROS 2025] GSplatLoc: Grounding Keypoint Descriptors into 3D Gaussian Splatting for Improved Visual Localization",
       "github_url": "https://github.com/be2rlab/gsplatloc",
       "lab": "be2rlab",
@@ -295,7 +284,7 @@
       "topics": []
     },
     {
-      "id": "msdm-slam",
+      "id": "msdmslam",
       "title": "MSDM-SLAM",
       "description": "Metric-Semantic Dense Mapping and SLAM system ",
       "github_url": "https://github.com/be2rlab/MSDM-SLAM",
