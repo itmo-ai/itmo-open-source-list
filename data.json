@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-24T19:38:23.027616",
+  "generated_at": "2026-02-25T01:20:57.824149",
   "projects": [
     {
       "id": "rvwo",
@@ -44,17 +44,28 @@
     {
       "id": "osa",
       "title": "OSA",
-      "description": {
-        "ru": "Инструмент для улучшения open-source проектов с помощью LLM-агентов.",
-        "en": "Tool that makes your open source project better using LLM agents."
-      },
+      "description": "Tool that just makes your open source project better using LLM agents",
       "github_url": "https://github.com/aimclub/OSA",
       "lab": "aimclub",
       "area": "ML tools",
       "logo": "https://github.com/aimclub/OSA/raw/main/docs/images/osa_logo_h.PNG",
       "links": {
         "website": "https://github.com/aimclub/OSA"
-      }
+      },
+      "stars": 134,
+      "updated_at": "2026-02-23T22:03:27Z",
+      "license": "BSD 3-Clause \"New\" or \"Revised\" License",
+      "language": "Python",
+      "url": "https://github.com/aimclub/OSA",
+      "fork": false,
+      "topics": [
+        "code-analysis",
+        "code-improvement",
+        "llm",
+        "open-source",
+        "repository-improvement",
+        "scientific-software"
+      ]
     },
     {
       "id": "dizyme",
