@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-26T01:14:42.397735",
+  "generated_at": "2026-02-27T01:13:48.033801",
   "projects": [
     {
       "id": "documentor",
@@ -14,10 +14,10 @@
         "docs": null
       },
       "stars": 29,
-      "updated_at": "2026-01-20T14:21:26Z",
+      "updated_at": "2026-02-26T19:36:04Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
-      "url": "https://github.com/Industrial-AI-Research-Lab/documentor",
+      "url": "https://github.com/aimclub/documentor",
       "fork": false,
       "topics": []
     },
@@ -102,8 +102,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 41,
-      "updated_at": "2026-01-28T14:56:09Z",
+      "stars": 42,
+      "updated_at": "2026-02-26T10:38:47Z",
       "license": "GNU General Public License v3.0",
       "language": "C++",
       "url": "https://github.com/be2rlab/rvwo",
@@ -595,7 +595,7 @@
         "website": "https://github.com/aimclub/OSA"
       },
       "stars": 134,
-      "updated_at": "2026-02-25T12:37:50Z",
+      "updated_at": "2026-02-26T10:19:23Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/OSA",
