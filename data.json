@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-02T01:15:44.589057",
+  "generated_at": "2026-03-03T01:18:53.574253",
   "projects": [
     {
       "id": "documentor",
@@ -14,7 +14,7 @@
         "docs": null
       },
       "stars": 29,
-      "updated_at": "2026-02-26T19:36:04Z",
+      "updated_at": "2026-03-02T08:19:02Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/documentor",
