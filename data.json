@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-04T01:13:53.259678",
+  "generated_at": "2026-03-05T01:16:13.712641",
   "projects": [
     {
       "id": "documentor",
@@ -14,7 +14,7 @@
         "docs": null
       },
       "stars": 29,
-      "updated_at": "2026-03-03T10:18:33Z",
+      "updated_at": "2026-03-04T13:38:41Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/documentor",
@@ -82,8 +82,8 @@
         "website": null,
         "docs": "https://compphyslab.github.io/SVETlANNa/"
       },
-      "stars": 51,
-      "updated_at": "2026-01-25T15:23:01Z",
+      "stars": 52,
+      "updated_at": "2026-03-04T12:36:07Z",
       "license": "Mozilla Public License 2.0",
       "language": "Python",
       "url": "https://github.com/CompPhysLab/SVETlANNa",
@@ -294,7 +294,7 @@
         "docs": null
       },
       "stars": 66,
-      "updated_at": "2026-02-10T09:07:56Z",
+      "updated_at": "2026-03-04T14:07:18Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/ITMO-NSS-team/EPDE",
