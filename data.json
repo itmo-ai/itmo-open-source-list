@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-06T01:19:39.789320",
+  "generated_at": "2026-03-07T01:11:05.798482",
   "projects": [
     {
       "id": "documentor",
@@ -294,7 +294,7 @@
         "docs": null
       },
       "stars": 66,
-      "updated_at": "2026-03-05T13:32:15Z",
+      "updated_at": "2026-03-06T15:01:23Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/ITMO-NSS-team/EPDE",
@@ -377,8 +377,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 45,
-      "updated_at": "2026-02-22T05:46:38Z",
+      "stars": 46,
+      "updated_at": "2026-03-06T09:22:40Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/be2rlab/km-vipe",
@@ -641,8 +641,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 176,
-      "updated_at": "2026-03-01T05:55:13Z",
+      "stars": 177,
+      "updated_at": "2026-03-06T17:18:08Z",
       "license": "Apache License 2.0",
       "language": "Python",
       "url": "https://github.com/CTLab-ITMO/CoolPrompt",
