@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T01:11:25.549456",
+  "generated_at": "2026-03-12T01:09:05.783878",
   "projects": [
     {
       "id": "documentor",
@@ -273,8 +273,8 @@
         "website": "https://gsplatloc.github.io/",
         "docs": null
       },
-      "stars": 131,
-      "updated_at": "2026-02-22T00:47:44Z",
+      "stars": 132,
+      "updated_at": "2026-03-11T08:12:53Z",
       "license": "Apache License 2.0",
       "language": "Jupyter Notebook",
       "url": "https://github.com/be2rlab/gsplatloc",
