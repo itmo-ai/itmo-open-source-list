@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-16T01:25:19.806200",
+  "generated_at": "2026-03-17T01:16:51.294188",
   "projects": [
     {
       "id": "documentor",
@@ -193,8 +193,8 @@
         "website": null,
         "docs": "https://github.com/ILT-ITMO/LaserWeldMonitor#documentation"
       },
-      "stars": 5,
-      "updated_at": "2026-02-06T09:16:56Z",
+      "stars": 6,
+      "updated_at": "2026-03-16T13:17:50Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Jupyter Notebook",
       "url": "https://github.com/ILT-ITMO/LaserWeldMonitor",
@@ -417,8 +417,8 @@
         "website": null,
         "docs": "https://bioconductor.org/packages/release/bioc/html/fgsea.html"
       },
-      "stars": 433,
-      "updated_at": "2026-02-03T18:31:02Z",
+      "stars": 432,
+      "updated_at": "2026-03-16T05:05:39Z",
       "license": "Other",
       "language": "R",
       "url": "https://github.com/alserglab/fgsea",
