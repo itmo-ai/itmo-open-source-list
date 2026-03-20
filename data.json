@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-19T01:21:00.263983",
+  "generated_at": "2026-03-20T01:16:11.952982",
   "projects": [
     {
       "id": "documentor",
@@ -595,7 +595,7 @@
         "website": "https://github.com/aimclub/OSA"
       },
       "stars": 134,
-      "updated_at": "2026-03-12T21:37:29Z",
+      "updated_at": "2026-03-19T10:47:50Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/OSA",
@@ -641,8 +641,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 179,
-      "updated_at": "2026-03-15T21:17:21Z",
+      "stars": 180,
+      "updated_at": "2026-03-19T15:19:25Z",
       "license": "Apache License 2.0",
       "language": "Python",
       "url": "https://github.com/CTLab-ITMO/CoolPrompt",
