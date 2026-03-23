@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-22T01:20:37.382596",
+  "generated_at": "2026-03-23T01:20:59.446607",
   "projects": [
     {
       "id": "documentor",
@@ -82,8 +82,8 @@
         "website": null,
         "docs": "https://compphyslab.github.io/SVETlANNa/"
       },
-      "stars": 53,
-      "updated_at": "2026-03-20T11:13:21Z",
+      "stars": 54,
+      "updated_at": "2026-03-22T03:09:03Z",
       "license": "Mozilla Public License 2.0",
       "language": "Python",
       "url": "https://github.com/CompPhysLab/SVETlANNa",
@@ -417,8 +417,8 @@
         "website": null,
         "docs": "https://bioconductor.org/packages/release/bioc/html/fgsea.html"
       },
-      "stars": 434,
-      "updated_at": "2026-03-21T21:28:52Z",
+      "stars": 435,
+      "updated_at": "2026-03-22T11:46:05Z",
       "license": "Other",
       "language": "R",
       "url": "https://github.com/alserglab/fgsea",
