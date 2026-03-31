@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-30T01:28:35.344759",
+  "generated_at": "2026-03-31T01:25:45.454155",
   "projects": [
     {
       "id": "chemx",
@@ -73,7 +73,7 @@
         "website": "https://github.com/aimclub/OSA"
       },
       "stars": 138,
-      "updated_at": "2026-03-29T20:14:44Z",
+      "updated_at": "2026-03-30T16:01:28Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/OSA",
@@ -614,8 +614,8 @@
         "website": "https://gsplatloc.github.io/",
         "docs": null
       },
-      "stars": 132,
-      "updated_at": "2026-03-11T08:12:53Z",
+      "stars": 135,
+      "updated_at": "2026-03-30T14:30:58Z",
       "license": "Apache License 2.0",
       "language": "Jupyter Notebook",
       "url": "https://github.com/be2rlab/gsplatloc",
@@ -717,10 +717,10 @@
         "docs": null
       },
       "stars": 47,
-      "updated_at": "2026-03-27T05:59:35Z",
+      "updated_at": "2026-03-30T02:32:40Z",
       "license": "Other",
       "language": "Python",
-      "url": "https://github.com/be2rlab/km-vipe",
+      "url": "https://github.com/be2rlab/RADIO-ViPE",
       "fork": false,
       "topics": []
     },
