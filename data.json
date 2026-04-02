@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-01T01:46:29.768444",
+  "generated_at": "2026-04-02T01:22:47.938792",
   "projects": [
     {
       "id": "chemx",
@@ -146,8 +146,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 185,
-      "updated_at": "2026-03-29T14:40:46Z",
+      "stars": 186,
+      "updated_at": "2026-04-01T13:51:15Z",
       "license": "Apache License 2.0",
       "language": "Python",
       "url": "https://github.com/CTLab-ITMO/CoolPrompt",
@@ -696,8 +696,8 @@
         "website": null,
         "docs": "https://bioconductor.org/packages/release/bioc/html/fgsea.html"
       },
-      "stars": 435,
-      "updated_at": "2026-03-27T03:16:30Z",
+      "stars": 436,
+      "updated_at": "2026-04-01T11:34:47Z",
       "license": "Other",
       "language": "R",
       "url": "https://github.com/alserglab/fgsea",
