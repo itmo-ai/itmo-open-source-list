@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-06T01:28:53.904202",
+  "generated_at": "2026-04-07T01:26:24.308289",
   "projects": [
     {
       "id": "chemx",
@@ -614,8 +614,8 @@
         "website": "https://gsplatloc.github.io/",
         "docs": null
       },
-      "stars": 135,
-      "updated_at": "2026-03-30T14:30:58Z",
+      "stars": 136,
+      "updated_at": "2026-04-06T02:44:41Z",
       "license": "Apache License 2.0",
       "language": "Jupyter Notebook",
       "url": "https://github.com/be2rlab/gsplatloc",
