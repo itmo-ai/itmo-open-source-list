@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-10T01:29:00.741312",
+  "generated_at": "2026-04-11T01:22:51.276340",
   "projects": [
     {
       "id": "samovar",
@@ -77,7 +77,7 @@
         "docs": "https://compphyslab.github.io/SVETlANNa/"
       },
       "stars": 54,
-      "updated_at": "2026-04-09T09:52:38Z",
+      "updated_at": "2026-04-10T06:33:13Z",
       "license": "Mozilla Public License 2.0",
       "language": "Python",
       "url": "https://github.com/CompPhysLab/SVETlANNa",
@@ -116,8 +116,8 @@
         "website": null,
         "docs": "https://bioconductor.org/packages/release/bioc/html/fgsea.html"
       },
-      "stars": 437,
-      "updated_at": "2026-04-03T12:52:54Z",
+      "stars": 438,
+      "updated_at": "2026-04-10T13:03:00Z",
       "license": "Other",
       "language": "R",
       "url": "https://github.com/alserglab/fgsea",
@@ -624,8 +624,8 @@
         "website": "https://gsplatloc.github.io/",
         "docs": null
       },
-      "stars": 136,
-      "updated_at": "2026-04-06T02:44:41Z",
+      "stars": 137,
+      "updated_at": "2026-04-10T07:31:59Z",
       "license": "Apache License 2.0",
       "language": "Jupyter Notebook",
       "url": "https://github.com/be2rlab/gsplatloc",
