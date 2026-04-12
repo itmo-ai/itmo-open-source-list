@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-11T01:22:51.276340",
+  "generated_at": "2026-04-12T01:46:19.201654",
   "projects": [
     {
       "id": "samovar",
@@ -116,8 +116,8 @@
         "website": null,
         "docs": "https://bioconductor.org/packages/release/bioc/html/fgsea.html"
       },
-      "stars": 438,
-      "updated_at": "2026-04-10T13:03:00Z",
+      "stars": 439,
+      "updated_at": "2026-04-11T09:02:09Z",
       "license": "Other",
       "language": "R",
       "url": "https://github.com/alserglab/fgsea",
@@ -624,8 +624,8 @@
         "website": "https://gsplatloc.github.io/",
         "docs": null
       },
-      "stars": 137,
-      "updated_at": "2026-04-10T07:31:59Z",
+      "stars": 138,
+      "updated_at": "2026-04-11T13:05:04Z",
       "license": "Apache License 2.0",
       "language": "Jupyter Notebook",
       "url": "https://github.com/be2rlab/gsplatloc",
