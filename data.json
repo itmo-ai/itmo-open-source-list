@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-15T01:28:14.990478",
+  "generated_at": "2026-04-16T01:50:05.545268",
   "projects": [
     {
       "id": "samovar",
@@ -36,8 +36,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 47,
-      "updated_at": "2026-04-03T22:37:23Z",
+      "stars": 48,
+      "updated_at": "2026-04-15T02:21:37Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/be2rlab/RADIO-ViPE",
