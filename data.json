@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T01:51:39.740145",
+  "generated_at": "2026-04-21T01:46:42.677108",
   "projects": [
     {
       "id": "samovar",
@@ -36,8 +36,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 48,
-      "updated_at": "2026-04-15T02:21:37Z",
+      "stars": 47,
+      "updated_at": "2026-04-20T06:01:01Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/be2rlab/RADIO-ViPE",
@@ -116,8 +116,8 @@
         "website": null,
         "docs": "https://bioconductor.org/packages/release/bioc/html/fgsea.html"
       },
-      "stars": 439,
-      "updated_at": "2026-04-11T09:02:09Z",
+      "stars": 440,
+      "updated_at": "2026-04-20T02:05:49Z",
       "license": "Other",
       "language": "R",
       "url": "https://github.com/alserglab/fgsea",
@@ -176,8 +176,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 42,
-      "updated_at": "2026-03-09T18:05:16Z",
+      "stars": 41,
+      "updated_at": "2026-04-20T06:01:01Z",
       "license": "GNU General Public License v3.0",
       "language": "C++",
       "url": "https://github.com/be2rlab/rvwo",
@@ -597,8 +597,8 @@
       "links": {
         "website": "https://github.com/aimclub/OSA"
       },
-      "stars": 140,
-      "updated_at": "2026-04-18T14:19:18Z",
+      "stars": 141,
+      "updated_at": "2026-04-20T15:39:50Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/OSA",
@@ -644,8 +644,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 31,
-      "updated_at": "2026-04-19T05:42:30Z",
+      "stars": 33,
+      "updated_at": "2026-04-21T00:38:56Z",
       "license": null,
       "language": "Jupyter Notebook",
       "url": "https://github.com/ai-chem/nanoMINER",
@@ -664,8 +664,8 @@
         "website": null,
         "docs": "https://iopt.readthedocs.io/ru/latest/"
       },
-      "stars": 56,
-      "updated_at": "2025-10-09T05:07:39Z",
+      "stars": 57,
+      "updated_at": "2026-04-20T13:36:11Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/iOpt",
