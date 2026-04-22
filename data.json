@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T01:46:42.677108",
+  "generated_at": "2026-04-22T01:45:47.290534",
   "projects": [
     {
       "id": "samovar",
@@ -240,8 +240,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 188,
-      "updated_at": "2026-04-16T13:24:19Z",
+      "stars": 187,
+      "updated_at": "2026-04-21T14:13:05Z",
       "license": "Apache License 2.0",
       "language": "Python",
       "url": "https://github.com/CTLab-ITMO/CoolPrompt",
@@ -471,7 +471,7 @@
         "docs": null
       },
       "stars": 66,
-      "updated_at": "2026-03-10T13:01:47Z",
+      "updated_at": "2026-04-21T14:59:14Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/ITMO-NSS-team/EPDE",
