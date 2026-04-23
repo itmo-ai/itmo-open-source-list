@@ -26,6 +26,8 @@
 
   padding: 0 !important;
   margin: 0 !important;
+  font-family: 'Golos/ALSGorizont', Arial, sans-serif;
+
 }
 
 #projects-container {
@@ -49,9 +51,9 @@
   overflow: visible !important;
   display: grid !important;
   grid-template-columns: 1fr !important;
-  gap: clamp(16px, 3vw, 24px);
+  gap: 24px;
   padding: clamp(16px, 3vw, 32px) clamp(16px, 3vw, 32px) !important;
-  padding-bottom: 40px !important;
+  padding-bottom: 20px !important;
   width: 100% !important;
   max-width: 100% !important;
   margin: 0 auto !important;
@@ -61,7 +63,7 @@
    КАРТОЧКИ
 */
 .lab-card {
-  margin-bottom: 24px !important;
+  margin-bottom: 0px !important;
   display: flex;
   align-items: flex-start;
   gap: 32px;
@@ -72,16 +74,21 @@
   margin-right: auto !important;
   min-height: 220px;
   position: relative;
-  border: 1px solid #000;
+  border: 1px solid #333333;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  box-shadow: none;
   transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1),
               box-shadow 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-
+.lab-selector.lab-card {
+  padding-bottom: 32px !important;
+}
+.lab-selector.lab-card.no-icons {
+  padding-bottom: 32px !important;
+}
 .lab-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+  box-shadow: none;
 }
 
 .lab-card:nth-child(odd) {
@@ -141,7 +148,7 @@
   border-radius: 8px;
 }
 
-/*
+/* 
    КОНТЕНТ
 */
 .card-content {
@@ -149,16 +156,17 @@
   display: flex;
   flex-direction: column;
   min-width: 0;
-  padding-left: 24px;
-  padding-right: 120px;
+  padding-left: 0px;
+  padding-right: 220px;
 }
-
 .card-title {
   font-size: 24px;
   line-height: 1.54;
   font-weight: 600;
   margin: 0 0 16px 0;
   color: #1a1a1a;
+  font-family: 'Golos/ALSGorizont', Arial, sans-serif;
+
 }
 
 .card-title a {
@@ -174,22 +182,29 @@
   font-size: 18px;
   line-height: 1.55;
   color: #666;
-  margin: 0 0 24px 0;
-  flex-grow: 1;
+  margin: 0 0 16px 0;
+  flex-grow: 0 !important;
   background: white;
   padding: 12px 16px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  box-shadow: none;
   max-width: 600px;
   overflow: hidden;
-  white-space: pre-line
+  white-space: pre-line;
+  font-family: 'Golos/ALSGorizont', Arial, sans-serif;
+
 }
 
 .card-examples {
   font-size: 18px;
   line-height: 1.55;
   color: #666;
-  margin: 0 0 auto 0;
+  margin: 0;
+  margin-bottom: 0 !important;
+  font-family: 'Golos/ALSGorizont', Arial, sans-serif;
+}
+.card-examples:empty {
+  display: none !important;
 }
 
 /*
@@ -200,22 +215,23 @@
 .github-button:visited,
 .github-button:active {
   position: absolute;
-  top: 16px;
-  right: 16px !important;
+  top: 32px;
+  right: 32px !important;
   padding: 8px 16px;
   font-size: 14px;
   font-weight: 500;
   background: transparent;
-  color: #000 !important;
-  border: 1px solid #000;
-  border-radius: 0;
+  color: #333333 !important;
+  border: 1px solid #333333;
+  border-radius: 8px;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 10;
+  font-family: 'Golos/ALSGorizont', Arial, sans-serif;
 }
 
 .github-button:hover {
-  background: #000 !important;
+  background: #333333 !important;
   color: #fff !important;
   transform: translateY(-1px);
 }
@@ -234,6 +250,8 @@
   font-weight: 600;
   box-shadow: 0 4px 15px rgba(90,111,216,0.3);
   transition: all 0.3s;
+  font-family: 'Golos/ALSGorizont', Arial, sans-serif;
+
 }
 
 .back-button:hover {
@@ -299,81 +317,98 @@
   transform: scale(1.1);
 }
 
-/*
-   SOCIAL ICONS
-  */
+/* 
+   SOCIAL ICONS 
+*/
+
+/* Базовые стили иконки */
 .social-icon {
-  position: absolute;
-  top: 68px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 54px;
-  height: 54px;
+  width: 44px;
+  height: 44px;
   border-radius: 8px;
-  background: rgba(255,255,255,0.9);
-  border: 1px solid #000;
+  background: transparent;
+  border: 1px solid #333333;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   z-index: 5;
 }
 
-.social-icon:hover {
-  background: #000;
-  border: 2px solid #fff;
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+.social-icon img {
+  width: 24px;
+  height: 24px;
+  filter: none;
+  transition: filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-icon img {
-  width: 27px;
-  height: 27px;
-  transition: all 0.2s ease;
+.social-icon:hover {
+  background: #333333;
+  border: 1px solid #333333;
 }
 
 .social-icon:hover img {
-  content: url('');
   filter: brightness(0) invert(1);
 }
 
-.social-icon[data-pos="1"] {
-  position: absolute !important;
-  top: 68px !important;
-  right: 16px !important;
-  z-index: 5;
-}
-
-.social-icon[data-pos="2"] {
-  position: absolute !important;
-  top: 68px !important;
-  right: 76px !important;
-  z-index: 5;
-}
-
-.social-icon[data-pos="3"] {
-  position: absolute !important;
-  top: 68px !important;
-  right: 136px !important;
-}
-
-.social-icon[data-pos="4"] {
-  position: absolute !important;
-  top: 68px !important;
-  right: 196px !important;
-}
-
-.project-item:has(.social-icon.docs-icon) .social-icon[data-pos="2"] { right: 76px !important; }
-.project-item:has(.social-icon.docs-icon) .social-icon[data-pos="3"] { right: 136px !important; }
-.project-item:has(.social-icon.docs-icon) .social-icon[data-pos="4"] { right: 196px !important; }
-
-/*
+/* 
    ОБЁРТКА ДЛЯ ИКОНОК
 */
-.icons-row {
-  display: contents;
+.lab-selector .icons-row {
+  position: absolute !important;
+  right: 32px !important;
+  bottom: 32px !important;
+  top: auto !important;
+  left: auto !important;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: flex-end !important;
+  gap: 8px !important;
+  margin: 0 !important;
+  z-index: 5;
 }
 
-/*
+.lab-selector .social-icon,
+.lab-selector .social-icon[data-pos],
+.lab-selector .social-icon[data-pos="1"],
+.lab-selector .social-icon[data-pos="2"],
+.lab-selector .social-icon[data-pos="3"],
+.lab-selector .social-icon[data-pos="4"] {
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  left: auto !important;
+  bottom: auto !important;
+}
+
+/* 
+   ОБЁРТКА ДЛЯ ИКОНОК
+*/
+.project-item .icons-row {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  margin-top: 16px !important;
+  position: relative !important;
+}
+
+.project-item .social-icon,
+.project-item .social-icon[data-pos],
+.project-item .social-icon[data-pos="1"],
+.project-item .social-icon[data-pos="2"],
+.project-item .social-icon[data-pos="3"],
+.project-item .social-icon[data-pos="4"] {
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  left: auto !important;
+  bottom: auto !important;
+}
+
+/* 
    АДАПТИВНОСТЬ
  */
 
@@ -385,6 +420,7 @@
 }
 
 /* Мобилка */
+
 @media (max-width: 768px) {
   .grid-container {
     padding: 20px 12px !important;
@@ -477,11 +513,15 @@
   position: fixed;
   inset: 0;
   display: none;
-  z-index: 99999;
+  z-index: 9999999;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px; 
+  box-sizing: border-box;
 }
 
 .lab-modal.active {
-  display: block;
+  display: flex;
 }
 
 .lab-modal-overlay {
@@ -499,17 +539,21 @@
 
 .lab-modal-window {
   position: relative;
-  margin: 60px auto;
-  width: 95%;
+  margin: 0 auto;
+  width: 100%;
   max-width: 1100px;
-  max-height: 85vh;
-  overflow-y: auto;
+  max-height: calc(100vh - 120px) !important; 
   background: #fff;
-  border-radius: 16px;
-  padding: 40px;
+  border-radius: 12px; 
+  overflow-y: auto !important; 
+  display: flex;
+  flex-direction: column;
   transform: translateY(20px);
   opacity: 0;
   transition: all 0.25s ease;
+  font-family: 'Golos/ALSGorizont', Arial, sans-serif;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  padding: 40px !important; 
 }
 
 .lab-modal.active .lab-modal-window {
@@ -527,61 +571,197 @@
   cursor: pointer;
 }
 
+
+#lab-modal .card-content > *:last-child {
+  margin-bottom: 0 !important;
+}
 /* Карточки проектов в модалке */
 
 #lab-modal .lab-card {
   width: 100% !important;
   max-width: 900px !important;
-  margin: 0 auto 24px auto !important;
+  margin: 0 auto 32px auto !important; 
   padding: 32px !important;
   box-sizing: border-box;
   position: relative;
+  min-height: auto !important; /* добавьте эту строку */
+}
+#lab-modal .lab-card:last-child {
+  margin-bottom: 0 !important;
 }
 
 #lab-modal .github-button {
   position: absolute !important;
-  top: 16px;
-  right: 16px !important;
+  top: 32px !important;
+  right: 32px !important;
 }
 
 #lab-modal .project-item .card-content {
-  padding-right: 180px;
+  padding-left: 0;
+  padding-right: 220px !important;
+}
+
+#lab-modal .project-item .icons-row {
+  position: absolute !important;
+  top: 32px !important;    /* Отступ сверху 32px */
+  right: 32px !important;  /* Отступ справа 32px */
+  margin-top: 0 !important;
+  display: flex !important;
+  gap: 8px !important;
+  z-index: 10;
+}
+
+  /* стили для сохранения визуального скругления при скролле */
+.lab-modal-window::-webkit-scrollbar {
+  width: 14px; /* общая ширина полосы */
+}
+
+.lab-modal-window::-webkit-scrollbar-track {
+  background: transparent; /* прозрачный фон дорожки не перекрывает скругление угла */
+    margin: 12px 0; 
+}
+
+.lab-modal-window::-webkit-scrollbar-thumb {
+  background-color: #d1d1d1; /* цвет ползунка */
+  border-radius: 10px;
+  /* создаем отступ ползунка от края, чтобы он не касался границы скругления */
+  border: 4px solid #fff; 
 }
 /* Мобильная версия модалки */
 
 @media (max-width: 768px) {
+  /* 1. окно модалки */
   .lab-modal-window {
     margin: 0;
     border-radius: 0;
     height: 100%;
-    max-height: 100%;
-    padding: 16px;
+    max-height: 100% !important;
+    padding: 16px !important;
+    display: flex;
+    flex-direction: column;
   }
 
+  /* 2. настройки карточки в модалке */
   #lab-modal .lab-card {
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important; /* перенос под аватарку */
+    align-items: stretch !important; /* растягивание контента */
     padding: 24px !important;
-    max-width: 100% !important;
     width: 100% !important;
-    margin-left: 0 !important;
+    min-height: auto !important;
+    gap: 16px !important;
+  }
+
+  /* 3. аватарка */
+  #lab-modal .avatar-container {
+    align-self: flex-start !important;
+    margin-bottom: 8px !important;
+    width: 64px !important;
+    height: 64px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* 4. расширение контента до 160 пикселей и выше */
+  #lab-modal .project-item .card-content,
+  #lab-modal .card-content {
+    /* сброс десктопного отступа 220px */
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    /* принудительное расширение */
+    width: 100% !important;
+    min-width: 160px !important; 
+    max-width: 100% !important;
+    flex: none !important;
+    display: block !important;
+  }
+
+  /* 5. заголовок проекта */
+  #lab-modal .project-item .card-title {
+    width: 100% !important;
+    min-width: 160px !important;
+    font-size: 18px !important;
+    margin-bottom: 12px !important;
+    word-break: break-word !important;
+    display: block !important;
+  }
+
+  /* 6. описание проекта (плашка) */
+  #lab-modal .lab-description {
+    width: 100% !important;
+    min-width: 160px !important; /* форсируем ширину минимум 160px */
+    max-width: 100% !important;
+    box-sizing: border-box !important;
     margin-right: 0 !important;
+    padding: 12px 16px !important;
+    font-size: 15px !important;
+    display: block !important;
+    flex-grow: 0 !important;
+  }
+
+  /* 7. иконки и кнопки */
+  #lab-modal .project-item .icons-row {
+    position: static !important;
+    margin-top: 16px !important;
+    width: 100% !important;
+    justify-content: flex-start !important;
+    display: flex !important;
+    gap: 12px !important;
   }
 
   #lab-modal .github-button {
     position: static !important;
-    margin-top: 12px;
+    margin-top: 16px !important;
+    display: inline-block !important;
+    width: fit-content !important;
   }
-    .card-content {
+
+  /* стили для общего списка */
+  .card-content {
     padding-left: 0 !important;
     padding-right: 0 !important;
     width: 100% !important;
   }
 
-  #lab-modal .project-item .card-content {
-    padding-right: 0 !important;
+  .lab-selector .icons-row {
+    position: static !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 20px !important;
+    width: 100% !important;
+  }
+
+  .lab-selector.lab-card {
+    padding-bottom: 20px !important;
   }
 }
+
+@media screen and (max-width: 959px) {
+  #rec1945326471 .tn-elem[data-elem-id="1771012805609"] {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    left: 0 !important;
+    top: 0 !important;
+    overflow: visible !important;
+  }
+
+  #rec1945326471 .t396__artboard,
+  #rec1945326471 .t396__carrier,
+  #rec1945326471 .t396__filter {
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+  }
 }
+
+@media screen and (min-width: 960px) {
+  #rec1945326471 .t396__artboard,
+  #rec1945326471 .t396__carrier,
+  #rec1945326471 .t396__filter {
+    min-height: 3446px !important;
+  }
+}
+
 </style>
 
 
@@ -591,19 +771,47 @@ let laboratories = [];
 let projects = [];
 let scrollPosition = 0;
 
+function fixContainerHeight() {
+  var elemId = '1771012805609';
+  var recId = '1945326471';
+
+  var elem = document.querySelector(
+    '#rec' + recId + ' .tn-elem[data-elem-id="' + elemId + '"]'
+  );
+  if (elem) {
+    elem.style.setProperty('height', 'auto', 'important');
+  }
+
+  var artboard = document.querySelector(
+    '.t396__artboard[data-artboard-recid="' + recId + '"]'
+  );
+  var carrier = document.querySelector(
+    '.t396__carrier[data-artboard-recid="' + recId + '"]'
+  );
+  var filter = document.querySelector(
+    '.t396__filter[data-artboard-recid="' + recId + '"]'
+  );
+
+  [artboard, carrier, filter].forEach(function(el) {
+    if (el) {
+      el.style.setProperty('height', 'auto', 'important');
+    }
+  });
+}
+
 const ICONS = {
-  TELEGRAM_WHITE: 'https://static.tildacdn.com/tild6536-6238-4861-b433-393136366633/telegram-white.png',
-  TELEGRAM_BLACK: 'https://static.tildacdn.com/tild6630-6464-4139-b338-353563666237/telegram-black.png',
-  VK_WHITE: 'https://static.tildacdn.com/tild6465-6132-4266-a566-343338303265/vk-white.png',
-  VK_BLACK: 'https://static.tildacdn.com/tild3432-6461-4365-b934-616461613231/vk-black.png',
-  WEBSITE_WHITE: 'https://static.tildacdn.com/tild3037-3234-4231-b438-663231623533/website-white.png',
-  WEBSITE_BLACK: 'https://static.tildacdn.com/tild3064-6438-4138-b532-383361636139/website-black.png',
-  DOCS_WHITE: 'https://static.tildacdn.com/tild6162-3438-4365-b661-393364326538/docs-white.png',
-  DOCS_BLACK: 'https://static.tildacdn.com/tild3734-3637-4138-b465-616163393438/docs-black.png',
-  GITHUB_WHITE: 'https://static.tildacdn.com/tild6236-3834-4139-b236-363337633163/icons8-github.png',
-  GITHUB_BLACK: 'https://static.tildacdn.com/tild3066-3130-4633-b934-306237643236/icons8-github-50.png'
+  TELEGRAM_WHITE: 'https://static.tildacdn.com/tild3438-3863-4434-b939-336335663536/telegram_black.svg',
+  TELEGRAM_BLACK: 'https://static.tildacdn.com/tild3537-6164-4531-a239-333933343333/telegram_white.svg',
+  VK_WHITE: 'https://static.tildacdn.com/tild3139-6137-4066-b834-313163343532/vk_black.svg',
+  VK_BLACK: 'https://static.tildacdn.com/tild3264-6663-4534-b034-383034323861/vk_white.svg',
+  WEBSITE_WHITE: 'https://static.tildacdn.com/tild6435-6262-4839-b034-613566333736/browser_black.svg',
+  WEBSITE_BLACK: 'https://static.tildacdn.com/tild3663-6163-4863-b838-346464633635/browser_white.svg',
+  DOCS_WHITE: 'https://static.tildacdn.com/tild3332-3831-4539-a361-653239346535/docs_black.svg',
+  DOCS_BLACK: 'https://static.tildacdn.com/tild3338-6638-4536-b765-393332363633/docs_white.svg',
+  GITHUB_WHITE: 'https://static.tildacdn.com/tild6435-3538-4938-a464-663361343436/mdi--github.svg',
+  GITHUB_BLACK: 'https://static.tildacdn.com/tild6436-6263-4865-b263-303266623335/proicons--github.svg'
 };
-const DATA_URL = 'https://github.com/itmo-ai/itmo-open-source-list/blob/main/build/data.json';
+const DATA_URL = 'https://raw.githubusercontent.com/itmo-ai/itmo-open-source-list/main/build/data.json';
 
 async function initializeData() {
   try {
@@ -767,31 +975,44 @@ function renderLaboratories() {
   scrollPosition = window.scrollY;
   container.innerHTML = laboratories.map((lab, index) => {
     const exampleProjects = lab.example_projects || [];
+    const iconsCount = [
+      lab.links?.telegram,
+      lab.links?.website,
+      lab.links?.docs,
+      lab.links?.vkontakte
+    ].filter(Boolean).length;
+    const hasIcons = iconsCount > 0;
+    const hasExamples = exampleProjects.length > 0;
     return `
-      <div class="lab-card lab-selector" data-lab-id="${lab.id}" style="cursor: pointer; position: relative;">
+      <div class="lab-card lab-selector${hasIcons ? '' : ' no-icons'}${hasExamples ? '' : ' no-examples'}${iconsCount === 2 ? ' has-two-icons' : ''}${iconsCount === 3 ? ' has-three-icons' : ''}${iconsCount >= 4 ? ' has-four-icons' : ''}" data-lab-id="${lab.id}" style="cursor: pointer; position: relative;">
         ${lab.github_org ? `<a href="${lab.github_org}" target="_blank" class="github-button">Смотреть на GitHub</a>` : ''}
         ${createLabIcons(lab)}
         <div class="card-content">
           <div class="card-title">${index + 1} — ${lab.name}</div>
-          <div class="lab-description">
-            ${lab.description?.ru?.slice(0,140) || lab.description?.en?.slice(0,140) || 'Научная лаборатория ИТМО'}
-          </div>
-          <div class="card-examples">
-            Примеры проектов: ${exampleProjects.slice(0,5).join(',\u00A0')}
-          </div>
+<div class="lab-description">
+  ${lab.description?.ru || lab.description?.en || 'Научная лаборатория ИТМО'}
+</div>
+          ${exampleProjects.length > 0 ? `
+            <div class="card-examples">
+              Примеры проектов:\u00A0${exampleProjects.slice(0,5).join(',\u00A0')}
+            </div>
+          ` : ''}
         </div>
       </div>
     `;
   }).join('');
-  setTimeout(() => window.scrollTo(0, scrollPosition), 100);
-  document.querySelectorAll('.lab-selector').forEach(card => {
-    card.addEventListener('click', (event) => {
-      if (event.target.tagName === 'A') return;
-      scrollPosition = window.scrollY;
-      const labId = card.dataset.labId;
-      renderProjectsForLab(labId);
-    });
+  setTimeout(() => {
+    window.scrollTo(0, scrollPosition);
+    fixContainerHeight();
+  }, 100);
+document.querySelectorAll('.lab-selector').forEach(card => {
+  card.addEventListener('click', (event) => {
+    if (event.target.closest('a, button')) return;
+    scrollPosition = window.scrollY;
+    const labId = card.dataset.labId;
+    renderProjectsForLab(labId);
   });
+});
 }
 
 async function renderProjectsForLab(labId) {
@@ -807,11 +1028,11 @@ async function renderProjectsForLab(labId) {
   const modalBody = document.getElementById('lab-modal-body');
 
   modalBody.innerHTML = `
-    <div style="margin-bottom:40px;">
+    <div style="margin-bottom:40px; padding-left:92px; padding-right:92px;">
       <div class="card-title" style="font-size:28px;margin-bottom:16px;">
         ${lab.name}
       </div>
-      <div class="lab-description" style="max-width:100%;">
+      <div class="lab-description" style="max-width:100%; padding-left:0; padding-right:0;">
         ${lab.description?.ru || lab.description?.en || ''}
       </div>
     </div>
@@ -854,7 +1075,7 @@ async function renderProjectsForLab(labId) {
             ` : ''}
 
             <div class="card-examples"
-                 style="font-size:14px;margin-bottom:12px;">
+                 style="font-size:14px;margin-bottom:2px;">
               <span style="margin-right:12px;">
                 ${project.area || ''}
               </span>
@@ -874,7 +1095,16 @@ async function renderProjectsForLab(labId) {
       </div>
     `}
   `;
-
+  if (!document.getElementById('lab-modal-moved')) {
+    var modal = document.getElementById('lab-modal');
+    document.body.appendChild(modal);
+    modal.id = 'lab-modal';
+    modal.setAttribute('data-moved', '1');
+    var marker = document.createElement('span');
+    marker.id = 'lab-modal-moved';
+    marker.style.display = 'none';
+    document.body.appendChild(marker);
+  }
   openModal();
   history.pushState({lab: labId}, '', `#${labId}`);
 }
@@ -901,6 +1131,8 @@ document.addEventListener('keydown', e => {
 window.addEventListener('load', () => {
   const hash = window.location.hash.replace('#','');
   if (hash) renderProjectsForLab(hash);
+  setTimeout(fixContainerHeight, 500);
+  setTimeout(fixContainerHeight, 2000);
 });
 
 initializeData();
