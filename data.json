@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T01:45:47.290534",
+  "generated_at": "2026-04-23T01:49:44.741474",
   "projects": [
     {
       "id": "samovar",
@@ -36,8 +36,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 47,
-      "updated_at": "2026-04-20T06:01:01Z",
+      "stars": 48,
+      "updated_at": "2026-04-22T08:11:14Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/be2rlab/RADIO-ViPE",
@@ -176,8 +176,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 41,
-      "updated_at": "2026-04-20T06:01:01Z",
+      "stars": 42,
+      "updated_at": "2026-04-23T01:15:05Z",
       "license": "GNU General Public License v3.0",
       "language": "C++",
       "url": "https://github.com/be2rlab/rvwo",
