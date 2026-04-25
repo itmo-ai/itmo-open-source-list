@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T01:49:29.428004",
+  "generated_at": "2026-04-25T01:28:20.205322",
   "projects": [
     {
       "id": "samovar",
@@ -36,8 +36,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 48,
-      "updated_at": "2026-04-23T03:59:53Z",
+      "stars": 49,
+      "updated_at": "2026-04-24T11:52:17Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/be2rlab/RADIO-ViPE",
@@ -76,8 +76,8 @@
         "website": null,
         "docs": "https://compphyslab.github.io/SVETlANNa/"
       },
-      "stars": 54,
-      "updated_at": "2026-04-16T10:44:19Z",
+      "stars": 56,
+      "updated_at": "2026-04-24T14:18:52Z",
       "license": "Mozilla Public License 2.0",
       "language": "Python",
       "url": "https://github.com/CompPhysLab/SVETlANNa",
@@ -176,8 +176,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 42,
-      "updated_at": "2026-04-23T01:15:05Z",
+      "stars": 43,
+      "updated_at": "2026-04-24T03:03:34Z",
       "license": "GNU General Public License v3.0",
       "language": "C++",
       "url": "https://github.com/be2rlab/rvwo",
@@ -275,8 +275,8 @@
         "website": "https://ods.ai/projects/fedot",
         "docs": "https://fedot.readthedocs.io"
       },
-      "stars": 703,
-      "updated_at": "2026-03-21T13:16:10Z",
+      "stars": 704,
+      "updated_at": "2026-04-24T21:49:20Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/FEDOT",
@@ -597,8 +597,8 @@
       "links": {
         "website": "https://github.com/aimclub/OSA"
       },
-      "stars": 141,
-      "updated_at": "2026-04-20T15:39:50Z",
+      "stars": 142,
+      "updated_at": "2026-04-24T21:49:55Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/OSA",
@@ -624,8 +624,8 @@
         "website": "https://gsplatloc.github.io/",
         "docs": null
       },
-      "stars": 139,
-      "updated_at": "2026-04-23T11:14:58Z",
+      "stars": 140,
+      "updated_at": "2026-04-24T20:15:54Z",
       "license": "Apache License 2.0",
       "language": "Jupyter Notebook",
       "url": "https://github.com/be2rlab/gsplatloc",
