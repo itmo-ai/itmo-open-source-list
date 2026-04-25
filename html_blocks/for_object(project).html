@@ -1,0 +1,102 @@
+<style>
+      /* текущий код отвечает за плавность и скролл плашки "проекты"  */
+@media screen and (min-width: 960px) {
+  .projects-sticky-label {
+    position: fixed !important;
+    z-index: 20 !important;
+    transition: none !important;
+  }
+}
+</style>
+
+<script>
+window.addEventListener('load', function () {
+  if (window.innerWidth < 960) return;
+
+  function initProjectsLabel() {
+    var groups = [...document.querySelectorAll('.t396__group[data-group-id="1765376188092000002"]')];
+
+    var projectsGroup = groups.find(function (group) {
+      return group.innerText.trim() === 'Проекты';
+    });
+
+    var cardsContainer = document.getElementById('projects-container');
+    if (!projectsGroup || !cardsContainer) return;
+
+    var initialTop = null;
+    var initialLeft = null;
+    var initialWidth = null;
+    var stickyTop = 16;
+
+    function clearFixed() {
+      projectsGroup.classList.remove('projects-sticky-label');
+      projectsGroup.style.position = '';
+      projectsGroup.style.top = '';
+      projectsGroup.style.left = '';
+      projectsGroup.style.width = '';
+      projectsGroup.style.zIndex = '';
+    }
+
+    function update() {
+      if (window.innerWidth < 960) {
+        clearFixed();
+        return;
+      }
+
+      if (initialTop === null) {
+        var startRect = projectsGroup.getBoundingClientRect();
+        initialTop = startRect.top + window.scrollY;
+        initialLeft = startRect.left;
+        initialWidth = startRect.width;
+      }
+
+      var groupHeight = projectsGroup.getBoundingClientRect().height;
+      var cardsRect = cardsContainer.getBoundingClientRect();
+      var currentScroll = window.scrollY;
+
+      var startStick = initialTop - stickyTop ;
+      var stopStick = window.scrollY + cardsRect.bottom - groupHeight + 80;
+
+      // состояние 1: обычная позиция
+      if (currentScroll < startStick) {
+        clearFixed();
+        return;
+      }
+
+      // состояние 2: sticky
+      if (currentScroll >= startStick && currentScroll < stopStick) {
+        projectsGroup.classList.add('projects-sticky-label');
+        projectsGroup.style.top = stickyTop + 'px';
+        projectsGroup.style.left = initialLeft + 'px';
+        projectsGroup.style.width = initialWidth + 'px';
+        projectsGroup.style.zIndex = '20';
+        return;
+      }
+
+      // состояние 3: остановка внизу
+      if (currentScroll >= stopStick) {
+        projectsGroup.classList.add('projects-sticky-label');
+        projectsGroup.style.top = (stopStick - currentScroll + stickyTop) + 'px';
+        projectsGroup.style.left = initialLeft + 'px';
+        projectsGroup.style.width = initialWidth + 'px';
+        projectsGroup.style.zIndex = '20';
+      }
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', function () {
+      initialTop = null;
+      initialLeft = null;
+      initialWidth = null;
+      clearFixed();
+      setTimeout(update, 50);
+    });
+
+    setTimeout(update, 100);
+    update();
+  }
+
+  setTimeout(initProjectsLabel, 500);
+  setTimeout(initProjectsLabel, 1500);
+});
+</script>
