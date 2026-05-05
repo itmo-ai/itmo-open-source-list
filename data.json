@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-04T01:59:36.660943",
+  "generated_at": "2026-05-05T01:59:42.458889",
   "projects": [
     {
       "id": "samovar",
@@ -36,8 +36,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 76,
-      "updated_at": "2026-05-04T00:35:52Z",
+      "stars": 85,
+      "updated_at": "2026-05-05T01:46:40Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/be2rlab/RADIO-ViPE",
@@ -363,8 +363,8 @@
         "website": "https://swarmtronics.com/",
         "docs": "https://ampy.readthedocs.io/en/latest/"
       },
-      "stars": 6,
-      "updated_at": "2025-08-21T18:48:26Z",
+      "stars": 7,
+      "updated_at": "2026-05-04T11:43:25Z",
       "license": "GNU General Public License v3.0",
       "language": "Python",
       "url": "https://github.com/swarmtronics/AMPy",
@@ -598,7 +598,7 @@
         "website": "https://github.com/aimclub/OSA"
       },
       "stars": 141,
-      "updated_at": "2026-04-30T23:21:14Z",
+      "updated_at": "2026-05-04T14:18:27Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/OSA",
