@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T01:59:42.458889",
+  "generated_at": "2026-05-06T01:58:57.006539",
   "projects": [
     {
       "id": "samovar",
@@ -36,8 +36,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 85,
-      "updated_at": "2026-05-05T01:46:40Z",
+      "stars": 90,
+      "updated_at": "2026-05-06T01:58:08Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/be2rlab/RADIO-ViPE",
@@ -324,7 +324,7 @@
         "docs": null
       },
       "stars": 6,
-      "updated_at": "2026-04-28T17:41:55Z",
+      "updated_at": "2026-05-05T20:51:59Z",
       "license": "MIT License",
       "language": "Python",
       "url": "https://github.com/ILT-ITMO/LaserProcessing",
@@ -334,7 +334,7 @@
     {
       "id": "documentor",
       "title": "Documentor",
-      "description": null,
+      "description": "Document parsing library that extracts structured content",
       "github_url": "https://github.com/Industrial-AI-Research-Lab/documentor",
       "lab": "industrial-ai-research-lab",
       "area": "Industrial AI",
@@ -343,13 +343,16 @@
         "website": null,
         "docs": null
       },
-      "stars": 29,
-      "updated_at": "2026-03-05T15:16:52Z",
+      "stars": 37,
+      "updated_at": "2026-05-05T21:21:30Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/documentor",
       "fork": false,
-      "topics": []
+      "topics": [
+        "ocr",
+        "parsing"
+      ]
     },
     {
       "id": "ampy",
@@ -598,7 +601,7 @@
         "website": "https://github.com/aimclub/OSA"
       },
       "stars": 141,
-      "updated_at": "2026-05-04T14:18:27Z",
+      "updated_at": "2026-05-05T14:11:27Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/OSA",
