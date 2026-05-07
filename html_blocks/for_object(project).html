@@ -1,10 +1,11 @@
 <style>
-      /* текущий код отвечает за плавность и скролл плашки "проекты"  */
+/* текущий код отвечает за плавность и скролл плашки "проекты"  */
 @media screen and (min-width: 960px) {
   .projects-sticky-label {
     position: fixed !important;
     z-index: 20 !important;
     transition: none !important;
+    will-change: top;
   }
 }
 </style>
@@ -13,15 +14,30 @@
 window.addEventListener('load', function () {
   if (window.innerWidth < 960) return;
 
+  var isInitialized = false;
+
   function initProjectsLabel() {
-    var groups = [...document.querySelectorAll('.t396__group[data-group-id="1765376188092000002"]')];
+    if (isInitialized) return;
+
+    var groups = Array.from(
+      document.querySelectorAll('.t396__group[data-group-id="1765376188092000002"]')
+    );
 
     var projectsGroup = groups.find(function (group) {
       return group.innerText.trim() === 'Проекты';
     });
 
-    var cardsContainer = document.getElementById('projects-container');
-    if (!projectsGroup || !cardsContainer) return;
+    /*
+      Класс должен быть навешен на обе кнопки:
+      "Пишите" и "Репозиторий".
+    */
+    var stopButtons = Array.from(
+      document.querySelectorAll('.projects-stop-btn')
+    );
+
+    if (!projectsGroup || !stopButtons.length) return;
+
+    isInitialized = true;
 
     var initialTop = null;
     var initialLeft = null;
@@ -37,6 +53,30 @@ window.addEventListener('load', function () {
       projectsGroup.style.zIndex = '';
     }
 
+    function lockFixed(topValue) {
+      projectsGroup.classList.add('projects-sticky-label');
+      projectsGroup.style.top = topValue + 'px';
+      projectsGroup.style.left = initialLeft + 'px';
+      projectsGroup.style.width = initialWidth + 'px';
+      projectsGroup.style.zIndex = '20';
+    }
+
+    function recalcInitialPosition() {
+      clearFixed();
+
+      var rect = projectsGroup.getBoundingClientRect();
+
+      initialTop = rect.top + window.scrollY;
+      initialLeft = rect.left;
+      initialWidth = rect.width;
+    }
+
+    function getStopButtonsBottom() {
+      return Math.max.apply(null, stopButtons.map(function (button) {
+        return button.getBoundingClientRect().bottom + window.scrollY;
+      }));
+    }
+
     function update() {
       if (window.innerWidth < 960) {
         clearFixed();
@@ -44,55 +84,54 @@ window.addEventListener('load', function () {
       }
 
       if (initialTop === null) {
-        var startRect = projectsGroup.getBoundingClientRect();
-        initialTop = startRect.top + window.scrollY;
-        initialLeft = startRect.left;
-        initialWidth = startRect.width;
+        recalcInitialPosition();
       }
 
-      var groupHeight = projectsGroup.getBoundingClientRect().height;
-      var cardsRect = cardsContainer.getBoundingClientRect();
       var currentScroll = window.scrollY;
+      var groupHeight = projectsGroup.getBoundingClientRect().height;
 
-      var startStick = initialTop - stickyTop ;
-      var stopStick = window.scrollY + cardsRect.bottom - groupHeight + 80;
+      var startStick = initialTop - stickyTop;
 
-      // состояние 1: обычная позиция
+      /*
+        Плашка останавливается так, чтобы её нижний край
+        совпал с нижним краем самой нижней кнопки.
+      */
+      var stopButtonsBottom = getStopButtonsBottom();
+      var stopTopAbsolute = stopButtonsBottom - groupHeight;
+      var stopStick = stopTopAbsolute - stickyTop;
+
       if (currentScroll < startStick) {
         clearFixed();
         return;
       }
 
-      // состояние 2: sticky
       if (currentScroll >= startStick && currentScroll < stopStick) {
-        projectsGroup.classList.add('projects-sticky-label');
-        projectsGroup.style.top = stickyTop + 'px';
-        projectsGroup.style.left = initialLeft + 'px';
-        projectsGroup.style.width = initialWidth + 'px';
-        projectsGroup.style.zIndex = '20';
+        lockFixed(stickyTop);
         return;
       }
 
-      // состояние 3: остановка внизу
-      if (currentScroll >= stopStick) {
-        projectsGroup.classList.add('projects-sticky-label');
-        projectsGroup.style.top = (stopStick - currentScroll + stickyTop) + 'px';
-        projectsGroup.style.left = initialLeft + 'px';
-        projectsGroup.style.width = initialWidth + 'px';
-        projectsGroup.style.zIndex = '20';
-      }
+      lockFixed(stopTopAbsolute - currentScroll);
     }
 
     window.addEventListener('scroll', update, { passive: true });
+
     window.addEventListener('resize', function () {
       initialTop = null;
       initialLeft = null;
       initialWidth = null;
+
       clearFixed();
-      setTimeout(update, 50);
+
+      setTimeout(function () {
+        recalcInitialPosition();
+        update();
+      }, 100);
     });
 
     setTimeout(update, 100);
+    setTimeout(update, 500);
+    setTimeout(update, 1500);
+
     update();
   }
 
