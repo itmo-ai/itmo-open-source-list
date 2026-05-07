@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T02:01:33.821861",
+  "generated_at": "2026-05-07T18:19:36.815070",
   "projects": [
     {
       "id": "samovar",
@@ -76,8 +76,8 @@
         "website": null,
         "docs": "https://compphyslab.github.io/SVETlANNa/"
       },
-      "stars": 57,
-      "updated_at": "2026-04-29T07:09:55Z",
+      "stars": 58,
+      "updated_at": "2026-05-07T14:44:33Z",
       "license": "Mozilla Public License 2.0",
       "language": "Python",
       "url": "https://github.com/CompPhysLab/SVETlANNa",
@@ -343,8 +343,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 40,
-      "updated_at": "2026-05-06T17:09:29Z",
+      "stars": 41,
+      "updated_at": "2026-05-07T11:09:59Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/documentor",
@@ -627,8 +627,8 @@
         "website": "https://gsplatloc.github.io/",
         "docs": null
       },
-      "stars": 140,
-      "updated_at": "2026-05-03T16:19:34Z",
+      "stars": 141,
+      "updated_at": "2026-05-07T08:30:29Z",
       "license": "Apache License 2.0",
       "language": "Jupyter Notebook",
       "url": "https://github.com/be2rlab/gsplatloc",
