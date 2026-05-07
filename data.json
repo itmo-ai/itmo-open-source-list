@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T01:58:57.006539",
+  "generated_at": "2026-05-07T02:01:33.821861",
   "projects": [
     {
       "id": "samovar",
@@ -36,8 +36,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 90,
-      "updated_at": "2026-05-06T01:58:08Z",
+      "stars": 93,
+      "updated_at": "2026-05-06T17:28:24Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/be2rlab/RADIO-ViPE",
@@ -116,8 +116,8 @@
         "website": null,
         "docs": "https://bioconductor.org/packages/release/bioc/html/fgsea.html"
       },
-      "stars": 440,
-      "updated_at": "2026-04-20T02:05:49Z",
+      "stars": 441,
+      "updated_at": "2026-05-06T15:44:44Z",
       "license": "Other",
       "language": "R",
       "url": "https://github.com/alserglab/fgsea",
@@ -343,8 +343,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 37,
-      "updated_at": "2026-05-05T21:21:30Z",
+      "stars": 40,
+      "updated_at": "2026-05-06T17:09:29Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/documentor",
