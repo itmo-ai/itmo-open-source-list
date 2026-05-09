@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T02:08:09.779576",
+  "generated_at": "2026-05-09T02:01:57.210975",
   "projects": [
     {
       "id": "samovar",
@@ -36,8 +36,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 93,
-      "updated_at": "2026-05-06T17:28:24Z",
+      "stars": 97,
+      "updated_at": "2026-05-09T01:58:40Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/be2rlab/RADIO-ViPE",
@@ -343,8 +343,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 41,
-      "updated_at": "2026-05-07T11:09:59Z",
+      "stars": 42,
+      "updated_at": "2026-05-08T19:51:00Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/documentor",
@@ -498,7 +498,7 @@
         "docs": null
       },
       "stars": 2,
-      "updated_at": "2026-01-28T10:50:29Z",
+      "updated_at": "2026-05-08T12:28:23Z",
       "license": "Creative Commons Attribution 4.0 International",
       "language": "C++",
       "url": "https://github.com/be2rlab/OSMa-Bench",
