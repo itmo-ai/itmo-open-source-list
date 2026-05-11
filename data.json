@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-10T02:01:56.836012",
+  "generated_at": "2026-05-11T02:11:26.838422",
   "projects": [
     {
       "id": "samovar",
@@ -36,8 +36,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 102,
-      "updated_at": "2026-05-09T12:36:42Z",
+      "stars": 104,
+      "updated_at": "2026-05-10T07:21:03Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/be2rlab/RADIO-ViPE",
@@ -713,8 +713,8 @@
         "website": null,
         "docs": "https://bamt.readthedocs.io/en/latest/"
       },
-      "stars": 133,
-      "updated_at": "2026-03-17T16:13:58Z",
+      "stars": 134,
+      "updated_at": "2026-05-10T16:49:17Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/BAMT",
