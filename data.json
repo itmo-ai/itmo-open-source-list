@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T02:06:58.403015",
+  "generated_at": "2026-05-13T02:12:36.547099",
   "projects": [
     {
       "id": "samovar",
@@ -36,8 +36,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 107,
-      "updated_at": "2026-05-12T00:16:52Z",
+      "stars": 114,
+      "updated_at": "2026-05-12T13:27:47Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/be2rlab/RADIO-ViPE",
@@ -77,7 +77,7 @@
         "docs": "https://compphyslab.github.io/SVETlANNa/"
       },
       "stars": 58,
-      "updated_at": "2026-05-07T14:44:33Z",
+      "updated_at": "2026-05-12T09:40:55Z",
       "license": "Mozilla Public License 2.0",
       "language": "Python",
       "url": "https://github.com/CompPhysLab/SVETlANNa",
@@ -474,7 +474,7 @@
         "docs": null
       },
       "stars": 66,
-      "updated_at": "2026-04-21T14:59:14Z",
+      "updated_at": "2026-05-12T11:57:28Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/ITMO-NSS-team/EPDE",
@@ -577,8 +577,8 @@
         "website": null,
         "docs": "https://rostok.readthedocs.io/en/latest/?badge=latest"
       },
-      "stars": 46,
-      "updated_at": "2026-02-06T09:18:40Z",
+      "stars": 47,
+      "updated_at": "2026-05-12T07:27:58Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Jupyter Notebook",
       "url": "https://github.com/aimclub/rostok",
@@ -601,7 +601,7 @@
         "website": "https://github.com/aimclub/OSA"
       },
       "stars": 140,
-      "updated_at": "2026-05-08T01:19:05Z",
+      "updated_at": "2026-05-12T08:50:54Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/OSA",
