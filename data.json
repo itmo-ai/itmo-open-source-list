@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T02:12:36.547099",
+  "generated_at": "2026-05-14T02:15:02.988080",
   "projects": [
     {
       "id": "samovar",
@@ -36,8 +36,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 114,
-      "updated_at": "2026-05-12T13:27:47Z",
+      "stars": 115,
+      "updated_at": "2026-05-13T14:43:18Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/be2rlab/RADIO-ViPE",
@@ -240,8 +240,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 188,
-      "updated_at": "2026-04-27T19:34:23Z",
+      "stars": 187,
+      "updated_at": "2026-05-13T05:43:53Z",
       "license": "Apache License 2.0",
       "language": "Python",
       "url": "https://github.com/CTLab-ITMO/CoolPrompt",
@@ -343,8 +343,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 42,
-      "updated_at": "2026-05-08T19:51:00Z",
+      "stars": 43,
+      "updated_at": "2026-05-13T07:59:50Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/documentor",
@@ -601,7 +601,7 @@
         "website": "https://github.com/aimclub/OSA"
       },
       "stars": 140,
-      "updated_at": "2026-05-12T08:50:54Z",
+      "updated_at": "2026-05-13T18:54:10Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/OSA",
