@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-15T02:12:52.131583",
+  "generated_at": "2026-05-16T02:04:54.599192",
   "projects": [
     {
       "id": "nanomaterial-morphology-prediction",
@@ -236,8 +236,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 116,
-      "updated_at": "2026-05-14T06:20:37Z",
+      "stars": 117,
+      "updated_at": "2026-05-15T21:11:17Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/be2rlab/RADIO-ViPE",
