@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T02:29:06.751832",
+  "generated_at": "2026-05-21T02:29:55.991746",
   "projects": [
     {
       "id": "nanomaterial-morphology-prediction",
@@ -187,7 +187,7 @@
         "docs": null
       },
       "stars": 66,
-      "updated_at": "2026-05-12T11:57:28Z",
+      "updated_at": "2026-05-20T11:13:01Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/ITMO-NSS-team/EPDE",
