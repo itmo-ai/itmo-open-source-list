@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-21T07:56:08.039571",
+  "generated_at": "2026-05-22T02:31:30.529401",
   "projects": [
     {
       "id": "nanomaterial-morphology-prediction",
@@ -79,8 +79,8 @@
       "links": {
         "website": "https://github.com/aimclub/OSA"
       },
-      "stars": 140,
-      "updated_at": "2026-05-19T10:07:33Z",
+      "stars": 141,
+      "updated_at": "2026-05-21T16:47:39Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/OSA",
@@ -187,7 +187,7 @@
         "docs": null
       },
       "stars": 66,
-      "updated_at": "2026-05-20T11:13:01Z",
+      "updated_at": "2026-05-21T13:31:59Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/ITMO-NSS-team/EPDE",
@@ -236,8 +236,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 120,
-      "updated_at": "2026-05-19T09:52:55Z",
+      "stars": 121,
+      "updated_at": "2026-05-21T14:58:06Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/be2rlab/RADIO-ViPE",
@@ -523,8 +523,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 188,
-      "updated_at": "2026-05-21T06:46:28Z",
+      "stars": 189,
+      "updated_at": "2026-05-21T11:25:40Z",
       "license": "Apache License 2.0",
       "language": "Python",
       "url": "https://github.com/CTLab-ITMO/CoolPrompt",
