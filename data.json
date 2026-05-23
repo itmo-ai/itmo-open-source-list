@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T02:31:30.529401",
+  "generated_at": "2026-05-23T02:08:00.727682",
   "projects": [
     {
       "id": "nanomaterial-morphology-prediction",
@@ -79,8 +79,8 @@
       "links": {
         "website": "https://github.com/aimclub/OSA"
       },
-      "stars": 141,
-      "updated_at": "2026-05-21T16:47:39Z",
+      "stars": 142,
+      "updated_at": "2026-05-22T11:41:08Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/OSA",
