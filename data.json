@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-24T02:26:58.303781",
+  "generated_at": "2026-05-25T02:35:02.491345",
   "projects": [
     {
       "id": "nanomaterial-morphology-prediction",
@@ -523,8 +523,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 189,
-      "updated_at": "2026-05-21T11:25:40Z",
+      "stars": 190,
+      "updated_at": "2026-05-24T18:47:36Z",
       "license": "Apache License 2.0",
       "language": "Python",
       "url": "https://github.com/CTLab-ITMO/CoolPrompt",
@@ -650,8 +650,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 45,
-      "updated_at": "2026-05-19T19:18:14Z",
+      "stars": 46,
+      "updated_at": "2026-05-25T02:25:29Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/documentor",
