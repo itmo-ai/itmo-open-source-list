@@ -1,52 +1,74 @@
 {
-  "generated_at": "2026-05-26T02:25:39.478792",
+  "generated_at": "2026-05-27T02:34:27.768339",
   "projects": [
     {
-      "id": "nanomaterial-morphology-prediction",
-      "title": "Nanomaterial Morphology Prediction",
-      "description": null,
-      "github_url": "https://github.com/ai-chem/Nanomaterial_Morphology_Prediction",
-      "lab": "ai-chem",
-      "area": "AI for Science",
-      "logo": null,
+      "id": "bamt",
+      "title": "BAMT",
+      "description": "Repository of a data modeling and analysis tool based on Bayesian networks",
+      "github_url": "https://github.com/aimclub/BAMT",
+      "lab": "aimclub",
+      "area": "ML tools",
+      "logo": "https://raw.githubusercontent.com/aimclub/BAMT/refs/heads/master/docs/images/BAMT_white_bg.png",
       "links": {
         "website": null,
-        "docs": null
+        "docs": "https://bamt.readthedocs.io/en/latest/"
       },
-      "stars": 3,
-      "updated_at": "2025-04-04T06:45:45Z",
-      "license": null,
-      "language": "Jupyter Notebook",
-      "url": "https://github.com/ai-chem/Nanomaterial_Morphology_Prediction",
-      "fork": false,
-      "topics": []
-    },
-    {
-      "id": "gemcode",
-      "title": "GEMCODE",
-      "description": "[NeurIPS 2024] Official impl. of \"Hybrid Generative AI for De Novo Design of Co-Crystals with Enhanced Tabletability\". An automated screening pipeline leveraging hybridization of generative AI and evolutionary optimization for pharmaceutical co-crystal design.",
-      "github_url": "https://github.com/ai-chem/GEMCODE",
-      "lab": "ai-chem",
-      "area": "AI for Science",
-      "logo": null,
-      "links": {
-        "website": null,
-        "docs": null
-      },
-      "stars": 9,
-      "updated_at": "2025-08-15T10:19:08Z",
-      "license": "MIT License",
-      "language": "Jupyter Notebook",
-      "url": "https://github.com/ai-chem/GEMCODE",
+      "stars": 134,
+      "updated_at": "2026-05-10T16:49:17Z",
+      "license": "BSD 3-Clause \"New\" or \"Revised\" License",
+      "language": "Python",
+      "url": "https://github.com/aimclub/BAMT",
       "fork": false,
       "topics": [
-        "chemistry",
-        "cocrystal",
-        "evolutionary-optimization",
-        "molecular-generation",
-        "pipeline",
-        "tabletability"
+        "bayesian-networks",
+        "mixed-data",
+        "parameters-learning",
+        "structure-learning",
+        "synthetic-data"
       ]
+    },
+    {
+      "id": "documentor",
+      "title": "Documentor",
+      "description": "Document parsing library that extracts structured content",
+      "github_url": "https://github.com/Industrial-AI-Research-Lab/documentor",
+      "lab": "industrial-ai-research-lab",
+      "area": "Industrial AI",
+      "logo": "https://raw.githubusercontent.com/Industrial-AI-Research-Lab/documentor/main/images/logo.png",
+      "links": {
+        "website": null,
+        "docs": null
+      },
+      "stars": 46,
+      "updated_at": "2026-05-25T02:25:29Z",
+      "license": "BSD 3-Clause \"New\" or \"Revised\" License",
+      "language": "Python",
+      "url": "https://github.com/aimclub/documentor",
+      "fork": false,
+      "topics": [
+        "ocr",
+        "parsing"
+      ]
+    },
+    {
+      "id": "fgsea",
+      "title": "fgsea",
+      "description": "Fast Gene Set Enrichment Analysis",
+      "github_url": "https://github.com/ctlab/fgsea",
+      "lab": "ctlab",
+      "area": "Bioinformatics",
+      "logo": null,
+      "links": {
+        "website": null,
+        "docs": "https://bioconductor.org/packages/release/bioc/html/fgsea.html"
+      },
+      "stars": 443,
+      "updated_at": "2026-05-26T20:32:28Z",
+      "license": "Other",
+      "language": "R",
+      "url": "https://github.com/alserglab/fgsea",
+      "fork": false,
+      "topics": []
     },
     {
       "id": "swarmodroid",
@@ -65,365 +87,6 @@
       "license": "GNU General Public License v3.0",
       "language": "C",
       "url": "https://github.com/swarmtronics/swarmodroid.firmware",
-      "fork": false,
-      "topics": []
-    },
-    {
-      "id": "osa",
-      "title": "OSA",
-      "description": "Tool that just makes your open source project better using LLM agents",
-      "github_url": "https://github.com/aimclub/OSA",
-      "lab": "aimclub",
-      "area": "ML tools",
-      "logo": "https://github.com/aimclub/OSA/raw/main/docs/images/osa_logo_h.PNG",
-      "links": {
-        "website": "https://github.com/aimclub/OSA"
-      },
-      "stars": 142,
-      "updated_at": "2026-05-22T11:41:08Z",
-      "license": "BSD 3-Clause \"New\" or \"Revised\" License",
-      "language": "Python",
-      "url": "https://github.com/aimclub/OSA",
-      "fork": false,
-      "topics": [
-        "code-analysis",
-        "code-improvement",
-        "llm",
-        "open-source",
-        "repository-improvement",
-        "scientific-software"
-      ]
-    },
-    {
-      "id": "metafast",
-      "title": "metafast",
-      "description": "Fast metagenome analysis toolkit",
-      "github_url": "https://github.com/ctlab/metafast",
-      "lab": "ctlab",
-      "area": "Bioinformatics",
-      "logo": "https://raw.githubusercontent.com/ctlab/metafast/master/logo.jpg",
-      "links": {
-        "website": null,
-        "docs": "https://github.com/ctlab/metafast/wiki"
-      },
-      "stars": 27,
-      "updated_at": "2025-11-08T12:58:38Z",
-      "license": "MIT License",
-      "language": "Java",
-      "url": "https://github.com/ctlab/metafast",
-      "fork": false,
-      "topics": []
-    },
-    {
-      "id": "svetlanna",
-      "title": "SVETlANNa",
-      "description": "Open source library for simulation and engineering of diffractive neural networks",
-      "github_url": "https://github.com/CompPhysLab/SVETlANNa",
-      "lab": "compphyslab",
-      "area": "AI for Science",
-      "logo": null,
-      "links": {
-        "website": null,
-        "docs": "https://compphyslab.github.io/SVETlANNa/"
-      },
-      "stars": 58,
-      "updated_at": "2026-05-12T09:40:55Z",
-      "license": "Mozilla Public License 2.0",
-      "language": "Python",
-      "url": "https://github.com/CompPhysLab/SVETlANNa",
-      "fork": false,
-      "topics": []
-    },
-    {
-      "id": "magnetexchangebias",
-      "title": "MagnetExchangeBias",
-      "description": null,
-      "github_url": "https://github.com/ai-chem/MagnetExchangeBias",
-      "lab": "ai-chem",
-      "area": "AI for Science",
-      "logo": null,
-      "links": {
-        "website": null,
-        "docs": null
-      },
-      "stars": 2,
-      "updated_at": "2025-04-04T06:45:46Z",
-      "license": null,
-      "language": "Jupyter Notebook",
-      "url": "https://github.com/ai-chem/MagnetExchangeBias",
-      "fork": false,
-      "topics": []
-    },
-    {
-      "id": "laserprocessing",
-      "title": "LaserProcessing",
-      "description": "Проект направлен на предсказание результатов лазерной обработки металлов путем использования физически-информированных нейронных сетей",
-      "github_url": "https://github.com/ILT-ITMO/LaserProcessing",
-      "lab": "ilt-itmo",
-      "area": "Industrial AI",
-      "logo": null,
-      "links": {
-        "website": null,
-        "docs": null
-      },
-      "stars": 6,
-      "updated_at": "2026-05-05T20:51:59Z",
-      "license": "MIT License",
-      "language": "Python",
-      "url": "https://github.com/ILT-ITMO/LaserProcessing",
-      "fork": false,
-      "topics": []
-    },
-    {
-      "id": "epde",
-      "title": "EPDE",
-      "description": "EPDE - partial differential equations discovery framework",
-      "github_url": "https://github.com/ITMO-NSS-team/EPDE",
-      "lab": "itmo-nss-team",
-      "area": "AI for Science",
-      "logo": "https://raw.githubusercontent.com/ITMO-NSS-team/EPDE/main/docs/epde_logo.png",
-      "links": {
-        "website": null,
-        "docs": null
-      },
-      "stars": 66,
-      "updated_at": "2026-05-21T13:31:59Z",
-      "license": "Other",
-      "language": "Python",
-      "url": "https://github.com/ITMO-NSS-team/EPDE",
-      "fork": false,
-      "topics": [
-        "automated-modelling",
-        "differential-equations",
-        "equation-discovery"
-      ]
-    },
-    {
-      "id": "iopt",
-      "title": "iOpt",
-      "description": "Framework of intelligent optimization methods iOpt",
-      "github_url": "https://github.com/aimclub/iOpt",
-      "lab": "aimclub",
-      "area": "ML tools",
-      "logo": "https://raw.githubusercontent.com/aimclub/iOpt/main/docs/iOpt_logo.png",
-      "links": {
-        "website": null,
-        "docs": "https://iopt.readthedocs.io/ru/latest/"
-      },
-      "stars": 57,
-      "updated_at": "2026-04-20T13:36:11Z",
-      "license": "BSD 3-Clause \"New\" or \"Revised\" License",
-      "language": "Python",
-      "url": "https://github.com/aimclub/iOpt",
-      "fork": false,
-      "topics": [
-        "global-optimization",
-        "global-optimization-algorithms",
-        "global-optimizers",
-        "hyperparameter-optimization",
-        "parameter-tuning"
-      ]
-    },
-    {
-      "id": "kmvipe",
-      "title": "km-vipe",
-      "description": "Online Tightly Coupled Vision-Language-Geometry Fusion for Open-Vocabulary Semantic SLAM",
-      "github_url": "https://github.com/be2rlab/km-vipe",
-      "lab": "be2rlab",
-      "area": "AI for Science",
-      "logo": null,
-      "links": {
-        "website": null,
-        "docs": null
-      },
-      "stars": 122,
-      "updated_at": "2026-05-25T06:42:49Z",
-      "license": "Other",
-      "language": "Python",
-      "url": "https://github.com/be2rlab/RADIO-ViPE",
-      "fork": false,
-      "topics": []
-    },
-    {
-      "id": "laserweldmonitor",
-      "title": "LaserWeldMonitor",
-      "description": "This project is aimed at applying data analytics and machine learning techniques to monitoring and control systems for laser welding production processes. ",
-      "github_url": "https://github.com/ILT-ITMO/LaserWeldMonitor",
-      "lab": "ilt-itmo",
-      "area": "Industrial AI",
-      "logo": null,
-      "links": {
-        "website": null,
-        "docs": "https://github.com/ILT-ITMO/LaserWeldMonitor#documentation"
-      },
-      "stars": 7,
-      "updated_at": "2026-04-09T02:26:16Z",
-      "license": "BSD 3-Clause \"New\" or \"Revised\" License",
-      "language": "Jupyter Notebook",
-      "url": "https://github.com/ILT-ITMO/LaserWeldMonitor",
-      "fork": false,
-      "topics": []
-    },
-    {
-      "id": "nanominer",
-      "title": "nanoMINER",
-      "description": "nanoMINER: Multimodal Information Extraction for Nanomaterials",
-      "github_url": "https://github.com/ai-chem/nanoMINER",
-      "lab": "ai-chem",
-      "area": "AI for Science",
-      "logo": null,
-      "links": {
-        "website": null,
-        "docs": null
-      },
-      "stars": 33,
-      "updated_at": "2026-04-21T00:38:56Z",
-      "license": null,
-      "language": "Jupyter Notebook",
-      "url": "https://github.com/ai-chem/nanoMINER",
-      "fork": false,
-      "topics": []
-    },
-    {
-      "id": "msdmslam",
-      "title": "MSDM-SLAM",
-      "description": "Metric-Semantic Dense Mapping and SLAM system ",
-      "github_url": "https://github.com/be2rlab/MSDM-SLAM",
-      "lab": "be2rlab",
-      "area": "AI for Science",
-      "logo": null,
-      "links": {
-        "website": null,
-        "docs": null
-      },
-      "stars": 20,
-      "updated_at": "2026-03-21T12:56:09Z",
-      "license": "GNU General Public License v3.0",
-      "language": "C++",
-      "url": "https://github.com/be2rlab/MSDM-SLAM",
-      "fork": false,
-      "topics": []
-    },
-    {
-      "id": "vglib",
-      "title": "VGLib",
-      "description": "Библиотека методов машинного обучения по обработке и генерации векторной графики",
-      "github_url": "https://github.com/CTLab-ITMO/VGLib",
-      "lab": "ctlab",
-      "area": "Computer Vision",
-      "logo": null,
-      "links": {
-        "website": null,
-        "docs": null
-      },
-      "stars": 6,
-      "updated_at": "2025-06-05T18:33:49Z",
-      "license": null,
-      "language": "Python",
-      "url": "https://github.com/CTLab-ITMO/VGLib",
-      "fork": false,
-      "topics": []
-    },
-    {
-      "id": "samovar",
-      "title": "samovar",
-      "description": "Algorithms package for generating model metagenomes with specified properties",
-      "github_url": "https://github.com/ctlab/samovar",
-      "lab": "ctlab",
-      "area": "Bioinformatics",
-      "logo": "https://raw.githubusercontent.com/ctlab/samovar/main/data/img/logos/logo_stable.png",
-      "links": {
-        "website": null,
-        "docs": null
-      },
-      "stars": 8,
-      "updated_at": "2026-02-17T11:40:04Z",
-      "license": "MIT License",
-      "language": "Python",
-      "url": "https://github.com/ctlab/samovar",
-      "fork": false,
-      "topics": [
-        "artificial-data",
-        "metagenomics"
-      ]
-    },
-    {
-      "id": "chemx",
-      "title": "ChemX",
-      "description": null,
-      "github_url": "https://github.com/ai-chem/ChemX",
-      "lab": "ai-chem",
-      "area": "AI for Science",
-      "logo": null,
-      "links": {
-        "website": null,
-        "docs": null
-      },
-      "stars": 2,
-      "updated_at": "2026-02-02T12:04:27Z",
-      "license": "MIT License",
-      "language": "Jupyter Notebook",
-      "url": "https://github.com/ai-chem/ChemX",
-      "fork": false,
-      "topics": []
-    },
-    {
-      "id": "drugnanoparticlesynergy",
-      "title": "DrugNanoparticleSynergy",
-      "description": null,
-      "github_url": "https://github.com/ai-chem/Drug-Nanoparticle-Synergy",
-      "lab": "ai-chem",
-      "area": "AI for Science",
-      "logo": null,
-      "links": {
-        "website": null,
-        "docs": null
-      },
-      "stars": 0,
-      "updated_at": "2025-04-04T06:45:46Z",
-      "license": null,
-      "language": "Jupyter Notebook",
-      "url": "https://github.com/ai-chem/Drug-Nanoparticle-Synergy",
-      "fork": false,
-      "topics": []
-    },
-    {
-      "id": "gadma",
-      "title": "GADMA",
-      "description": "Genetic Algorithm for Demographic Model Analysis",
-      "github_url": "https://github.com/ctlab/GADMA",
-      "lab": "ctlab",
-      "area": "Bioinformatics",
-      "logo": null,
-      "links": {
-        "website": null,
-        "docs": "https://gadma.readthedocs.io/en/latest/"
-      },
-      "stars": 56,
-      "updated_at": "2026-05-19T06:03:45Z",
-      "license": "Other",
-      "language": "Python",
-      "url": "https://github.com/ctlab/GADMA",
-      "fork": false,
-      "topics": []
-    },
-    {
-      "id": "fgsea",
-      "title": "fgsea",
-      "description": "Fast Gene Set Enrichment Analysis",
-      "github_url": "https://github.com/ctlab/fgsea",
-      "lab": "ctlab",
-      "area": "Bioinformatics",
-      "logo": null,
-      "links": {
-        "website": null,
-        "docs": "https://bioconductor.org/packages/release/bioc/html/fgsea.html"
-      },
-      "stars": 441,
-      "updated_at": "2026-05-06T15:44:44Z",
-      "license": "Other",
-      "language": "R",
-      "url": "https://github.com/alserglab/fgsea",
       "fork": false,
       "topics": []
     },
@@ -468,10 +131,30 @@
       "topics": []
     },
     {
-      "id": "rvwo",
-      "title": "rvwo",
-      "description": "[IROS 23] A Robust Visual-Wheel SLAM System for Mobile Robots in Dynamic Environments",
-      "github_url": "https://github.com/be2rlab/rvwo",
+      "id": "gsplatloc",
+      "title": "GSplatLoc",
+      "description": "[IROS 2025] GSplatLoc: Grounding Keypoint Descriptors into 3D Gaussian Splatting for Improved Visual Localization",
+      "github_url": "https://github.com/be2rlab/gsplatloc",
+      "lab": "be2rlab",
+      "area": "AI for Science",
+      "logo": null,
+      "links": {
+        "website": "https://gsplatloc.github.io/",
+        "docs": null
+      },
+      "stars": 141,
+      "updated_at": "2026-05-07T08:30:29Z",
+      "license": "Apache License 2.0",
+      "language": "Jupyter Notebook",
+      "url": "https://github.com/be2rlab/gsplatloc",
+      "fork": false,
+      "topics": []
+    },
+    {
+      "id": "kmvipe",
+      "title": "km-vipe",
+      "description": "Online Tightly Coupled Vision-Language-Geometry Fusion for Open-Vocabulary Semantic SLAM",
+      "github_url": "https://github.com/be2rlab/km-vipe",
       "lab": "be2rlab",
       "area": "AI for Science",
       "logo": null,
@@ -479,11 +162,195 @@
         "website": null,
         "docs": null
       },
-      "stars": 43,
-      "updated_at": "2026-04-24T03:03:34Z",
-      "license": "GNU General Public License v3.0",
+      "stars": 123,
+      "updated_at": "2026-05-26T04:24:59Z",
+      "license": "Other",
+      "language": "Python",
+      "url": "https://github.com/be2rlab/RADIO-ViPE",
+      "fork": false,
+      "topics": []
+    },
+    {
+      "id": "designsolvents",
+      "title": "DESignSolvents",
+      "description": null,
+      "github_url": "https://github.com/ai-chem/DESignSolvents?tab=readme-ov-file",
+      "lab": "ai-chem",
+      "area": "AI for Science",
+      "logo": null,
+      "links": {
+        "website": null,
+        "docs": null
+      },
+      "stars": 6,
+      "updated_at": "2026-01-18T12:40:14Z",
+      "license": null,
+      "language": "Jupyter Notebook",
+      "url": "https://github.com/ai-chem/DESignSolvents",
+      "fork": false,
+      "topics": []
+    },
+    {
+      "id": "vglib",
+      "title": "VGLib",
+      "description": "Библиотека методов машинного обучения по обработке и генерации векторной графики",
+      "github_url": "https://github.com/CTLab-ITMO/VGLib",
+      "lab": "ctlab",
+      "area": "Computer Vision",
+      "logo": null,
+      "links": {
+        "website": null,
+        "docs": null
+      },
+      "stars": 6,
+      "updated_at": "2025-06-05T18:33:49Z",
+      "license": null,
+      "language": "Python",
+      "url": "https://github.com/CTLab-ITMO/VGLib",
+      "fork": false,
+      "topics": []
+    },
+    {
+      "id": "metafast",
+      "title": "metafast",
+      "description": "Fast metagenome analysis toolkit",
+      "github_url": "https://github.com/ctlab/metafast",
+      "lab": "ctlab",
+      "area": "Bioinformatics",
+      "logo": "https://raw.githubusercontent.com/ctlab/metafast/master/logo.jpg",
+      "links": {
+        "website": null,
+        "docs": "https://github.com/ctlab/metafast/wiki"
+      },
+      "stars": 27,
+      "updated_at": "2025-11-08T12:58:38Z",
+      "license": "MIT License",
+      "language": "Java",
+      "url": "https://github.com/ctlab/metafast",
+      "fork": false,
+      "topics": []
+    },
+    {
+      "id": "laserprocessing",
+      "title": "LaserProcessing",
+      "description": "Проект направлен на предсказание результатов лазерной обработки металлов путем использования физически-информированных нейронных сетей",
+      "github_url": "https://github.com/ILT-ITMO/LaserProcessing",
+      "lab": "ilt-itmo",
+      "area": "Industrial AI",
+      "logo": null,
+      "links": {
+        "website": null,
+        "docs": null
+      },
+      "stars": 6,
+      "updated_at": "2026-05-05T20:51:59Z",
+      "license": "MIT License",
+      "language": "Python",
+      "url": "https://github.com/ILT-ITMO/LaserProcessing",
+      "fork": false,
+      "topics": []
+    },
+    {
+      "id": "torch-de-solver",
+      "title": "torch_DE_solver",
+      "description": "Combines power of torch, numerical methods to conquer and solve ALL {O,P}DEs",
+      "github_url": "https://github.com/ITMO-NSS-team/torch_DE_solver",
+      "lab": "itmo-nss-team",
+      "area": "AI for Science",
+      "logo": null,
+      "links": {
+        "website": null,
+        "docs": null
+      },
+      "stars": 64,
+      "updated_at": "2026-02-12T19:56:35Z",
+      "license": "BSD 3-Clause \"New\" or \"Revised\" License",
+      "language": "Python",
+      "url": "https://github.com/ITMO-NSS-team/torch_DE_solver",
+      "fork": false,
+      "topics": [
+        "differential-equations",
+        "equation-solver",
+        "numerical-methods"
+      ]
+    },
+    {
+      "id": "nanomaterial-morphology-prediction",
+      "title": "Nanomaterial Morphology Prediction",
+      "description": null,
+      "github_url": "https://github.com/ai-chem/Nanomaterial_Morphology_Prediction",
+      "lab": "ai-chem",
+      "area": "AI for Science",
+      "logo": null,
+      "links": {
+        "website": null,
+        "docs": null
+      },
+      "stars": 3,
+      "updated_at": "2025-04-04T06:45:45Z",
+      "license": null,
+      "language": "Jupyter Notebook",
+      "url": "https://github.com/ai-chem/Nanomaterial_Morphology_Prediction",
+      "fork": false,
+      "topics": []
+    },
+    {
+      "id": "nanominer",
+      "title": "nanoMINER",
+      "description": "nanoMINER: Multimodal Information Extraction for Nanomaterials",
+      "github_url": "https://github.com/ai-chem/nanoMINER",
+      "lab": "ai-chem",
+      "area": "AI for Science",
+      "logo": null,
+      "links": {
+        "website": null,
+        "docs": null
+      },
+      "stars": 33,
+      "updated_at": "2026-04-21T00:38:56Z",
+      "license": null,
+      "language": "Jupyter Notebook",
+      "url": "https://github.com/ai-chem/nanoMINER",
+      "fork": false,
+      "topics": []
+    },
+    {
+      "id": "svetlanna",
+      "title": "SVETlANNa",
+      "description": "Open source library for simulation and engineering of diffractive neural networks",
+      "github_url": "https://github.com/CompPhysLab/SVETlANNa",
+      "lab": "compphyslab",
+      "area": "AI for Science",
+      "logo": null,
+      "links": {
+        "website": null,
+        "docs": "https://compphyslab.github.io/SVETlANNa/"
+      },
+      "stars": 58,
+      "updated_at": "2026-05-12T09:40:55Z",
+      "license": "Mozilla Public License 2.0",
+      "language": "Python",
+      "url": "https://github.com/CompPhysLab/SVETlANNa",
+      "fork": false,
+      "topics": []
+    },
+    {
+      "id": "opensemanticmapping",
+      "title": "OpenSemanticMapping",
+      "description": "[IROS 25] OSMa-Bench: Evaluating Open Semantic Mapping Under Varying Lighting Conditions",
+      "github_url": "https://github.com/be2rlab/OSMa-Bench",
+      "lab": "be2rlab",
+      "area": "Robotics",
+      "logo": null,
+      "links": {
+        "website": null,
+        "docs": null
+      },
+      "stars": 2,
+      "updated_at": "2026-05-08T12:28:23Z",
+      "license": "Creative Commons Attribution 4.0 International",
       "language": "C++",
-      "url": "https://github.com/be2rlab/rvwo",
+      "url": "https://github.com/be2rlab/OSMa-Bench",
       "fork": false,
       "topics": []
     },
@@ -512,6 +379,53 @@
       ]
     },
     {
+      "id": "gemcode",
+      "title": "GEMCODE",
+      "description": "[NeurIPS 2024] Official impl. of \"Hybrid Generative AI for De Novo Design of Co-Crystals with Enhanced Tabletability\". An automated screening pipeline leveraging hybridization of generative AI and evolutionary optimization for pharmaceutical co-crystal design.",
+      "github_url": "https://github.com/ai-chem/GEMCODE",
+      "lab": "ai-chem",
+      "area": "AI for Science",
+      "logo": null,
+      "links": {
+        "website": null,
+        "docs": null
+      },
+      "stars": 9,
+      "updated_at": "2025-08-15T10:19:08Z",
+      "license": "MIT License",
+      "language": "Jupyter Notebook",
+      "url": "https://github.com/ai-chem/GEMCODE",
+      "fork": false,
+      "topics": [
+        "chemistry",
+        "cocrystal",
+        "evolutionary-optimization",
+        "molecular-generation",
+        "pipeline",
+        "tabletability"
+      ]
+    },
+    {
+      "id": "laserweldmonitor",
+      "title": "LaserWeldMonitor",
+      "description": "This project is aimed at applying data analytics and machine learning techniques to monitoring and control systems for laser welding production processes. ",
+      "github_url": "https://github.com/ILT-ITMO/LaserWeldMonitor",
+      "lab": "ilt-itmo",
+      "area": "Industrial AI",
+      "logo": null,
+      "links": {
+        "website": null,
+        "docs": "https://github.com/ILT-ITMO/LaserWeldMonitor#documentation"
+      },
+      "stars": 7,
+      "updated_at": "2026-04-09T02:26:16Z",
+      "license": "BSD 3-Clause \"New\" or \"Revised\" License",
+      "language": "Jupyter Notebook",
+      "url": "https://github.com/ILT-ITMO/LaserWeldMonitor",
+      "fork": false,
+      "topics": []
+    },
+    {
       "id": "coolprompt",
       "title": "CoolPrompt",
       "description": "Automatic Prompt Optimization Framework",
@@ -524,7 +438,7 @@
         "docs": null
       },
       "stars": 190,
-      "updated_at": "2026-05-24T18:47:36Z",
+      "updated_at": "2026-05-26T22:43:59Z",
       "license": "Apache License 2.0",
       "language": "Python",
       "url": "https://github.com/CTLab-ITMO/CoolPrompt",
@@ -547,44 +461,114 @@
       ]
     },
     {
-      "id": "torch-de-solver",
-      "title": "torch_DE_solver",
-      "description": "Combines power of torch, numerical methods to conquer and solve ALL {O,P}DEs",
-      "github_url": "https://github.com/ITMO-NSS-team/torch_DE_solver",
+      "id": "epde",
+      "title": "EPDE",
+      "description": "EPDE - partial differential equations discovery framework",
+      "github_url": "https://github.com/ITMO-NSS-team/EPDE",
       "lab": "itmo-nss-team",
+      "area": "AI for Science",
+      "logo": "https://raw.githubusercontent.com/ITMO-NSS-team/EPDE/main/docs/epde_logo.png",
+      "links": {
+        "website": null,
+        "docs": null
+      },
+      "stars": 66,
+      "updated_at": "2026-05-26T12:05:36Z",
+      "license": "Other",
+      "language": "Python",
+      "url": "https://github.com/ITMO-NSS-team/EPDE",
+      "fork": false,
+      "topics": [
+        "automated-modelling",
+        "differential-equations",
+        "equation-discovery"
+      ]
+    },
+    {
+      "id": "rvwo",
+      "title": "rvwo",
+      "description": "[IROS 23] A Robust Visual-Wheel SLAM System for Mobile Robots in Dynamic Environments",
+      "github_url": "https://github.com/be2rlab/rvwo",
+      "lab": "be2rlab",
       "area": "AI for Science",
       "logo": null,
       "links": {
         "website": null,
         "docs": null
       },
-      "stars": 64,
-      "updated_at": "2026-02-12T19:56:35Z",
+      "stars": 43,
+      "updated_at": "2026-04-24T03:03:34Z",
+      "license": "GNU General Public License v3.0",
+      "language": "C++",
+      "url": "https://github.com/be2rlab/rvwo",
+      "fork": false,
+      "topics": []
+    },
+    {
+      "id": "iopt",
+      "title": "iOpt",
+      "description": "Framework of intelligent optimization methods iOpt",
+      "github_url": "https://github.com/aimclub/iOpt",
+      "lab": "aimclub",
+      "area": "ML tools",
+      "logo": "https://raw.githubusercontent.com/aimclub/iOpt/main/docs/iOpt_logo.png",
+      "links": {
+        "website": null,
+        "docs": "https://iopt.readthedocs.io/ru/latest/"
+      },
+      "stars": 57,
+      "updated_at": "2026-04-20T13:36:11Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
-      "url": "https://github.com/ITMO-NSS-team/torch_DE_solver",
+      "url": "https://github.com/aimclub/iOpt",
       "fork": false,
       "topics": [
-        "differential-equations",
-        "equation-solver",
-        "numerical-methods"
+        "global-optimization",
+        "global-optimization-algorithms",
+        "global-optimizers",
+        "hyperparameter-optimization",
+        "parameter-tuning"
       ]
     },
     {
-      "id": "edulytica",
-      "title": "Edulytica",
-      "description": {
-        "ru": "Инструмент для аналитики в образовании.",
-        "en": "Educational analytics tool."
-      },
-      "github_url": "https://github.com/aimclub/Edulytica/tree/lisa_2023",
-      "lab": "lisa-itmo",
-      "area": "Education",
-      "logo": "https://raw.githubusercontent.com/aimclub/Edulytica/lisa_2023/src/images/logo.png",
+      "id": "magnetexchangebias",
+      "title": "MagnetExchangeBias",
+      "description": null,
+      "github_url": "https://github.com/ai-chem/MagnetExchangeBias",
+      "lab": "ai-chem",
+      "area": "AI for Science",
+      "logo": null,
       "links": {
         "website": null,
         "docs": null
-      }
+      },
+      "stars": 2,
+      "updated_at": "2025-04-04T06:45:46Z",
+      "license": null,
+      "language": "Jupyter Notebook",
+      "url": "https://github.com/ai-chem/MagnetExchangeBias",
+      "fork": false,
+      "topics": []
+    },
+    {
+      "id": "msdmslam",
+      "title": "MSDM-SLAM",
+      "description": "Metric-Semantic Dense Mapping and SLAM system ",
+      "github_url": "https://github.com/be2rlab/MSDM-SLAM",
+      "lab": "be2rlab",
+      "area": "AI for Science",
+      "logo": null,
+      "links": {
+        "website": null,
+        "docs": null
+      },
+      "stars": 20,
+      "updated_at": "2026-03-21T12:56:09Z",
+      "license": "GNU General Public License v3.0",
+      "language": "C++",
+      "url": "https://github.com/be2rlab/MSDM-SLAM",
+      "fork": false,
+      "topics": []
     },
     {
       "id": "fedot",
@@ -619,53 +603,53 @@
       ]
     },
     {
-      "id": "gsplatloc",
-      "title": "GSplatLoc",
-      "description": "[IROS 2025] GSplatLoc: Grounding Keypoint Descriptors into 3D Gaussian Splatting for Improved Visual Localization",
-      "github_url": "https://github.com/be2rlab/gsplatloc",
-      "lab": "be2rlab",
-      "area": "AI for Science",
+      "id": "gadma",
+      "title": "GADMA",
+      "description": "Genetic Algorithm for Demographic Model Analysis",
+      "github_url": "https://github.com/ctlab/GADMA",
+      "lab": "ctlab",
+      "area": "Bioinformatics",
       "logo": null,
       "links": {
-        "website": "https://gsplatloc.github.io/",
-        "docs": null
+        "website": null,
+        "docs": "https://gadma.readthedocs.io/en/latest/"
       },
-      "stars": 141,
-      "updated_at": "2026-05-07T08:30:29Z",
-      "license": "Apache License 2.0",
-      "language": "Jupyter Notebook",
-      "url": "https://github.com/be2rlab/gsplatloc",
+      "stars": 56,
+      "updated_at": "2026-05-19T06:03:45Z",
+      "license": "Other",
+      "language": "Python",
+      "url": "https://github.com/ctlab/GADMA",
       "fork": false,
       "topics": []
     },
     {
-      "id": "documentor",
-      "title": "Documentor",
-      "description": "Document parsing library that extracts structured content",
-      "github_url": "https://github.com/Industrial-AI-Research-Lab/documentor",
-      "lab": "industrial-ai-research-lab",
-      "area": "Industrial AI",
-      "logo": "https://raw.githubusercontent.com/Industrial-AI-Research-Lab/documentor/main/images/logo.png",
+      "id": "samovar",
+      "title": "samovar",
+      "description": "Algorithms package for generating model metagenomes with specified properties",
+      "github_url": "https://github.com/ctlab/samovar",
+      "lab": "ctlab",
+      "area": "Bioinformatics",
+      "logo": "https://raw.githubusercontent.com/ctlab/samovar/main/data/img/logos/logo_stable.png",
       "links": {
         "website": null,
         "docs": null
       },
-      "stars": 46,
-      "updated_at": "2026-05-25T02:25:29Z",
-      "license": "BSD 3-Clause \"New\" or \"Revised\" License",
+      "stars": 8,
+      "updated_at": "2026-02-17T11:40:04Z",
+      "license": "MIT License",
       "language": "Python",
-      "url": "https://github.com/aimclub/documentor",
+      "url": "https://github.com/ctlab/samovar",
       "fork": false,
       "topics": [
-        "ocr",
-        "parsing"
+        "artificial-data",
+        "metagenomics"
       ]
     },
     {
-      "id": "designsolvents",
-      "title": "DESignSolvents",
+      "id": "drugnanoparticlesynergy",
+      "title": "DrugNanoparticleSynergy",
       "description": null,
-      "github_url": "https://github.com/ai-chem/DESignSolvents?tab=readme-ov-file",
+      "github_url": "https://github.com/ai-chem/Drug-Nanoparticle-Synergy",
       "lab": "ai-chem",
       "area": "AI for Science",
       "logo": null,
@@ -673,31 +657,11 @@
         "website": null,
         "docs": null
       },
-      "stars": 6,
-      "updated_at": "2026-01-18T12:40:14Z",
+      "stars": 0,
+      "updated_at": "2025-04-04T06:45:46Z",
       "license": null,
       "language": "Jupyter Notebook",
-      "url": "https://github.com/ai-chem/DESignSolvents",
-      "fork": false,
-      "topics": []
-    },
-    {
-      "id": "opensemanticmapping",
-      "title": "OpenSemanticMapping",
-      "description": "[IROS 25] OSMa-Bench: Evaluating Open Semantic Mapping Under Varying Lighting Conditions",
-      "github_url": "https://github.com/be2rlab/OSMa-Bench",
-      "lab": "be2rlab",
-      "area": "Robotics",
-      "logo": null,
-      "links": {
-        "website": null,
-        "docs": null
-      },
-      "stars": 2,
-      "updated_at": "2026-05-08T12:28:23Z",
-      "license": "Creative Commons Attribution 4.0 International",
-      "language": "C++",
-      "url": "https://github.com/be2rlab/OSMa-Bench",
+      "url": "https://github.com/ai-chem/Drug-Nanoparticle-Synergy",
       "fork": false,
       "topics": []
     },
@@ -722,51 +686,103 @@
       "topics": []
     },
     {
-      "id": "bamt",
-      "title": "BAMT",
-      "description": "Repository of a data modeling and analysis tool based on Bayesian networks",
-      "github_url": "https://github.com/aimclub/BAMT",
-      "lab": "aimclub",
-      "area": "ML tools",
-      "logo": "https://raw.githubusercontent.com/aimclub/BAMT/refs/heads/master/docs/images/BAMT_white_bg.png",
+      "id": "edulytica",
+      "title": "Edulytica",
+      "description": {
+        "ru": "Инструмент для аналитики в образовании.",
+        "en": "Educational analytics tool."
+      },
+      "github_url": "https://github.com/aimclub/Edulytica/tree/lisa_2023",
+      "lab": "lisa-itmo",
+      "area": "Education",
+      "logo": "https://raw.githubusercontent.com/aimclub/Edulytica/lisa_2023/src/images/logo.png",
       "links": {
         "website": null,
-        "docs": "https://bamt.readthedocs.io/en/latest/"
+        "docs": null
+      }
+    },
+    {
+      "id": "chemx",
+      "title": "ChemX",
+      "description": null,
+      "github_url": "https://github.com/ai-chem/ChemX",
+      "lab": "ai-chem",
+      "area": "AI for Science",
+      "logo": null,
+      "links": {
+        "website": null,
+        "docs": null
       },
-      "stars": 134,
-      "updated_at": "2026-05-10T16:49:17Z",
+      "stars": 2,
+      "updated_at": "2026-02-02T12:04:27Z",
+      "license": "MIT License",
+      "language": "Jupyter Notebook",
+      "url": "https://github.com/ai-chem/ChemX",
+      "fork": false,
+      "topics": []
+    },
+    {
+      "id": "osa",
+      "title": "OSA",
+      "description": "Tool that just makes your open source project better using LLM agents",
+      "github_url": "https://github.com/aimclub/OSA",
+      "lab": "aimclub",
+      "area": "ML tools",
+      "logo": "https://github.com/aimclub/OSA/raw/main/docs/images/osa_logo_h.PNG",
+      "links": {
+        "website": "https://github.com/aimclub/OSA"
+      },
+      "stars": 142,
+      "updated_at": "2026-05-22T11:41:08Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
-      "url": "https://github.com/aimclub/BAMT",
+      "url": "https://github.com/aimclub/OSA",
       "fork": false,
       "topics": [
-        "bayesian-networks",
-        "mixed-data",
-        "parameters-learning",
-        "structure-learning",
-        "synthetic-data"
+        "code-analysis",
+        "code-improvement",
+        "llm",
+        "open-source",
+        "repository-improvement",
+        "scientific-software"
       ]
     }
   ],
   "labs": [
     {
-      "id": "swarmtronics",
-      "name": "Swarmtronics",
+      "id": "ilt-itmo",
+      "name": "ILT-ITMO (Institute of Laser Technologies)",
       "description": {
-        "ru": "Лаборатория, занимающаяся моделированием роев из простых роботов, способных к самоорганизации и совместному решению сложных задач.",
-        "en": "Lab focused on swarm robotics: modeling swarms of simple robots capable of self-organization and solving complex tasks together."
+        "ru": "Институт лазерных технологий ИТМО с открытыми проектами по лазерной обработке материалов и мониторингу процессов.",
+        "en": "ITMO’s Institute of Laser Technologies with open-source projects on laser material processing and process monitoring."
       },
-      "github_org": "https://github.com/swarmtronics",
+      "github_org": "https://github.com/ILT-ITMO",
       "links": {
-        "email": null,
-        "website": "http://swarmtronics.com/",
-        "telegram": null,
-        "vkontakte": null
+        "email": "ilt@itmo.ru",
+        "website": "https://ilt.itmo.ru/",
+        "telegram": "https://t.me/careerstalk",
+        "vkontakte": "https://vk.com/lasers_itmo"
       },
       "example_projects": [
-        "AMPy",
-        "swarmodroid"
+        "LaserProcessing",
+        "LaserWeldMonitor"
       ]
+    },
+    {
+      "id": "aist-lab",
+      "name": "AIST (AI Science & Technology Lab)",
+      "description": {
+        "ru": "Учебно-научная лаборатория AIST, объединяющая студентов для работы над реальными научными проектами в области ИИ.",
+        "en": "Educational and research laboratory AIST, uniting students to work on real-world scientific AI projects."
+      },
+      "github_org": null,
+      "links": {
+        "email": null,
+        "website": null,
+        "telegram": "https://t.me/aist_itmo",
+        "vkontakte": null
+      },
+      "example_projects": []
     },
     {
       "id": "be2rlab",
@@ -790,6 +806,24 @@
       ]
     },
     {
+      "id": "urban-planning-lab",
+      "name": "Intelligent Urban Planning Technologies Lab",
+      "description": {
+        "ru": "Лаборатория интеллектуальных технологий городского планирования, разрабатывающая AI-инструменты для анализа городских данных, мастер-планирования и оценки территорий.",
+        "en": "Laboratory of Intelligent Urban Planning Technologies developing AI tools for urban data analysis, master planning, and territory assessment."
+      },
+      "github_org": null,
+      "links": {
+        "email": null,
+        "website": "https://iai.itmo.ru/czifrovaya-urbanistika",
+        "telegram": null,
+        "vkontakte": null
+      },
+      "example_projects": [
+        "Prosto.R"
+      ]
+    },
+    {
       "id": "aimclub",
       "name": "AIM club, AI Institute ITMO",
       "description": {
@@ -809,42 +843,6 @@
         "OSA",
         "rostok",
         "iOpt"
-      ]
-    },
-    {
-      "id": "lisa-itmo",
-      "name": "LISA Lab",
-      "description": {
-        "ru": "Учебно-научная лаборатория LISA с открытыми проектами на стыке ИИ и образования/аналитики.",
-        "en": "Educational and research lab LISA with open-source projects at the intersection of AI, education, and analytics."
-      },
-      "github_org": "https://github.com/LISA-ITMO",
-      "links": {
-        "email": null,
-        "website": "https://sno.itmo.ru/lisa",
-        "telegram": "https://t.me/lisaitmo",
-        "vkontakte": "https://vk.com/lisa.itmo"
-      },
-      "example_projects": [
-        "edulytica"
-      ]
-    },
-    {
-      "id": "urban-planning-lab",
-      "name": "Intelligent Urban Planning Technologies Lab",
-      "description": {
-        "ru": "Лаборатория интеллектуальных технологий городского планирования, разрабатывающая AI-инструменты для анализа городских данных, мастер-планирования и оценки территорий.",
-        "en": "Laboratory of Intelligent Urban Planning Technologies developing AI tools for urban data analysis, master planning, and territory assessment."
-      },
-      "github_org": null,
-      "links": {
-        "email": null,
-        "website": "https://iai.itmo.ru/czifrovaya-urbanistika",
-        "telegram": null,
-        "vkontakte": null
-      },
-      "example_projects": [
-        "Prosto.R"
       ]
     },
     {
@@ -890,27 +888,21 @@
       ]
     },
     {
-      "id": "ai-chem",
-      "name": "AI-chem (AI in Chemistry Center)",
+      "id": "lisa-itmo",
+      "name": "LISA Lab",
       "description": {
-        "ru": "Центр «ИИ в химии» ИТМО, разрабатывающий открытые инструменты для задач химии и материаловедения.",
-        "en": "ITMO’s AI in Chemistry center developing open-source tools for chemistry and materials science."
+        "ru": "Учебно-научная лаборатория LISA с открытыми проектами на стыке ИИ и образования/аналитики.",
+        "en": "Educational and research lab LISA with open-source projects at the intersection of AI, education, and analytics."
       },
-      "github_org": "https://github.com/ai-chem",
+      "github_org": "https://github.com/LISA-ITMO",
       "links": {
-        "email": "ai-chemistry@scamt-itmo.ru",
-        "website": "https://ai-chemistry.itmo.ru/",
-        "telegram": "https://t.me/ai_chemistry",
-        "vkontakte": "https://vk.com/ai_chemistry"
+        "email": null,
+        "website": "https://sno.itmo.ru/lisa",
+        "telegram": "https://t.me/lisaitmo",
+        "vkontakte": "https://vk.com/lisa.itmo"
       },
       "example_projects": [
-        "GEMCODE",
-        "DiZyme",
-        "DESignSolvents",
-        "Drug-Nanoparticle-Synergy",
-        "MagnetExchangeBias",
-        "nanoMINER",
-        "ChemX"
+        "edulytica"
       ]
     },
     {
@@ -952,39 +944,47 @@
       ]
     },
     {
-      "id": "ilt-itmo",
-      "name": "ILT-ITMO (Institute of Laser Technologies)",
+      "id": "swarmtronics",
+      "name": "Swarmtronics",
       "description": {
-        "ru": "Институт лазерных технологий ИТМО с открытыми проектами по лазерной обработке материалов и мониторингу процессов.",
-        "en": "ITMO’s Institute of Laser Technologies with open-source projects on laser material processing and process monitoring."
+        "ru": "Лаборатория, занимающаяся моделированием роев из простых роботов, способных к самоорганизации и совместному решению сложных задач.",
+        "en": "Lab focused on swarm robotics: modeling swarms of simple robots capable of self-organization and solving complex tasks together."
       },
-      "github_org": "https://github.com/ILT-ITMO",
+      "github_org": "https://github.com/swarmtronics",
       "links": {
-        "email": "ilt@itmo.ru",
-        "website": "https://ilt.itmo.ru/",
-        "telegram": "https://t.me/careerstalk",
-        "vkontakte": "https://vk.com/lasers_itmo"
+        "email": null,
+        "website": "http://swarmtronics.com/",
+        "telegram": null,
+        "vkontakte": null
       },
       "example_projects": [
-        "LaserProcessing",
-        "LaserWeldMonitor"
+        "AMPy",
+        "swarmodroid"
       ]
     },
     {
-      "id": "aist-lab",
-      "name": "AIST (AI Science & Technology Lab)",
+      "id": "ai-chem",
+      "name": "AI-chem (AI in Chemistry Center)",
       "description": {
-        "ru": "Учебно-научная лаборатория AIST, объединяющая студентов для работы над реальными научными проектами в области ИИ.",
-        "en": "Educational and research laboratory AIST, uniting students to work on real-world scientific AI projects."
+        "ru": "Центр «ИИ в химии» ИТМО, разрабатывающий открытые инструменты для задач химии и материаловедения.",
+        "en": "ITMO’s AI in Chemistry center developing open-source tools for chemistry and materials science."
       },
-      "github_org": null,
+      "github_org": "https://github.com/ai-chem",
       "links": {
-        "email": null,
-        "website": null,
-        "telegram": "https://t.me/aist_itmo",
-        "vkontakte": null
+        "email": "ai-chemistry@scamt-itmo.ru",
+        "website": "https://ai-chemistry.itmo.ru/",
+        "telegram": "https://t.me/ai_chemistry",
+        "vkontakte": "https://vk.com/ai_chemistry"
       },
-      "example_projects": []
+      "example_projects": [
+        "GEMCODE",
+        "DiZyme",
+        "DESignSolvents",
+        "Drug-Nanoparticle-Synergy",
+        "MagnetExchangeBias",
+        "nanoMINER",
+        "ChemX"
+      ]
     }
   ]
 }
