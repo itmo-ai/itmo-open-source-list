@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-27T02:34:27.768339",
+  "generated_at": "2026-05-28T02:10:47.603698",
   "projects": [
     {
       "id": "bamt",
@@ -39,8 +39,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 46,
-      "updated_at": "2026-05-25T02:25:29Z",
+      "stars": 47,
+      "updated_at": "2026-05-27T08:28:45Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/documentor",
@@ -582,8 +582,8 @@
         "website": "https://ods.ai/projects/fedot",
         "docs": "https://fedot.readthedocs.io"
       },
-      "stars": 704,
-      "updated_at": "2026-04-24T21:49:20Z",
+      "stars": 705,
+      "updated_at": "2026-05-27T21:47:27Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/FEDOT",
