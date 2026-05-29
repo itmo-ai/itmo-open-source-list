@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T02:10:47.603698",
+  "generated_at": "2026-05-29T02:14:21.565378",
   "projects": [
     {
       "id": "bamt",
@@ -162,8 +162,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 123,
-      "updated_at": "2026-05-26T04:24:59Z",
+      "stars": 125,
+      "updated_at": "2026-05-28T10:23:29Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/be2rlab/RADIO-ViPE",
@@ -733,7 +733,7 @@
         "website": "https://github.com/aimclub/OSA"
       },
       "stars": 142,
-      "updated_at": "2026-05-22T11:41:08Z",
+      "updated_at": "2026-05-28T11:59:08Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/OSA",
