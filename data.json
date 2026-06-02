@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T02:45:04.557811",
+  "generated_at": "2026-06-02T02:43:15.647707",
   "projects": [
     {
       "id": "bamt",
@@ -142,8 +142,8 @@
         "website": "https://gsplatloc.github.io/",
         "docs": null
       },
-      "stars": 141,
-      "updated_at": "2026-05-07T08:30:29Z",
+      "stars": 142,
+      "updated_at": "2026-06-01T16:23:00Z",
       "license": "Apache License 2.0",
       "language": "Jupyter Notebook",
       "url": "https://github.com/be2rlab/gsplatloc",
@@ -162,8 +162,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 125,
-      "updated_at": "2026-05-28T10:23:29Z",
+      "stars": 126,
+      "updated_at": "2026-06-01T12:56:02Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/be2rlab/RADIO-ViPE",
