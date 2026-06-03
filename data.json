@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T02:43:15.647707",
+  "generated_at": "2026-06-03T02:51:33.255104",
   "projects": [
     {
       "id": "bamt",
@@ -306,8 +306,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 33,
-      "updated_at": "2026-04-21T00:38:56Z",
+      "stars": 34,
+      "updated_at": "2026-06-02T17:33:36Z",
       "license": null,
       "language": "Jupyter Notebook",
       "url": "https://github.com/ai-chem/nanoMINER",
