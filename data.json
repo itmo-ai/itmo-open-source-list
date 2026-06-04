@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-03T02:51:33.255104",
+  "generated_at": "2026-06-04T02:46:46.869325",
   "projects": [
     {
       "id": "bamt",
@@ -142,8 +142,8 @@
         "website": "https://gsplatloc.github.io/",
         "docs": null
       },
-      "stars": 142,
-      "updated_at": "2026-06-01T16:23:00Z",
+      "stars": 143,
+      "updated_at": "2026-06-03T16:26:36Z",
       "license": "Apache License 2.0",
       "language": "Jupyter Notebook",
       "url": "https://github.com/be2rlab/gsplatloc",
@@ -162,8 +162,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 126,
-      "updated_at": "2026-06-01T12:56:02Z",
+      "stars": 128,
+      "updated_at": "2026-06-04T02:01:36Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/be2rlab/RADIO-ViPE",
@@ -326,8 +326,8 @@
         "website": null,
         "docs": "https://compphyslab.github.io/SVETlANNa/"
       },
-      "stars": 58,
-      "updated_at": "2026-05-12T09:40:55Z",
+      "stars": 59,
+      "updated_at": "2026-06-03T20:36:14Z",
       "license": "Mozilla Public License 2.0",
       "language": "Python",
       "url": "https://github.com/CompPhysLab/SVETlANNa",
