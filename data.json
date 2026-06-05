@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-04T02:46:46.869325",
+  "generated_at": "2026-06-05T02:33:34.725003",
   "projects": [
     {
       "id": "bamt",
@@ -162,8 +162,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 128,
-      "updated_at": "2026-06-04T02:01:36Z",
+      "stars": 129,
+      "updated_at": "2026-06-04T06:55:00Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/be2rlab/RADIO-ViPE",
@@ -473,7 +473,7 @@
         "docs": null
       },
       "stars": 66,
-      "updated_at": "2026-05-26T12:05:36Z",
+      "updated_at": "2026-06-04T08:49:02Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/ITMO-NSS-team/EPDE",
