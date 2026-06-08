@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07T02:39:09.848899",
+  "generated_at": "2026-06-08T02:43:20.238287",
   "projects": [
     {
       "id": "bamt",
@@ -496,8 +496,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 43,
-      "updated_at": "2026-04-24T03:03:34Z",
+      "stars": 44,
+      "updated_at": "2026-06-07T12:13:05Z",
       "license": "GNU General Public License v3.0",
       "language": "C++",
       "url": "https://github.com/be2rlab/rvwo",
