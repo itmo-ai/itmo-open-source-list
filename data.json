@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-09T02:10:03.927077",
+  "generated_at": "2026-06-10T02:33:42.053282",
   "projects": [
     {
       "id": "bamt",
@@ -162,8 +162,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 129,
-      "updated_at": "2026-06-04T06:55:00Z",
+      "stars": 130,
+      "updated_at": "2026-06-09T16:11:46Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/be2rlab/RADIO-ViPE",
@@ -326,8 +326,8 @@
         "website": null,
         "docs": "https://compphyslab.github.io/SVETlANNa/"
       },
-      "stars": 59,
-      "updated_at": "2026-06-03T20:36:14Z",
+      "stars": 60,
+      "updated_at": "2026-06-09T04:41:55Z",
       "license": "Mozilla Public License 2.0",
       "language": "Python",
       "url": "https://github.com/CompPhysLab/SVETlANNa",
@@ -437,8 +437,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 192,
-      "updated_at": "2026-06-08T11:34:07Z",
+      "stars": 191,
+      "updated_at": "2026-06-09T19:10:16Z",
       "license": "Apache License 2.0",
       "language": "Python",
       "url": "https://github.com/CTLab-ITMO/CoolPrompt",
@@ -473,7 +473,7 @@
         "docs": null
       },
       "stars": 66,
-      "updated_at": "2026-06-04T08:49:02Z",
+      "updated_at": "2026-06-09T17:06:30Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/ITMO-NSS-team/EPDE",
