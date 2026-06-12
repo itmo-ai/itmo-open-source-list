@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T02:43:49.852052",
+  "generated_at": "2026-06-12T02:39:54.137800",
   "projects": [
     {
       "id": "dizyme",
@@ -256,8 +256,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 48,
-      "updated_at": "2026-05-29T04:40:52Z",
+      "stars": 49,
+      "updated_at": "2026-06-11T13:46:34Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/documentor",
@@ -435,8 +435,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 191,
-      "updated_at": "2026-06-09T19:10:16Z",
+      "stars": 192,
+      "updated_at": "2026-06-11T20:50:08Z",
       "license": "Apache License 2.0",
       "language": "Python",
       "url": "https://github.com/CTLab-ITMO/CoolPrompt",
@@ -638,7 +638,7 @@
         "docs": "https://bioconductor.org/packages/release/bioc/html/fgsea.html"
       },
       "stars": 445,
-      "updated_at": "2026-06-08T19:51:17Z",
+      "updated_at": "2026-06-11T16:24:44Z",
       "license": "Other",
       "language": "R",
       "url": "https://github.com/alserglab/fgsea",
@@ -693,8 +693,8 @@
         "website": null,
         "docs": "https://github.com/ctlab/metafast/wiki"
       },
-      "stars": 27,
-      "updated_at": "2025-11-08T12:58:38Z",
+      "stars": 28,
+      "updated_at": "2026-06-11T04:33:10Z",
       "license": "MIT License",
       "language": "Java",
       "url": "https://github.com/ctlab/metafast",
