@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T02:39:54.137800",
+  "generated_at": "2026-06-13T02:32:29.368133",
   "projects": [
     {
       "id": "dizyme",
@@ -100,8 +100,8 @@
         "website": "https://gsplatloc.github.io/",
         "docs": null
       },
-      "stars": 143,
-      "updated_at": "2026-06-03T16:26:36Z",
+      "stars": 144,
+      "updated_at": "2026-06-12T15:28:22Z",
       "license": "Apache License 2.0",
       "language": "Jupyter Notebook",
       "url": "https://github.com/be2rlab/gsplatloc",
@@ -166,8 +166,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 34,
-      "updated_at": "2026-06-02T17:33:36Z",
+      "stars": 35,
+      "updated_at": "2026-06-12T04:26:40Z",
       "license": null,
       "language": "Jupyter Notebook",
       "url": "https://github.com/ai-chem/nanoMINER",
@@ -617,8 +617,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 44,
-      "updated_at": "2026-06-07T12:13:05Z",
+      "stars": 43,
+      "updated_at": "2026-06-12T16:17:03Z",
       "license": "GNU General Public License v3.0",
       "language": "C++",
       "url": "https://github.com/be2rlab/rvwo",
