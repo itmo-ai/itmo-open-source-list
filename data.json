@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T02:32:29.368133",
+  "generated_at": "2026-06-14T02:43:50.084859",
   "projects": [
     {
       "id": "dizyme",
@@ -100,8 +100,8 @@
         "website": "https://gsplatloc.github.io/",
         "docs": null
       },
-      "stars": 144,
-      "updated_at": "2026-06-12T15:28:22Z",
+      "stars": 145,
+      "updated_at": "2026-06-13T06:38:41Z",
       "license": "Apache License 2.0",
       "language": "Jupyter Notebook",
       "url": "https://github.com/be2rlab/gsplatloc",
@@ -185,8 +185,8 @@
       "links": {
         "website": "https://github.com/aimclub/OSA"
       },
-      "stars": 142,
-      "updated_at": "2026-06-10T09:57:23Z",
+      "stars": 141,
+      "updated_at": "2026-06-13T10:35:06Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/OSA",
