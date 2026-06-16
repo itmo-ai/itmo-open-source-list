@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15T02:48:15.387695",
+  "generated_at": "2026-06-16T02:50:08.096471",
   "projects": [
     {
       "id": "dizyme",
@@ -186,7 +186,7 @@
         "website": "https://github.com/aimclub/OSA"
       },
       "stars": 141,
-      "updated_at": "2026-06-13T10:35:06Z",
+      "updated_at": "2026-06-15T12:17:36Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/OSA",
@@ -319,8 +319,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 64,
-      "updated_at": "2026-02-12T19:56:35Z",
+      "stars": 63,
+      "updated_at": "2026-06-15T08:07:48Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/ITMO-NSS-team/torch_DE_solver",
