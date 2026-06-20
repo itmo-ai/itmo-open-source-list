@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T03:26:01.170703",
+  "generated_at": "2026-06-20T02:32:21.220220",
   "projects": [
     {
       "id": "dizyme",
@@ -435,8 +435,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 192,
-      "updated_at": "2026-06-18T03:14:06Z",
+      "stars": 193,
+      "updated_at": "2026-06-19T11:12:59Z",
       "license": "Apache License 2.0",
       "language": "Python",
       "url": "https://github.com/CTLab-ITMO/CoolPrompt",
@@ -637,8 +637,8 @@
         "website": null,
         "docs": "https://bioconductor.org/packages/release/bioc/html/fgsea.html"
       },
-      "stars": 445,
-      "updated_at": "2026-06-11T16:24:44Z",
+      "stars": 446,
+      "updated_at": "2026-06-19T20:15:08Z",
       "license": "Other",
       "language": "R",
       "url": "https://github.com/alserglab/fgsea",
