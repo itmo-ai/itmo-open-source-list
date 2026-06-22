@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T02:47:43.983596",
+  "generated_at": "2026-06-22T02:50:15.055264",
   "projects": [
     {
       "id": "dizyme",
@@ -166,8 +166,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 35,
-      "updated_at": "2026-06-12T04:26:40Z",
+      "stars": 36,
+      "updated_at": "2026-06-21T15:18:59Z",
       "license": null,
       "language": "Jupyter Notebook",
       "url": "https://github.com/ai-chem/nanoMINER",
