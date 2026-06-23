@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-22T02:50:15.055264",
+  "generated_at": "2026-06-23T02:25:29.808841",
   "projects": [
     {
       "id": "dizyme",
@@ -435,8 +435,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 193,
-      "updated_at": "2026-06-19T11:12:59Z",
+      "stars": 194,
+      "updated_at": "2026-06-22T10:44:23Z",
       "license": "Apache License 2.0",
       "language": "Python",
       "url": "https://github.com/CTLab-ITMO/CoolPrompt",
