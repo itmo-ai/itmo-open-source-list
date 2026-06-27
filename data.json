@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T02:30:32.715134",
+  "generated_at": "2026-06-27T02:14:38.994543",
   "projects": [
     {
       "id": "dizyme",
@@ -256,8 +256,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 49,
-      "updated_at": "2026-06-11T13:46:34Z",
+      "stars": 50,
+      "updated_at": "2026-06-26T09:11:42Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/documentor",
@@ -637,8 +637,8 @@
         "website": null,
         "docs": "https://bioconductor.org/packages/release/bioc/html/fgsea.html"
       },
-      "stars": 446,
-      "updated_at": "2026-06-25T23:05:24Z",
+      "stars": 448,
+      "updated_at": "2026-06-26T22:24:46Z",
       "license": "Other",
       "language": "R",
       "url": "https://github.com/alserglab/fgsea",
