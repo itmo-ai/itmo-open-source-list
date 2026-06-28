@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T02:14:38.994543",
+  "generated_at": "2026-06-28T02:36:27.016910",
   "projects": [
     {
       "id": "dizyme",
@@ -638,7 +638,7 @@
         "docs": "https://bioconductor.org/packages/release/bioc/html/fgsea.html"
       },
       "stars": 448,
-      "updated_at": "2026-06-26T22:24:46Z",
+      "updated_at": "2026-06-27T17:21:07Z",
       "license": "Other",
       "language": "R",
       "url": "https://github.com/alserglab/fgsea",
