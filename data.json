@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T02:37:05.080287",
+  "generated_at": "2026-07-02T02:26:56.748422",
   "projects": [
     {
       "id": "dizyme",
@@ -100,8 +100,8 @@
         "website": "https://gsplatloc.github.io/",
         "docs": null
       },
-      "stars": 145,
-      "updated_at": "2026-06-13T06:38:41Z",
+      "stars": 146,
+      "updated_at": "2026-07-01T14:42:11Z",
       "license": "Apache License 2.0",
       "language": "Jupyter Notebook",
       "url": "https://github.com/be2rlab/gsplatloc",
@@ -236,8 +236,8 @@
         "website": null,
         "docs": "https://github.com/ILT-ITMO/LaserWeldMonitor#documentation"
       },
-      "stars": 7,
-      "updated_at": "2026-04-09T02:26:16Z",
+      "stars": 8,
+      "updated_at": "2026-07-01T19:44:33Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Jupyter Notebook",
       "url": "https://github.com/ILT-ITMO/LaserWeldMonitor",
