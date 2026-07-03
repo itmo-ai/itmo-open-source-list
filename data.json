@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T02:26:56.748422",
+  "generated_at": "2026-07-03T02:01:50.971545",
   "projects": [
     {
       "id": "dizyme",
@@ -415,8 +415,8 @@
         "website": "https://swarmtronics.com/",
         "docs": "https://ampy.readthedocs.io/en/latest/"
       },
-      "stars": 7,
-      "updated_at": "2026-05-04T11:43:25Z",
+      "stars": 8,
+      "updated_at": "2026-07-02T08:34:51Z",
       "license": "GNU General Public License v3.0",
       "language": "Python",
       "url": "https://github.com/swarmtronics/AMPy",
