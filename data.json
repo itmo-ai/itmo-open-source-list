@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T02:01:50.971545",
+  "generated_at": "2026-07-04T01:59:46.122794",
   "projects": [
     {
       "id": "dizyme",
@@ -186,7 +186,7 @@
         "website": "https://github.com/aimclub/OSA"
       },
       "stars": 141,
-      "updated_at": "2026-06-25T07:36:06Z",
+      "updated_at": "2026-07-04T00:00:34Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/OSA",
@@ -343,8 +343,8 @@
         "website": "https://ods.ai/projects/fedot",
         "docs": "https://fedot.readthedocs.io"
       },
-      "stars": 705,
-      "updated_at": "2026-06-05T17:10:07Z",
+      "stars": 707,
+      "updated_at": "2026-07-03T14:03:31Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/FEDOT",
@@ -517,8 +517,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 133,
-      "updated_at": "2026-06-29T22:10:47Z",
+      "stars": 134,
+      "updated_at": "2026-07-03T13:39:37Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/be2rlab/RADIO-ViPE",
