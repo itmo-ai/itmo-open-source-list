@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-05T02:07:47.926658",
+  "generated_at": "2026-07-06T02:13:02.828560",
   "projects": [
     {
       "id": "dizyme",
@@ -100,8 +100,8 @@
         "website": "https://gsplatloc.github.io/",
         "docs": null
       },
-      "stars": 146,
-      "updated_at": "2026-07-01T14:42:11Z",
+      "stars": 145,
+      "updated_at": "2026-07-05T08:47:31Z",
       "license": "Apache License 2.0",
       "language": "Jupyter Notebook",
       "url": "https://github.com/be2rlab/gsplatloc",
@@ -212,8 +212,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 66,
-      "updated_at": "2026-06-18T14:04:55Z",
+      "stars": 67,
+      "updated_at": "2026-07-06T00:26:11Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/ITMO-NSS-team/EPDE",
@@ -343,8 +343,8 @@
         "website": "https://ods.ai/projects/fedot",
         "docs": "https://fedot.readthedocs.io"
       },
-      "stars": 707,
-      "updated_at": "2026-07-03T14:03:31Z",
+      "stars": 708,
+      "updated_at": "2026-07-06T00:27:56Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/FEDOT",
