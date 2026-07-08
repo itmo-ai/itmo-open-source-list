@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-07T02:08:37.485950",
+  "generated_at": "2026-07-08T01:49:21.395543",
   "projects": [
     {
       "id": "dizyme",
@@ -733,8 +733,8 @@
         "website": null,
         "docs": "https://bamt.readthedocs.io/en/latest/"
       },
-      "stars": 134,
-      "updated_at": "2026-05-10T16:49:17Z",
+      "stars": 135,
+      "updated_at": "2026-07-07T20:35:04Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/BAMT",
