@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T02:01:51.326360",
+  "generated_at": "2026-07-10T02:00:09.645762",
   "projects": [
     {
       "id": "dizyme",
@@ -100,8 +100,8 @@
         "website": "https://gsplatloc.github.io/",
         "docs": null
       },
-      "stars": 145,
-      "updated_at": "2026-07-05T08:47:31Z",
+      "stars": 146,
+      "updated_at": "2026-07-09T04:57:27Z",
       "license": "Apache License 2.0",
       "language": "Jupyter Notebook",
       "url": "https://github.com/be2rlab/gsplatloc",
@@ -185,8 +185,8 @@
       "links": {
         "website": "https://github.com/aimclub/OSA"
       },
-      "stars": 141,
-      "updated_at": "2026-07-04T00:00:34Z",
+      "stars": 143,
+      "updated_at": "2026-07-09T09:26:39Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/OSA",
@@ -256,8 +256,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 50,
-      "updated_at": "2026-06-26T09:11:42Z",
+      "stars": 51,
+      "updated_at": "2026-07-09T20:57:21Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/documentor",
@@ -435,8 +435,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 194,
-      "updated_at": "2026-06-30T09:57:17Z",
+      "stars": 193,
+      "updated_at": "2026-07-09T08:11:26Z",
       "license": "Apache License 2.0",
       "language": "Python",
       "url": "https://github.com/CTLab-ITMO/CoolPrompt",
@@ -637,8 +637,8 @@
         "website": null,
         "docs": "https://bioconductor.org/packages/release/bioc/html/fgsea.html"
       },
-      "stars": 449,
-      "updated_at": "2026-07-04T06:50:50Z",
+      "stars": 450,
+      "updated_at": "2026-07-09T06:03:31Z",
       "license": "Other",
       "language": "R",
       "url": "https://github.com/alserglab/fgsea",
