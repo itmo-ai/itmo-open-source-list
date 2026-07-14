@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T01:52:38.043418",
+  "generated_at": "2026-07-14T01:29:39.996226",
   "projects": [
     {
       "id": "dizyme",
@@ -517,8 +517,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 135,
-      "updated_at": "2026-07-11T09:49:32Z",
+      "stars": 136,
+      "updated_at": "2026-07-13T05:12:49Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/be2rlab/RADIO-ViPE",
