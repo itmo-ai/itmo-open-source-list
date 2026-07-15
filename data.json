@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T01:29:39.996226",
+  "generated_at": "2026-07-15T01:26:05.280855",
   "projects": [
     {
       "id": "dizyme",
@@ -343,8 +343,8 @@
         "website": "https://ods.ai/projects/fedot",
         "docs": "https://fedot.readthedocs.io"
       },
-      "stars": 709,
-      "updated_at": "2026-07-06T07:07:12Z",
+      "stars": 708,
+      "updated_at": "2026-07-14T21:31:11Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/FEDOT",
