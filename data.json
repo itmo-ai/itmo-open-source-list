@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T01:49:52.359426",
+  "generated_at": "2026-07-18T01:40:28.677001",
   "projects": [
     {
       "id": "laserprocessing",
@@ -234,7 +234,7 @@
         "docs": "https://fedot.readthedocs.io"
       },
       "stars": 708,
-      "updated_at": "2026-07-14T21:31:11Z",
+      "updated_at": "2026-07-17T10:07:49Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/FEDOT",
@@ -368,7 +368,7 @@
         "docs": "https://compphyslab.github.io/SVETlANNa/"
       },
       "stars": 60,
-      "updated_at": "2026-06-09T04:41:55Z",
+      "updated_at": "2026-07-17T14:42:10Z",
       "license": "Mozilla Public License 2.0",
       "language": "Python",
       "url": "https://github.com/CompPhysLab/SVETlANNa",
@@ -733,7 +733,7 @@
         "website": "https://github.com/aimclub/OSA"
       },
       "stars": 143,
-      "updated_at": "2026-07-09T09:26:39Z",
+      "updated_at": "2026-07-17T08:29:38Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/OSA",
