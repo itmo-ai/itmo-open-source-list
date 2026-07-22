@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T01:48:19.668062",
+  "generated_at": "2026-07-22T01:47:01.036315",
   "projects": [
     {
       "id": "laserprocessing",
@@ -33,8 +33,8 @@
         "website": "https://gsplatloc.github.io/",
         "docs": null
       },
-      "stars": 146,
-      "updated_at": "2026-07-09T04:57:27Z",
+      "stars": 147,
+      "updated_at": "2026-07-21T02:17:00Z",
       "license": "Apache License 2.0",
       "language": "Jupyter Notebook",
       "url": "https://github.com/be2rlab/gsplatloc",
@@ -53,8 +53,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 136,
-      "updated_at": "2026-07-13T05:12:49Z",
+      "stars": 137,
+      "updated_at": "2026-07-21T04:15:25Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/be2rlab/RADIO-ViPE",
@@ -285,8 +285,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 195,
-      "updated_at": "2026-07-15T14:48:59Z",
+      "stars": 196,
+      "updated_at": "2026-07-21T09:20:09Z",
       "license": "Apache License 2.0",
       "language": "Python",
       "url": "https://github.com/CTLab-ITMO/CoolPrompt",
