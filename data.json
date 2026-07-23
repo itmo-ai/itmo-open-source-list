@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T01:47:01.036315",
+  "generated_at": "2026-07-23T01:54:25.641325",
   "projects": [
     {
       "id": "laserprocessing",
@@ -53,8 +53,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 137,
-      "updated_at": "2026-07-21T04:15:25Z",
+      "stars": 138,
+      "updated_at": "2026-07-22T06:42:39Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/be2rlab/RADIO-ViPE",
