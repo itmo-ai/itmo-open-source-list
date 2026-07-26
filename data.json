@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T01:50:16.911000",
+  "generated_at": "2026-07-26T01:53:16.008411",
   "projects": [
     {
       "id": "documentor",
@@ -98,8 +98,8 @@
         "website": "https://ods.ai/projects/fedot",
         "docs": "https://fedot.readthedocs.io"
       },
-      "stars": 708,
-      "updated_at": "2026-07-17T10:07:49Z",
+      "stars": 709,
+      "updated_at": "2026-07-25T16:08:20Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/FEDOT",
