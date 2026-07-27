@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T01:53:16.008411",
+  "generated_at": "2026-07-27T02:01:24.992351",
   "projects": [
     {
       "id": "documentor",
@@ -63,8 +63,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 195,
-      "updated_at": "2026-07-23T18:13:12Z",
+      "stars": 194,
+      "updated_at": "2026-07-26T11:40:00Z",
       "license": "Apache License 2.0",
       "language": "Python",
       "url": "https://github.com/CTLab-ITMO/CoolPrompt",
@@ -369,7 +369,7 @@
         "website": "https://github.com/aimclub/OSA"
       },
       "stars": 143,
-      "updated_at": "2026-07-20T21:19:32Z",
+      "updated_at": "2026-07-26T18:46:30Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/OSA",
@@ -635,8 +635,8 @@
         "website": null,
         "docs": "https://compphyslab.github.io/SVETlANNa/"
       },
-      "stars": 60,
-      "updated_at": "2026-07-17T14:42:10Z",
+      "stars": 61,
+      "updated_at": "2026-07-26T19:43:05Z",
       "license": "Mozilla Public License 2.0",
       "language": "Python",
       "url": "https://github.com/CompPhysLab/SVETlANNa",
