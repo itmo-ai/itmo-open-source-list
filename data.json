@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T02:01:24.992351",
+  "generated_at": "2026-07-28T01:43:49.681671",
   "projects": [
     {
       "id": "documentor",
@@ -566,7 +566,7 @@
         "docs": null
       },
       "stars": 67,
-      "updated_at": "2026-07-06T00:26:11Z",
+      "updated_at": "2026-07-27T09:26:55Z",
       "license": "Other",
       "language": "Python",
       "url": "https://github.com/ITMO-NSS-team/EPDE",
@@ -719,8 +719,8 @@
         "website": null,
         "docs": null
       },
-      "stars": 6,
-      "updated_at": "2026-05-05T20:51:59Z",
+      "stars": 5,
+      "updated_at": "2026-07-27T21:08:18Z",
       "license": "MIT License",
       "language": "Python",
       "url": "https://github.com/ILT-ITMO/LaserProcessing",
