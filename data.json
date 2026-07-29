@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T01:43:49.681671",
+  "generated_at": "2026-07-29T01:45:25.944214",
   "projects": [
     {
       "id": "documentor",
@@ -635,8 +635,8 @@
         "website": null,
         "docs": "https://compphyslab.github.io/SVETlANNa/"
       },
-      "stars": 61,
-      "updated_at": "2026-07-26T19:43:05Z",
+      "stars": 62,
+      "updated_at": "2026-07-28T17:55:09Z",
       "license": "Mozilla Public License 2.0",
       "language": "Python",
       "url": "https://github.com/CompPhysLab/SVETlANNa",
