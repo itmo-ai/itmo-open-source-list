@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-29T01:45:25.944214",
+  "generated_at": "2026-07-29T15:57:17.161981",
   "projects": [
     {
       "id": "documentor",
@@ -85,6 +85,21 @@
         "python",
         "structured-prompts"
       ]
+    },
+    {
+      "id": "slideguard",
+      "title": "SlideGuard",
+      "description": "SlideGuard - protection from bad slides",
+      "github_url": "https://github.com/Industrial-AI-Research-Lab/SlideGuard",
+      "lab": "industrial-ai-research-lab",
+      "area": "ML Tools",
+      "stars": 6,
+      "updated_at": "2026-07-29T09:45:31Z",
+      "license": "Apache License 2.0",
+      "language": "Python",
+      "url": "https://github.com/Industrial-AI-Research-Lab/SlideGuard",
+      "fork": false,
+      "topics": []
     },
     {
       "id": "fedot",
@@ -368,8 +383,8 @@
       "links": {
         "website": "https://github.com/aimclub/OSA"
       },
-      "stars": 143,
-      "updated_at": "2026-07-26T18:46:30Z",
+      "stars": 144,
+      "updated_at": "2026-07-29T10:54:54Z",
       "license": "BSD 3-Clause \"New\" or \"Revised\" License",
       "language": "Python",
       "url": "https://github.com/aimclub/OSA",
@@ -982,6 +997,7 @@
         "vkontakte": null
       },
       "example_projects": [
+        "SlideGuard",
         "documentor",
         "rec4u"
       ]
