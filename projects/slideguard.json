@@ -1,0 +1,11 @@
+{
+  "id": "slideguard",
+  "title": "SlideGuard",
+  "description": {
+    "ru": "Система автоматической оценки качества слайдов презентаций на основе LLM (LangGraph + LangChain): проверка по настраиваемым критериям с учётом типа презентации, CLI и веб-интерфейс, генерация PDF-отчётов.",
+    "en": "LLM-based slide deck evaluation system built with LangGraph and LangChain: type-aware criteria-based assessment, CLI and web UI, PDF report generation."
+  },
+  "github_url": "https://github.com/Industrial-AI-Research-Lab/SlideGuard",
+  "lab": "industrial-ai-research-lab",
+  "area": "ML Tools"
+}
