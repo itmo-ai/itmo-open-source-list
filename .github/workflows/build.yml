@@ -53,5 +53,5 @@ jobs:
           echo "data.json is up to date, nothing to commit"
         else
           git commit -m "chore: update build/data.json [skip ci]"
-          git push
+          git push || echo "Skipping push: protected branch requires pull request"
         fi
