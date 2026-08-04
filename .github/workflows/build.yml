@@ -1,57 +1,177 @@
 name: Build Data
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
   push:
-    branches: [ "main" ]
+    branches:
+      - main
+    paths:
+      - "projects/**"
+      - "labs/**"
+      - "build.py"
+      - ".github/workflows/build.yml"
   workflow_dispatch:
 
 permissions:
   contents: write
+  pull-requests: write
+
+concurrency:
+  group: build-data-main
+  cancel-in-progress: true
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.10'
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.10"
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install requests python-dotenv
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests python-dotenv
 
-    - name: Run build script
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: python build.py
+      - name: Build data.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python build.py
 
-    - name: Check if build/data.json exists
-      run: |
-        ls -l build/data.json
+      - name: Verify generated file
+        run: test -s build/data.json
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
+      - name: Deploy build to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
 
-    - name: Commit updated data.json to main
-      if: github.ref == 'refs/heads/main'
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git add --force -- build/data.json
-        if git diff --cached --quiet; then
-          echo "data.json is up to date, nothing to commit"
-        else
-          git commit -m "chore: update build/data.json [skip ci]"
-          git push || echo "Skipping push: protected branch requires pull request"
-        fi
+      # Этот шаг работает уже сейчас:
+      # результат отправляется не в защищённый main,
+      # а в отдельную служебную ветку.
+      - name: Push data.json to update branch
+        id: update
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add --force -- build/data.json
+
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "build/data.json is already up to date"
+            exit 0
+          fi
+
+          git commit -m "chore: update build/data.json"
+
+          git push --force \
+            origin HEAD:refs/heads/automation/update-data-json
+
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      # Активируется только после подключения GitHub App
+      # и установки переменной DATA_PR_MODE=github-app.
+      - name: Create GitHub App token
+        id: app-token
+        if: >-
+          steps.update.outputs.changed == 'true' &&
+          vars.DATA_PR_MODE == 'github-app'
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.BUILD_BOT_CLIENT_ID }}
+          private-key: ${{ secrets.BUILD_BOT_PRIVATE_KEY }}
+          permission-contents: write
+          permission-pull-requests: write
+
+      # Выбирает стандартный GITHUB_TOKEN или токен GitHub App.
+      - name: Select token for PR operations
+        if: >-
+          steps.update.outputs.changed == 'true' &&
+          (vars.DATA_PR_MODE == 'github-token' ||
+          vars.DATA_PR_MODE == 'github-app')
+        shell: bash
+        env:
+          DATA_PR_MODE: ${{ vars.DATA_PR_MODE }}
+          ACTIONS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          APP_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          if [ "$DATA_PR_MODE" = "github-app" ]; then
+            echo "GH_TOKEN=$APP_TOKEN" >> "$GITHUB_ENV"
+          else
+            echo "GH_TOKEN=$ACTIONS_TOKEN" >> "$GITHUB_ENV"
+          fi
+
+      # Создаёт PR либо использует уже открытый PR для служебной ветки.
+      - name: Create or reuse update pull request
+        id: pr
+        if: >-
+          steps.update.outputs.changed == 'true' &&
+          (vars.DATA_PR_MODE == 'github-token' ||
+          vars.DATA_PR_MODE == 'github-app')
+        shell: bash
+        env:
+          GH_REPO: ${{ github.repository }}
+        run: |
+          PR_NUMBER="$(gh pr list \
+            --base main \
+            --head automation/update-data-json \
+            --state open \
+            --json number \
+            --jq '.[0].number')"
+
+          if [ -z "$PR_NUMBER" ]; then
+            gh pr create \
+              --base main \
+              --head automation/update-data-json \
+              --title "chore: update build/data.json" \
+              --body "Автоматически сгенерировано workflow Build Data."
+
+            PR_NUMBER="$(gh pr view automation/update-data-json \
+              --json number \
+              --jq '.number')"
+          else
+            echo "Using existing PR #$PR_NUMBER"
+          fi
+
+          echo "number=$PR_NUMBER" >> "$GITHUB_OUTPUT"
+
+      # Активируется только для GitHub App и только после явного
+      # включения DATA_AUTO_MERGE=true.
+      - name: Auto-merge update pull request
+        if: >-
+          steps.pr.outputs.number != '' &&
+          vars.DATA_PR_MODE == 'github-app' &&
+          vars.DATA_AUTO_MERGE == 'true'
+        shell: bash
+        env:
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh pr merge "${{ steps.pr.outputs.number }}" \
+            --squash \
+            --admin \
+            --delete-branch
+
+      # Текущий резервный режим: показывает ссылку для ручного PR.
+      - name: Show manual pull request link
+        if: >-
+          steps.update.outputs.changed == 'true' &&
+          vars.DATA_PR_MODE != 'github-token' &&
+          vars.DATA_PR_MODE != 'github-app'
+        shell: bash
+        run: |
+          echo "### build/data.json is ready" >> "$GITHUB_STEP_SUMMARY"
+          echo "Create and merge the pull request:" >> "$GITHUB_STEP_SUMMARY"
+          echo \
+            "https://github.com/${{ github.repository }}/compare/main...automation/update-data-json?expand=1" \
+            >> "$GITHUB_STEP_SUMMARY"
