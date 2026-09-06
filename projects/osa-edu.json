@@ -1,0 +1,16 @@
+{
+  "id": "osa-edu",
+  "title": "OSA.Edu",
+  "description": {
+    "ru": "Система автоматической проверки выпускных квалификационных работ и диссертаций.",
+    "en": "An automated system for reviewing graduation theses and dissertations."
+  },
+  "github_url": "https://github.com/ITMO-NSS-team/osa.edu",
+  "lab": "aist-lab",
+  "area": "Education",
+  "logo": null,
+  "links": {
+    "website": null,
+    "docs": null
+  }
+}
